@@ -3,7 +3,8 @@
  *
  * Decision-support API for municipal authorities.
  * Strictly adheres to project rules:
- * - Data served from preloaded memory via mockProvider.js
+ * - Selectable persistence via DATA_PROVIDER (mock, file, postgres)
+ * - In-memory path preserved and completely decoupled from external DBs
  * - Never calculates or recalculates priority or anomaly scores
  */
 
@@ -12,7 +13,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { mockProvider } from './providers/mockProvider.js';
+import { getProvider, getProviderType, verifyActiveProvider } from './providers/index.js';
 import apiRoutes from './routes/api.js';
 
 dotenv.config();
@@ -22,6 +23,10 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+
+// Provider selection
+const provider = getProvider();
+const providerType = getProviderType();
 
 // Middlewares
 app.use(cors());
@@ -45,21 +50,26 @@ app.use((req, res, next) => {
 });
 
 // Health check
-app.get('/api/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    service: 'urban-pulse-backend',
-    version: '1.0.0',
-    mode: 'development-mock',
-    isMock: mockProvider.isMockActive(),
-    timestamp: new Date().toISOString()
-  });
+app.get('/api/health', async (req, res) => {
+  try {
+    const isMock = await provider.isMockActive();
+    res.json({
+      status: 'ok',
+      service: 'urban-pulse-backend',
+      version: '1.0.0',
+      mode: providerType === 'postgres' ? 'postgres' : (providerType === 'file' ? 'file' : 'development-mock'),
+      isMock,
+      timestamp: new Date().toISOString()
+    });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
 });
 
 // City / Region Overview
-app.get('/api/overview', (req, res) => {
+app.get('/api/overview', async (req, res) => {
   try {
-    const overview = mockProvider.getOverview();
+    const overview = await provider.getOverview();
     res.json(overview);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve region overview', details: error.message });
@@ -67,9 +77,9 @@ app.get('/api/overview', (req, res) => {
 });
 
 // Pipeline Architecture & Chain Definition
-app.get('/api/pipeline', (req, res) => {
+app.get('/api/pipeline', async (req, res) => {
   try {
-    const pipeline = mockProvider.getPipeline();
+    const pipeline = await provider.getPipeline();
     res.json(pipeline);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve pipeline metadata', details: error.message });
@@ -77,9 +87,9 @@ app.get('/api/pipeline', (req, res) => {
 });
 
 // Full Investigation List (Standard Member 1 contract)
-app.get('/api/investigation-list', (req, res) => {
+app.get('/api/investigation-list', async (req, res) => {
   try {
-    const list = mockProvider.getInvestigationList();
+    const list = await provider.getInvestigationList();
     res.json(list);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve investigation list', details: error.message });
@@ -87,9 +97,9 @@ app.get('/api/investigation-list', (req, res) => {
 });
 
 // Monitored Grid Cells
-app.get('/api/grid-cells', (req, res) => {
+app.get('/api/grid-cells', async (req, res) => {
   try {
-    const cells = mockProvider.getGridCells({
+    const cells = await provider.getGridCells({
       priorityLevel: req.query.priorityLevel,
       anomalyStatus: req.query.anomalyStatus
     });
@@ -100,9 +110,9 @@ app.get('/api/grid-cells', (req, res) => {
 });
 
 // Ranked Hotspots / Prioritized Investigation List
-app.get('/api/hotspots', (req, res) => {
+app.get('/api/hotspots', async (req, res) => {
   try {
-    const hotspots = mockProvider.getHotspots({
+    const hotspots = await provider.getHotspots({
       priorityLevel: req.query.priorityLevel,
       category: req.query.category,
       zone: req.query.zone
@@ -114,9 +124,9 @@ app.get('/api/hotspots', (req, res) => {
 });
 
 // Single Hotspot
-app.get('/api/hotspots/:id', (req, res) => {
+app.get('/api/hotspots/:id', async (req, res) => {
   try {
-    const hotspot = mockProvider.getHotspotById(req.params.id);
+    const hotspot = await provider.getHotspotById(req.params.id);
     if (!hotspot) {
       return res.status(404).json({ error: `Hotspot with ID '${req.params.id}' not found` });
     }
@@ -127,9 +137,9 @@ app.get('/api/hotspots/:id', (req, res) => {
 });
 
 // Full Evidence Dossier for a Hotspot
-app.get('/api/hotspots/:id/evidence', (req, res) => {
+app.get('/api/hotspots/:id/evidence', async (req, res) => {
   try {
-    const evidence = mockProvider.getEvidence(req.params.id);
+    const evidence = await provider.getEvidence(req.params.id);
     if (!evidence) {
       return res.status(404).json({ error: `Evidence dossier for '${req.params.id}' not found` });
     }
@@ -140,11 +150,19 @@ app.get('/api/hotspots/:id/evidence', (req, res) => {
 });
 
 // Global 404 handler
-app.use('/api', (req, res) => {
+app.use('/api', async (req, res) => {
+  let meta = null;
+  try {
+    const overview = await provider.getOverview();
+    meta = overview?.meta;
+  } catch {
+    // fallback
+  }
+
   res.status(404).json({
-    meta: mockProvider.getOverview()?.meta || {
-      source: "mock",
-      is_mock: true,
+    meta: meta || {
+      source: providerType,
+      is_mock: providerType !== 'postgres',
       warning: "DEVELOPMENT DATA ONLY. Invented values for UI development. Not real satellite observations. Replace with Member 1 output before the demo."
     },
     error: 'Not found',
@@ -152,14 +170,33 @@ app.use('/api', (req, res) => {
   });
 });
 
-// Start listening
-app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(` UrbanPulse Backend API running on port ${PORT}`);
-  console.log(` Health check: http://localhost:${PORT}/api/health`);
-  console.log(` Overview:     http://localhost:${PORT}/api/overview`);
-  console.log(` Hotspots:     http://localhost:${PORT}/api/hotspots`);
-  console.log(`=======================================================`);
-});
+// Start listening after provider verification
+async function startServer() {
+  // If PostgreSQL persistence selected, verify DB connectivity
+  if (providerType === 'postgres') {
+    try {
+      console.log('[UrbanPulse] Verifying PostgreSQL connection...');
+      await verifyActiveProvider();
+      console.log('[UrbanPulse] PostgreSQL connection established successfully.');
+    } catch (err) {
+      console.error(`\n[UrbanPulse Server FATAL] Cannot start server with DATA_PROVIDER=postgres:`);
+      console.error(err.message);
+      console.error('To run with in-memory mock data instead, unset DATA_PROVIDER or set DATA_PROVIDER=mock.\n');
+      process.exit(1);
+    }
+  }
+
+  app.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(` UrbanPulse Backend API running on port ${PORT}`);
+    console.log(` Active Provider: [${providerType.toUpperCase()}]`);
+    console.log(` Health check:    http://localhost:${PORT}/api/health`);
+    console.log(` Overview:        http://localhost:${PORT}/api/overview`);
+    console.log(` Hotspots:        http://localhost:${PORT}/api/hotspots`);
+    console.log(`=======================================================`);
+  });
+}
+
+startServer();
 
 export default app;

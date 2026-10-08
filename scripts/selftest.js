@@ -286,5 +286,95 @@ if (unknownEvidence !== null) {
 }
 console.log('✓ getEvidence unknown ID correctly returns null for 404 response');
 
-console.log('\nALL EXTENDED REST SERVICES CHECKS PASSED (0 errors).\n');
+// =========================================================================
+// 7. Database Persistence & Provider Architecture Tests
+// =========================================================================
+
+console.log('\n--- Persistence & Multi-Provider Architecture Tests ---');
+
+// A. Schema SQL Validation
+const schemaPath = path.join(ROOT_DIR, 'backend', 'db', 'schema.sql');
+if (!fs.existsSync(schemaPath)) {
+  console.error('FAIL: backend/db/schema.sql does not exist');
+  process.exit(1);
+}
+const schemaSql = fs.readFileSync(schemaPath, 'utf-8');
+const requiredTables = ['urban_observations', 'evidence', 'hotspots', 'metadata'];
+for (const table of requiredTables) {
+  if (!schemaSql.includes(`CREATE TABLE IF NOT EXISTS ${table}`)) {
+    console.error(`FAIL: schema.sql missing required table: ${table}`);
+    process.exit(1);
+  }
+}
+if (!schemaSql.includes('postgis') || !schemaSql.includes('geom geometry')) {
+  console.error('FAIL: schema.sql missing conditional PostGIS geometry handling');
+  process.exit(1);
+}
+console.log('✓ schema.sql verified (tables: urban_observations, evidence, hotspots; conditional PostGIS support)');
+
+// B. Importer Script Validation
+const importScriptPath = path.join(ROOT_DIR, 'backend', 'scripts', 'import.js');
+if (!fs.existsSync(importScriptPath)) {
+  console.error('FAIL: backend/scripts/import.js does not exist');
+  process.exit(1);
+}
+const importScriptContent = fs.readFileSync(importScriptPath, 'utf-8');
+if (!importScriptContent.includes('ON CONFLICT') || !importScriptContent.includes('DATABASE_URL')) {
+  console.error('FAIL: import.js missing idempotent conflict handling or DATABASE_URL config');
+  process.exit(1);
+}
+console.log('✓ import.js verified (idempotent loading with ON CONFLICT DO UPDATE)');
+
+// C. File Provider Contract Tests
+const { fileProvider } = await import('../backend/src/providers/fileProvider.js');
+const fileStats = fileProvider.getStatistics();
+if (fileStats.analyzed_cells !== 150 || fileStats.high !== 5 || fileStats.medium !== 10) {
+  console.error('FAIL: fileProvider.getStatistics mismatch:', fileStats);
+  process.exit(1);
+}
+const fileAreas = fileProvider.getAreas();
+if (fileAreas.areas.length !== 150) {
+  console.error('FAIL: fileProvider.getAreas length mismatch');
+  process.exit(1);
+}
+const fileHotspot = fileProvider.getHotspotDetail('HYD_0421');
+if (!fileHotspot || fileHotspot.differences.built_up !== 16) {
+  console.error('FAIL: fileProvider.getHotspotDetail calculation mismatch');
+  process.exit(1);
+}
+console.log('✓ fileProvider verified (reads directly from filesystem with identical metrics)');
+
+// D. Provider Selector & Postgres Unreachable Handling
+const { getProvider, postgresProvider } = await import('../backend/src/providers/index.js');
+const defaultProv = getProvider();
+if (defaultProv.getMode && defaultProv.getMode() !== 'mock') {
+  console.error('FAIL: default provider should be mock in development');
+  process.exit(1);
+}
+console.log('✓ In-memory mock provider remains active by default');
+
+// E. Verify Postgres Provider Fails With Clear Message When DB is Unreachable
+let caughtError = null;
+const originalDbUrl = process.env.DATABASE_URL;
+try {
+  process.env.DATABASE_URL = 'postgresql://localhost:59999/unreachable_db';
+  await postgresProvider.verifyConnection();
+} catch (err) {
+  caughtError = err;
+} finally {
+  if (originalDbUrl) {
+    process.env.DATABASE_URL = originalDbUrl;
+  } else {
+    delete process.env.DATABASE_URL;
+  }
+}
+
+if (!caughtError || !caughtError.message.includes('Database unreachable')) {
+  console.error('FAIL: postgresProvider did not fail with clear "Database unreachable" message:', caughtError);
+  process.exit(1);
+}
+console.log('✓ postgresProvider fails with clear message when DB is unreachable');
+
+console.log('\nALL EXTENDED REST SERVICES & PERSISTENCE CHECKS PASSED (0 errors).\n');
 process.exit(0);
+

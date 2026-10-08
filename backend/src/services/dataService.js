@@ -1,16 +1,21 @@
 /**
  * UrbanPulse - Data Service
  *
- * Implements business data access for mock data layer per contract:
- * - Preloaded synchronously into memory at module load.
- * - Adheres strictly to Hard Rules: never recalculates or adjusts priority or anomaly scores.
+ * Implements business data access across configured providers:
+ * - DATA_PROVIDER=mock (default): In-memory synchronous mock data layer
+ * - DATA_PROVIDER=file: Dynamic filesystem JSON layer via fileProvider
+ * - DATA_PROVIDER=postgres: PostgreSQL database persistence via postgresProvider
+ *
+ * Adheres strictly to Hard Rules:
+ * - Never recalculates or adjusts priority or anomaly scores.
  * - Simple subtraction for metric differences (2020 -> 2026).
- * - Checks for existence of placeholder SVGs in data/images/<gridId>/.
+ * - Serves existing placeholder SVGs in data/images/<gridId>/.
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getProviderType, fileProvider, postgresProvider } from '../providers/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,11 +34,19 @@ function loadData() {
   }
 }
 
-// In-memory dataset
+// In-memory dataset for mock provider
 const rawData = loadData();
 
 export const dataService = {
   getMeta() {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getMeta();
+    }
+    if (providerType === 'file') {
+      return fileProvider.getMeta();
+    }
+
     return {
       source: rawData.meta?.source || "mock",
       is_mock: rawData.meta?.is_mock !== undefined ? rawData.meta.is_mock : true,
@@ -46,18 +59,43 @@ export const dataService = {
   },
 
   getAllRecords() {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getInvestigationList().then(res => res.records);
+    }
+    if (providerType === 'file') {
+      return fileProvider.getInvestigationList().records;
+    }
     return rawData.records;
   },
 
   getRecordById(gridId) {
     if (!gridId) return null;
     const cleanId = String(gridId).trim();
+
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getHotspotById(cleanId);
+    }
+    if (providerType === 'file') {
+      const inv = fileProvider.getInvestigationList();
+      return (inv.records || []).find(r => r.grid_id.toLowerCase() === cleanId.toLowerCase()) || null;
+    }
+
     return rawData.records.find(
       r => r.grid_id.toLowerCase() === cleanId.toLowerCase()
     ) || null;
   },
 
   getStatistics() {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getStatistics();
+    }
+    if (providerType === 'file') {
+      return fileProvider.getStatistics();
+    }
+
     const meta = this.getMeta();
     const records = rawData.records;
 
@@ -77,6 +115,14 @@ export const dataService = {
   },
 
   getAreas() {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getAreas();
+    }
+    if (providerType === 'file') {
+      return fileProvider.getAreas();
+    }
+
     const meta = this.getMeta();
     const areas = rawData.records.map(r => ({
       grid_id: r.grid_id,
@@ -94,6 +140,14 @@ export const dataService = {
   },
 
   getHotspotDetail(gridId) {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getHotspotDetail(gridId);
+    }
+    if (providerType === 'file') {
+      return fileProvider.getHotspotDetail(gridId);
+    }
+
     const rec = this.getRecordById(gridId);
     if (!rec) return null;
 
@@ -124,6 +178,14 @@ export const dataService = {
   },
 
   getChange(gridId) {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getChange(gridId);
+    }
+    if (providerType === 'file') {
+      return fileProvider.getChange(gridId);
+    }
+
     const rec = this.getRecordById(gridId);
     if (!rec) return null;
 
@@ -161,6 +223,14 @@ export const dataService = {
   },
 
   getEvidence(gridId) {
+    const providerType = getProviderType();
+    if (providerType === 'postgres') {
+      return postgresProvider.getEvidenceDetail(gridId);
+    }
+    if (providerType === 'file') {
+      return fileProvider.getEvidenceDetail(gridId);
+    }
+
     const rec = this.getRecordById(gridId);
     if (!rec) return null;
 

@@ -52,18 +52,31 @@ UrbanPulse adheres strictly to established ethical and system boundaries:
 ```
 urban-pulse/
 ├── data/
+│   ├── images/                         # Watermarked placeholder SVGs (top 8 hotspots)
 │   └── mock/                           # Preloaded mock datasets
 │       ├── overview.json               # Monitored region summary & baseline dates
 │       ├── pipeline.json               # 7-stage evidence pipeline definition
 │       ├── hotspots.json               # Ranked field investigation queue
 │       ├── evidence.json               # Full multi-epoch evidence dossiers
-│       └── cells.json                  # Monitored grid cells with bounds
+│       ├── cells.json                  # Monitored grid cells with bounds
+│       └── investigation_list.json     # Standard 150-cell intelligence dataset
 ├── backend/
 │   ├── package.json
+│   ├── db/
+│   │   └── schema.sql                  # PostgreSQL DDL (urban_observations, evidence, hotspots)
+│   ├── scripts/
+│   │   └── import.js                   # Idempotent intelligence JSON importer
 │   └── src/
 │       ├── server.js                   # Express REST API (Port 5001)
+│       ├── routes/
+│       │   └── api.js                  # Modular REST routes
+│       ├── services/
+│       │   └── dataService.js          # Business logic and metric difference layer
 │       └── providers/
-│           └── mockProvider.js         # In-memory mock data loader & provider
+│           ├── index.js                # Provider factory & environment selector
+│           ├── mockProvider.js         # In-memory mock data loader
+│           ├── fileProvider.js         # Direct filesystem JSON provider
+│           └── postgresProvider.js     # PostgreSQL persistent provider (pg pool)
 ├── frontend/
 │   ├── package.json
 │   ├── vite.config.js                  # Vite dev server with /api proxy (Port 3000)
@@ -86,11 +99,55 @@ urban-pulse/
 
 ---
 
-## 4. How to Run Locally
+## 4. Persistence & Data Providers
+
+UrbanPulse supports three decoupled data providers via the `DATA_PROVIDER` environment variable:
+
+| Provider | `DATA_PROVIDER` | Description |
+| :--- | :--- | :--- |
+| **Mock** *(Default)* | `mock` (or unset) | Synchronously preloaded in-memory dataset from `data/mock/`. Fast and zero external dependencies. |
+| **File** | `file` | Reads datasets dynamically from filesystem JSON files in `data/mock/`. |
+| **PostgreSQL** | `postgres` | Persists observations, evidence dossiers, and hotspots into PostgreSQL via `pg`. Requires `DATABASE_URL`. |
+
+> **Fail-Safe Contract**: If `DATA_PROVIDER=postgres` is selected and the database is unreachable or misconfigured, the server aborts startup immediately with a clear diagnostic message. Mock and File providers require zero database setup and will never fail due to external database unavailability.
+
+### PostgreSQL Setup & Schema Migration
+
+The database schema is defined in `backend/db/schema.sql`:
+- **`urban_observations`**: Grid cells with coordinates, 2020/2023/2026 land cover metrics, percentiles, anomalies, and breakdowns.
+- **`evidence`**: Full evidence dossiers, pipeline audit trails, and image references.
+- **`hotspots`**: Ranked investigation targets with priority scores and recommendations.
+- **`metadata`**: Provenance, imagery timestamps, and dataset metadata.
+- **PostGIS Support**: Automatically adds `geom geometry(Polygon, 4326)` and GIST spatial indices if the `postgis` extension is available on the PostgreSQL host.
+
+#### 1. Run Schema Migration
+```bash
+psql "$DATABASE_URL" -f backend/db/schema.sql
+```
+
+#### 2. Import Intelligence JSON Idempotently
+The importer script safely loads or updates records (`ON CONFLICT DO UPDATE`), storing values exactly as provided without altering scores:
+```bash
+# Import default intelligence JSON (data/mock/investigation_list.json)
+DATABASE_URL="postgresql://user:password@localhost:5432/urbanpulse" node backend/scripts/import.js
+
+# Or import a custom intelligence JSON file:
+DATABASE_URL="postgresql://user:password@localhost:5432/urbanpulse" node backend/scripts/import.js /path/to/intelligence.json
+```
+
+#### 3. Run Backend with PostgreSQL
+```bash
+DATA_PROVIDER=postgres DATABASE_URL="postgresql://user:password@localhost:5432/urbanpulse" npm --prefix backend run dev
+```
+
+---
+
+## 5. How to Run Locally
 
 ### Prerequisites
 - Node.js (v18+)
 - npm (v9+)
+- *(Optional)* PostgreSQL 14+ (only if running with `DATA_PROVIDER=postgres`)
 
 ### Single-Command Start (Root)
 From the repository root (`/Users/pardhu/urban-pulse`):
@@ -109,7 +166,13 @@ npm run dev
 ```bash
 cd backend
 npm run dev
-# Running at http://localhost:5001
+# Running at http://localhost:5001 (defaults to in-memory mock provider)
+
+# Or test filesystem provider:
+DATA_PROVIDER=file npm run dev
+
+# Or run with PostgreSQL:
+DATA_PROVIDER=postgres DATABASE_URL="postgresql://user:pass@localhost:5432/urbanpulse" npm run dev
 ```
 
 **Frontend Application (Vite + React)**:
@@ -121,45 +184,44 @@ npm run dev
 
 ---
 
-## 5. API Reference
+## 6. API Reference
 
-All endpoints return JSON and are served by `backend/src/providers/mockProvider.js`:
+All endpoints return JSON and include the provenance `meta` block (`source`, `is_mock`, `warning`):
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| `GET` | `/api/health` | System health check, provider mode (`development-mock`), and uptime |
+| `GET` | `/api/health` | System health check, active provider mode (`development-mock`, `file`, `postgres`) |
 | `GET` | `/api/overview` | Monitored region summary, cell counts, baseline periods |
+| `GET` | `/api/statistics` | Aggregated counts: `analyzed_cells`, `anomalous` (Medium+High), `high`, `medium`, `low` |
+| `GET` | `/api/areas` | All grid cells with `grid_id`, coordinates, GeoJSON `geometry`, and priority levels |
+| `GET` | `/api/hotspots` | Ranked investigation queue with scores, categories, and recommendations |
+| `GET` | `/api/hotspots/:gridId` | Hotspot detail, score breakdown, reasons, and 2020->2026 metric differences |
+| `GET` | `/api/change/:gridId` | Time-series data points `[{year, value}]` for built-up, vegetation, water, bare land |
+| `GET` | `/api/evidence/:gridId` | Full evidence metrics, anomalies, persistence, and placeholder image URLs |
 | `GET` | `/api/pipeline` | The 7 pipeline stages (`Change` → `Investigation list`) |
-| `GET` | `/api/grid-cells` | Monitored spatial grid cells with bounds and anomaly flags |
-| `GET` | `/api/hotspots` | Ranked investigation list with scores, categories, and metrics |
-| `GET` | `/api/hotspots/:id` | Single hotspot detail by ID |
-| `GET` | `/api/hotspots/:id/evidence` | Full multi-epoch evidence dossier for a specific hotspot |
+| `GET` | `/images/:gridId/:year.svg` | Static placeholder SVG imagery with "MOCK IMAGERY" watermark |
 
 ---
 
-## 6. Verification and Smoke Testing
+## 7. Verification and Smoke Testing
 
-1. **Verify Backend Health**:
-   ```bash
-   curl -s http://localhost:5001/api/health
-   ```
-   *Expected response:* `{"status":"ok","service":"urban-pulse-backend","isMock":true}`
+Run the automated test suite verifying data integrity, metric calculations, and multi-provider handling:
 
-2. **Verify Overview Data**:
-   ```bash
-   curl -s http://localhost:5001/api/overview
-   ```
-   *Expected response:* JSON containing `regionName: "Bengaluru East Growth Corridor..."`, `isMock: true`.
+```bash
+npm test
+```
 
-3. **Verify Hotspots Queue**:
-   ```bash
-   curl -s http://localhost:5001/api/hotspots
-   ```
-   *Expected response:* Ranked array of 12 hotspots with `priorityScore` and recommendation.
+*Expected output:*
+```text
+✓ All 150 records verified: score_breakdown sums strictly equal priority_score
+✓ All 150 records verified: valid GeoJSON square polygon (~500m)
+✓ Top 8 hotspots have valid placeholder SVG images with 'MOCK IMAGERY' watermark
+✓ getStatistics, getAreas, getHotspotDetail, getChange, getEvidence contracts passed
+✓ schema.sql verified (tables: urban_observations, evidence, hotspots; conditional PostGIS support)
+✓ import.js verified (idempotent loading with ON CONFLICT DO UPDATE)
+✓ fileProvider verified (reads directly from filesystem with identical metrics)
+✓ In-memory mock provider remains active by default
+✓ postgresProvider fails with clear message when DB is unreachable
+ALL EXTENDED REST SERVICES & PERSISTENCE CHECKS PASSED (0 errors).
+```
 
-4. **Verify Frontend UI in Browser**:
-   Open `http://localhost:3000` to confirm:
-   - "Development data" banner is active at the top.
-   - Municipal masthead shows online status and active region.
-   - Pipeline breadcrumb visually represents `Change → Historical baseline → Local baseline → Anomaly → Evidence → Priority → Investigation list`.
-   - Ranked investigation table is interactive and clicking "Inspect evidence" renders the full dossier.
