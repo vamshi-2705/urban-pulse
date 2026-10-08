@@ -17,6 +17,7 @@ import pytest
         "geospatial.anomaly",
         "geospatial.anomaly_detection",
         "geospatial.priority",
+        "geospatial.integration",
         "geospatial.evidence",
         "geospatial.validation",
         "config",
