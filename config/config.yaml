@@ -93,6 +93,23 @@ anomaly:
   evidence:
     anomaly_threshold: 0.50      # Threshold [0, 1] to flag component anomaly in evidence raster
 
+# Priority Scoring & Investigation Ranking Configuration (Step 7)
+priority:
+  enabled: true
+  weights:
+    anomaly: 0.35          # Overall anomaly severity component
+    evidence: 0.25         # Cross-indicator evidence strength (coherence bonus)
+    persistence: 0.20      # Multi-period directional persistence
+    magnitude: 0.10        # Normalized change magnitude
+    spatial_context: 0.10  # Spatial neighborhood anomaly component
+  thresholds:
+    high: 0.70             # Priority score >= 0.70 -> HIGH priority
+    medium: 0.45           # 0.45 <= Priority score < 0.70 -> MEDIUM priority
+  top_k:
+    - 10
+    - 25
+    - 50
+
 # Logging Settings
 logging:
   level: "INFO"

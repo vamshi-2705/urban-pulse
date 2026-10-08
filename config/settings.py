@@ -135,6 +135,29 @@ class AnomalyConfig:
 
 
 @dataclass(frozen=True)
+class PriorityWeightsConfig:
+    anomaly: float = 0.35
+    evidence: float = 0.25
+    persistence: float = 0.20
+    magnitude: float = 0.10
+    spatial_context: float = 0.10
+
+
+@dataclass(frozen=True)
+class PriorityThresholdsConfig:
+    high: float = 0.70
+    medium: float = 0.45
+
+
+@dataclass(frozen=True)
+class PriorityConfig:
+    enabled: bool = True
+    weights: PriorityWeightsConfig = field(default_factory=PriorityWeightsConfig)
+    thresholds: PriorityThresholdsConfig = field(default_factory=PriorityThresholdsConfig)
+    top_k: List[int] = field(default_factory=lambda: [10, 25, 50])
+
+
+@dataclass(frozen=True)
 class AppConfig:
     study_area: StudyAreaConfig
     crs: CRSConfig
@@ -146,6 +169,7 @@ class AppConfig:
     indicators: IndicatorThresholdsConfig = field(default_factory=IndicatorThresholdsConfig)
     change_detection: ChangeDetectionConfig = field(default_factory=ChangeDetectionConfig)
     anomaly: AnomalyConfig = field(default_factory=AnomalyConfig)
+    priority: PriorityConfig = field(default_factory=PriorityConfig)
     raw_dict: Dict[str, Any] = field(default_factory=dict)
 
 
@@ -237,6 +261,25 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         ),
     )
 
+    p_data = data.get("priority", {})
+    p_weights = p_data.get("weights", {})
+    p_thresholds = p_data.get("thresholds", {})
+    priority_cfg = PriorityConfig(
+        enabled=bool(p_data.get("enabled", True)),
+        weights=PriorityWeightsConfig(
+            anomaly=float(p_weights.get("anomaly", 0.35)),
+            evidence=float(p_weights.get("evidence", 0.25)),
+            persistence=float(p_weights.get("persistence", 0.20)),
+            magnitude=float(p_weights.get("magnitude", 0.10)),
+            spatial_context=float(p_weights.get("spatial_context", 0.10)),
+        ),
+        thresholds=PriorityThresholdsConfig(
+            high=float(p_thresholds.get("high", 0.70)),
+            medium=float(p_thresholds.get("medium", 0.45)),
+        ),
+        top_k=list(p_data.get("top_k", [10, 25, 50])),
+    )
+
     app_config = AppConfig(
         study_area=StudyAreaConfig(**data["study_area"]),
         crs=CRSConfig(**data["crs"]),
@@ -248,6 +291,7 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         indicators=indicators_cfg,
         change_detection=change_detection_cfg,
         anomaly=anomaly_cfg,
+        priority=priority_cfg,
         raw_dict=data,
     )
 
