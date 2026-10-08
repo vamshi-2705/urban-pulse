@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { fetchOverview, fetchPipeline, fetchHotspots, fetchHealth } from './api/client';
+import { fetchOverview, fetchPipeline, fetchHotspots, fetchHealth, fetchGridCells } from './api/client';
 import DevelopmentDataBanner from './components/DevelopmentDataBanner';
 import Header from './components/Header';
 import PipelineBreadcrumb from './components/PipelineBreadcrumb';
 import CityOverviewBar from './components/CityOverviewBar';
+import MapView from './components/MapView';
 import Phase1Dashboard from './components/Phase1Dashboard';
 
 export default function App() {
   const [overview, setOverview] = useState(null);
   const [pipeline, setPipeline] = useState(null);
   const [hotspots, setHotspots] = useState([]);
+  const [cells, setCells] = useState([]);
+  const [selectedCellId, setSelectedCellId] = useState(null);
   const [healthInfo, setHealthInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,17 +23,25 @@ export default function App() {
         setLoading(true);
         setError(null);
 
-        const [healthRes, overviewRes, pipelineRes, hotspotsRes] = await Promise.all([
+        const [healthRes, overviewRes, pipelineRes, hotspotsRes, cellsRes] = await Promise.all([
           fetchHealth(),
           fetchOverview(),
           fetchPipeline(),
-          fetchHotspots()
+          fetchHotspots(),
+          fetchGridCells()
         ]);
 
         setHealthInfo(healthRes);
         setOverview(overviewRes);
         setPipeline(pipelineRes);
         setHotspots(hotspotsRes);
+        setCells(cellsRes);
+
+        if (hotspotsRes.length > 0) {
+          setSelectedCellId(hotspotsRes[0].id || hotspotsRes[0].grid_id);
+        } else if (cellsRes.length > 0) {
+          setSelectedCellId(cellsRes[0].grid_id || cellsRes[0].cellId);
+        }
       } catch (err) {
         console.error('Failed to load initial data:', err);
         setError(err.message);
@@ -90,10 +101,22 @@ export default function App() {
 
       <CityOverviewBar overview={overview} />
 
+      <main style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {/* Phase 2: Interactive Leaflet Map View */}
+        <MapView
+          cells={cells}
+          selectedCellId={selectedCellId}
+          onSelectCell={setSelectedCellId}
+          overview={overview}
+        />
+      </main>
+
       <Phase1Dashboard
         hotspots={hotspots}
         healthInfo={healthInfo}
         overview={overview}
+        selectedHotspotId={selectedCellId}
+        onSelectHotspot={setSelectedCellId}
       />
     </>
   );

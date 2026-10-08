@@ -520,3 +520,203 @@ p {
   background-color: #172554;
   border-color: #172554;
 }
+
+/* ==========================================================================
+   Map-First Layout & Leaflet Geospatial Components (Phase 2)
+   ========================================================================== */
+
+.map-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-header {
+  padding: 10px 16px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.map-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.map-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.map-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  background-color: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.filter-btn.active .badge-count {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.badge-count {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  background-color: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.map-wrapper {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  background-color: #e2e8f0;
+}
+
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  font-family: var(--font-sans) !important;
+  z-index: 10;
+}
+
+/* Map Legend */
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 11px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  pointer-events: auto;
+}
+
+.map-legend-title {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: var(--text-secondary);
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-color-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Popup */
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid var(--border-default) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  font-family: var(--font-sans) !important;
+}
+
+.popup-card {
+  padding: 12px 14px;
+  min-width: 240px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.popup-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.popup-body {
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.popup-metric {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.popup-reasons {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.popup-actions {
+  border-top: 1px solid var(--border-light);
+  padding-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}

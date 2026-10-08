@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import { fetchHotspotEvidence } from '../api/client';
 
-export default function Phase1Dashboard({ hotspots, healthInfo, overview }) {
-  const [selectedHotspotId, setSelectedHotspotId] = useState(hotspots[0]?.id || null);
+export default function Phase1Dashboard({
+  hotspots,
+  healthInfo,
+  overview,
+  selectedHotspotId: controlledId,
+  onSelectHotspot: setControlledId
+}) {
+  const [internalId, setInternalId] = useState(hotspots[0]?.id || hotspots[0]?.grid_id || null);
+  const selectedHotspotId = controlledId || internalId;
+
   const [evidenceData, setEvidenceData] = useState(null);
   const [evidenceLoading, setEvidenceLoading] = useState(false);
   const [evidenceError, setEvidenceError] = useState(null);
 
   const handleSelectHotspot = async (hotspotId) => {
-    setSelectedHotspotId(hotspotId);
+    if (setControlledId) {
+      setControlledId(hotspotId);
+    } else {
+      setInternalId(hotspotId);
+    }
     setEvidenceLoading(true);
     setEvidenceError(null);
     try {
@@ -21,9 +33,9 @@ export default function Phase1Dashboard({ hotspots, healthInfo, overview }) {
     }
   };
 
-  // Automatically load evidence for first item if not loaded
+  // Automatically load evidence when selectedHotspotId changes
   React.useEffect(() => {
-    if (selectedHotspotId && !evidenceData) {
+    if (selectedHotspotId) {
       handleSelectHotspot(selectedHotspotId);
     }
   }, [selectedHotspotId]);
@@ -47,7 +59,7 @@ export default function Phase1Dashboard({ hotspots, healthInfo, overview }) {
     }
   };
 
-  const selectedHotspot = hotspots.find(h => h.id === selectedHotspotId);
+  const selectedHotspot = hotspots.find(h => h.id === selectedHotspotId || h.grid_id === selectedHotspotId || h.cellId === selectedHotspotId);
 
   return (
     <div className="main-layout">
