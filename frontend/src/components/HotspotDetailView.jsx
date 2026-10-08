@@ -316,8 +316,8 @@ export default function HotspotDetailView() {
           <div className="action-buttons-cluster">
             <button
               type="button"
-              className={`btn ${activeModule === 'change' ? 'btn-primary' : 'btn-outline-primary'}`}
-              onClick={() => setActiveModule(activeModule === 'change' ? null : 'change')}
+              className="btn btn-outline-primary"
+              onClick={() => navigate(`/hotspot/${gridId}/change`)}
             >
               Change explorer
             </button>

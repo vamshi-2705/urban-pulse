@@ -6,6 +6,7 @@ import Header from './components/Header';
 import CityOverviewPage from './components/CityOverviewPage';
 import HotspotRankingPage from './components/HotspotRankingPage';
 import HotspotDetailView from './components/HotspotDetailView';
+import ChangeExplorerView from './components/ChangeExplorerView';
 
 export default function App() {
   const [overview, setOverview] = useState(null);
@@ -124,6 +125,16 @@ export default function App() {
           <Route
             path="/hotspots/:gridId"
             element={<HotspotDetailView />}
+          />
+
+          {/* Change Explorer */}
+          <Route
+            path="/hotspot/:gridId/change"
+            element={<ChangeExplorerView />}
+          />
+          <Route
+            path="/hotspots/:gridId/change"
+            element={<ChangeExplorerView />}
           />
 
           {/* Fallback to Overview */}
