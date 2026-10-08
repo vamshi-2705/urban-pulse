@@ -139,6 +139,7 @@ export default function ChangeExplorerView() {
   const [evidenceData, setEvidenceData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryTrigger, setRetryTrigger] = useState(0);
 
   // Before/after imagery selected years
   const [beforeYear, setBeforeYear] = useState(2020);
@@ -170,7 +171,7 @@ export default function ChangeExplorerView() {
     }
 
     loadData();
-  }, [gridId]);
+  }, [gridId, retryTrigger]);
 
   // Convert GeoJSON polygon to Leaflet [lat, lng] format
   const polygonPositions = useMemo(() => {
@@ -215,12 +216,17 @@ export default function ChangeExplorerView() {
   if (error || !changeData) {
     return (
       <div className="why-flagged-container" style={{ padding: '40px 20px', maxWidth: '640px', margin: '0 auto' }}>
-        <div className="error-card">
+        <div className="error-card" style={{ padding: '32px 24px', textAlign: 'center' }}>
           <h2>Change Series Not Found</h2>
           <p>{error || `No change trajectory found for grid ID '${gridId}'`}</p>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/ranking')}>
-            &larr; Back to Hotspot ranking
-          </button>
+          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '16px' }}>
+            <button type="button" className="btn btn-primary" onClick={() => setRetryTrigger((prev) => prev + 1)}>
+              Retry
+            </button>
+            <button type="button" className="btn btn-outline-primary" onClick={() => navigate('/ranking')}>
+              &larr; Back to Hotspot ranking
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -404,7 +410,7 @@ export default function ChangeExplorerView() {
                 </div>
 
                 <p className="panel-caption">
-                  Transition of open plots and vacant land parcels awaiting construction.
+                  Transition of open plots and vacant land parcels. Unusual spatial change detected. Field verification recommended.
                 </p>
               </div>
             )}

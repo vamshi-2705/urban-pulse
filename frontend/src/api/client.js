@@ -3,38 +3,84 @@
  *
  * Connects directly to backend endpoints.
  * Never calculates or overrides priority or anomaly data.
+ * Implements intelligent in-memory caching and startup preloading for slow network resilience.
  */
 
 const API_BASE = '/api';
 
+// In-memory request cache: URL -> Promise<data>
+const apiCache = new Map();
+
+/**
+ * Cached fetch wrapper with error eviction and request deduplication
+ */
+export async function cachedFetch(url) {
+  if (apiCache.has(url)) {
+    return apiCache.get(url);
+  }
+
+  const fetchPromise = fetch(url)
+    .then(async (res) => {
+      if (!res.ok) {
+        apiCache.delete(url);
+        throw new Error(`Request failed (${res.status}): ${res.statusText}`);
+      }
+      return res.json();
+    })
+    .catch((err) => {
+      apiCache.delete(url);
+      throw err;
+    });
+
+  apiCache.set(url, fetchPromise);
+  return fetchPromise;
+}
+
+export function clearCache(url) {
+  if (url) {
+    apiCache.delete(url);
+  } else {
+    apiCache.clear();
+  }
+}
+
+/**
+ * Preloads and caches intelligence data across the entire demo path at startup
+ */
+export async function preloadAllData() {
+  const coreEndpoints = [
+    `${API_BASE}/health`,
+    `${API_BASE}/overview`,
+    `${API_BASE}/pipeline`,
+    `${API_BASE}/statistics`,
+    `${API_BASE}/areas`,
+    `${API_BASE}/hotspots`,
+    `${API_BASE}/hotspots/HYD_0421`,
+    `${API_BASE}/change/HYD_0421`,
+    `${API_BASE}/evidence/HYD_0421`
+  ];
+
+  await Promise.allSettled(coreEndpoints.map((url) => cachedFetch(url)));
+}
+
 export async function fetchHealth() {
-  const res = await fetch(`${API_BASE}/health`);
-  if (!res.ok) throw new Error(`Health check failed: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/health`);
 }
 
 export async function fetchOverview() {
-  const res = await fetch(`${API_BASE}/overview`);
-  if (!res.ok) throw new Error(`Failed to fetch overview: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/overview`);
 }
 
 export async function fetchPipeline() {
-  const res = await fetch(`${API_BASE}/pipeline`);
-  if (!res.ok) throw new Error(`Failed to fetch pipeline: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/pipeline`);
 }
 
 export async function fetchStatistics() {
-  const res = await fetch(`${API_BASE}/statistics`);
-  if (!res.ok) throw new Error(`Failed to fetch statistics: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/statistics`);
 }
 
 export async function fetchAreas() {
-  const res = await fetch(`${API_BASE}/areas`);
-  if (!res.ok) throw new Error(`Failed to fetch areas: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/areas`);
 }
 
 export async function fetchHotspots(filters = {}) {
@@ -44,33 +90,23 @@ export async function fetchHotspots(filters = {}) {
   if (filters.zone) params.append('zone', filters.zone);
 
   const url = `${API_BASE}/hotspots${params.toString() ? `?${params.toString()}` : ''}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch hotspots: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(url);
 }
 
 export async function fetchHotspotDetail(gridId) {
-  const res = await fetch(`${API_BASE}/hotspots/${gridId}`);
-  if (!res.ok) throw new Error(`Failed to fetch hotspot ${gridId}: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/hotspots/${gridId}`);
 }
 
 export async function fetchChange(gridId) {
-  const res = await fetch(`${API_BASE}/change/${gridId}`);
-  if (!res.ok) throw new Error(`Failed to fetch change series for ${gridId}: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/change/${gridId}`);
 }
 
 export async function fetchEvidence(gridId) {
-  const res = await fetch(`${API_BASE}/evidence/${gridId}`);
-  if (!res.ok) throw new Error(`Failed to fetch evidence for ${gridId}: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/evidence/${gridId}`);
 }
 
 export async function fetchHotspotEvidence(hotspotId) {
-  const res = await fetch(`${API_BASE}/hotspots/${hotspotId}/evidence`);
-  if (!res.ok) throw new Error(`Failed to fetch evidence for ${hotspotId}: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(`${API_BASE}/hotspots/${hotspotId}/evidence`);
 }
 
 export async function fetchGridCells(filters = {}) {
@@ -79,7 +115,5 @@ export async function fetchGridCells(filters = {}) {
   if (filters.anomalyStatus) params.append('anomalyStatus', filters.anomalyStatus);
 
   const url = `${API_BASE}/grid-cells${params.toString() ? `?${params.toString()}` : ''}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch grid cells: ${res.statusText}`);
-  return res.json();
+  return cachedFetch(url);
 }

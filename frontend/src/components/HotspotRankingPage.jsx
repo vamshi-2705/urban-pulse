@@ -10,6 +10,7 @@ export default function HotspotRankingPage() {
   const [filterLevel, setFilterLevel] = useState('ALL');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryTrigger, setRetryTrigger] = useState(0);
 
   useEffect(() => {
     async function loadData() {
@@ -48,7 +49,7 @@ export default function HotspotRankingPage() {
     }
 
     loadData();
-  }, []);
+  }, [retryTrigger]);
 
   if (loading) {
     return (
@@ -62,9 +63,17 @@ export default function HotspotRankingPage() {
   if (error) {
     return (
       <div className="ranking-page-container" style={{ padding: '24px' }}>
-        <div className="error-card">
-          <p style={{ color: 'var(--status-high)', fontWeight: 600 }}>Failed to load hotspot ranking</p>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{error}</p>
+        <div className="error-card" style={{ padding: '32px 24px', textAlign: 'center' }}>
+          <p style={{ color: 'var(--status-high)', fontWeight: 700, fontSize: '15px' }}>Failed to load hotspot ranking</p>
+          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>{error}</p>
+          <button
+            type="button"
+            className="btn btn-primary"
+            style={{ marginTop: '16px' }}
+            onClick={() => setRetryTrigger((prev) => prev + 1)}
+          >
+            Retry loading rankings
+          </button>
         </div>
       </div>
     );

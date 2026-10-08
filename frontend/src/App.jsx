@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { fetchOverview, fetchHotspots, fetchHealth } from './api/client';
+import { fetchOverview, fetchHotspots, fetchHealth, preloadAllData } from './api/client';
 import DevelopmentDataBanner from './components/DevelopmentDataBanner';
 import Header from './components/Header';
 import CityOverviewPage from './components/CityOverviewPage';
@@ -16,12 +16,16 @@ export default function App() {
   const [healthInfo, setHealthInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryTrigger, setRetryTrigger] = useState(0);
 
   useEffect(() => {
     async function loadInitialData() {
       try {
         setLoading(true);
         setError(null);
+
+        // Preload demo flow data in background
+        preloadAllData().catch((err) => console.warn('[UrbanPulse Preload]', err));
 
         const [healthRes, overviewRes, hotspotsRes] = await Promise.all([
           fetchHealth().catch(() => null),
@@ -45,7 +49,7 @@ export default function App() {
     }
 
     loadInitialData();
-  }, []);
+  }, [retryTrigger]);
 
   if (loading) {
     return (
@@ -70,13 +74,14 @@ export default function App() {
           <p style={{ fontSize: '12px', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
             Error: {error}
           </p>
-          <div style={{ marginTop: '16px' }}>
-            <p style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-              Please verify the backend server is running:
-            </p>
-            <pre style={{ backgroundColor: '#ffffff', padding: '8px', borderRadius: '4px', marginTop: '6px', fontSize: '11px', border: '1px solid var(--border-light)' }}>
-              cd backend && npm run dev
-            </pre>
+          <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => setRetryTrigger((prev) => prev + 1)}
+            >
+              Retry connection
+            </button>
           </div>
         </div>
       </div>

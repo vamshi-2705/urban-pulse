@@ -13,6 +13,8 @@ export default function CityOverviewPage({ overview }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [retryTrigger, setRetryTrigger] = useState(0);
+
   useEffect(() => {
     async function loadOverviewData() {
       try {
@@ -45,7 +47,11 @@ export default function CityOverviewPage({ overview }) {
     }
 
     loadOverviewData();
-  }, []);
+  }, [retryTrigger]);
+
+  const handleRetry = () => {
+    setRetryTrigger((prev) => prev + 1);
+  };
 
   return (
     <div className="city-overview-page" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '0 20px 24px' }}>
@@ -69,6 +75,7 @@ export default function CityOverviewPage({ overview }) {
         onSelectCell={setSelectedGridId}
         loading={loading}
         error={error}
+        onRetry={handleRetry}
       />
     </div>
   );

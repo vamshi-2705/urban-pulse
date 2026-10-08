@@ -11,6 +11,7 @@ export default function EvidenceView() {
   const [detail, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryTrigger, setRetryTrigger] = useState(0);
   const [imageErrors, setImageErrors] = useState({});
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function EvidenceView() {
     }
 
     loadData();
-  }, [gridId]);
+  }, [gridId, retryTrigger]);
 
   if (loading) {
     return (
@@ -50,12 +51,17 @@ export default function EvidenceView() {
   if (error || !evidence) {
     return (
       <div className="why-flagged-container" style={{ padding: '40px 20px', maxWidth: '640px', margin: '0 auto' }}>
-        <div className="error-card">
+        <div className="error-card" style={{ padding: '32px 24px', textAlign: 'center' }}>
           <h2>Evidence Dossier Not Found</h2>
           <p>{error || `No evidence records found for grid ID '${gridId}'`}</p>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/ranking')}>
-            &larr; Back to Hotspot ranking
-          </button>
+          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '16px' }}>
+            <button type="button" className="btn btn-primary" onClick={() => setRetryTrigger((prev) => prev + 1)}>
+              Retry
+            </button>
+            <button type="button" className="btn btn-outline-primary" onClick={() => navigate('/ranking')}>
+              &larr; Back to Hotspot ranking
+            </button>
+          </div>
         </div>
       </div>
     );

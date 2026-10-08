@@ -13,6 +13,7 @@ export default function HotspotDetailView() {
   const [activeModule, setActiveModule] = useState(null); // 'change' | 'evidence' | null
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryTrigger, setRetryTrigger] = useState(0);
 
   useEffect(() => {
     async function loadData() {
@@ -39,7 +40,7 @@ export default function HotspotDetailView() {
     }
 
     loadData();
-  }, [gridId]);
+  }, [gridId, retryTrigger]);
 
   // 3. Process score breakdown:
   // "from score_breakdown as horizontal bars labelled '+32', sorted by size:
@@ -97,12 +98,17 @@ export default function HotspotDetailView() {
   if (error || !detail) {
     return (
       <div className="why-flagged-container" style={{ padding: '40px 20px', maxWidth: '640px', margin: '0 auto' }}>
-        <div className="error-card">
+        <div className="error-card" style={{ padding: '32px 24px', textAlign: 'center' }}>
           <h2>Location Not Found</h2>
           <p>{error || `No record found for grid ID '${gridId}'`}</p>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/ranking')}>
-            &larr; Back to Hotspot ranking
-          </button>
+          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '16px' }}>
+            <button type="button" className="btn btn-primary" onClick={() => setRetryTrigger((prev) => prev + 1)}>
+              Retry
+            </button>
+            <button type="button" className="btn btn-outline-primary" onClick={() => navigate('/ranking')}>
+              &larr; Back to Hotspot ranking
+            </button>
+          </div>
         </div>
       </div>
     );

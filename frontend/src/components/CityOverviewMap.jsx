@@ -44,7 +44,8 @@ export default function CityOverviewMap({
   selectedGridId,
   onSelectCell,
   loading = false,
-  error = null
+  error = null,
+  onRetry
 }) {
   const navigate = useNavigate();
   const [filterMode, setFilterMode] = useState('all'); // 'all' | 'anomalous'
@@ -187,9 +188,32 @@ export default function CityOverviewMap({
   if (error) {
     return (
       <div className="map-card error-state">
-        <div style={{ padding: '24px', textAlign: 'center' }}>
-          <p style={{ color: 'var(--status-high)', fontWeight: 600 }}>Error loading map areas</p>
+        <div style={{ padding: '32px 24px', textAlign: 'center' }}>
+          <p style={{ color: 'var(--status-high)', fontWeight: 700, fontSize: '15px' }}>Error loading map areas</p>
           <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>{error}</p>
+          {onRetry && (
+            <button type="button" className="btn btn-primary" style={{ marginTop: '16px' }} onClick={onRetry}>
+              Retry loading map
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (!loading && !error && areas.length === 0) {
+    return (
+      <div className="map-card empty-state">
+        <div style={{ padding: '40px 24px', textAlign: 'center' }}>
+          <p style={{ fontWeight: 700, fontSize: '15px', color: 'var(--text-primary)' }}>No Monitored Cells Available</p>
+          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '6px' }}>
+            No geospatial intelligence records were returned for this region. Verify data provider connection.
+          </p>
+          {onRetry && (
+            <button type="button" className="btn btn-outline-primary" style={{ marginTop: '16px' }} onClick={onRetry}>
+              Refresh data
+            </button>
+          )}
         </div>
       </div>
     );
