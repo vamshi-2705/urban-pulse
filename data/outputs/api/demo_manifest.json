@@ -1,0 +1,173 @@
+{
+  "project": "UrbanPulse",
+  "version": "1.0.0",
+  "description": "Authoritative demo manifest and API catalog for Member 2 frontend/backend integration.",
+  "recommended_demo_hotspot": "HYD_1220",
+  "backup_demo_hotspots": [
+    "HYD_1223",
+    "HYD_0863",
+    "HYD_1200"
+  ],
+  "supported_periods": [
+    "2020_2026",
+    "2020_2023",
+    "2023_2026"
+  ],
+  "source_dates": {
+    "2020": "2020-03-29T05:06:51.024000+00:00",
+    "2023": "2023-01-28T05:10:49.024000+00:00",
+    "2026": "2026-03-10T05:12:41.024000+00:00"
+  },
+  "city_summary_paths": {
+    "2020_2026": "data/outputs/api/city_summary_2020_2026.json",
+    "2020_2023": "data/outputs/api/city_summary_2020_2023.json",
+    "2023_2026": "data/outputs/api/city_summary_2023_2026.json"
+  },
+  "hotspot_paths": {
+    "2020_2026": {
+      "all": "data/outputs/api/hotspots_2020_2026.json",
+      "top_10": "data/outputs/api/top_10_2020_2026.json",
+      "top_25": "data/outputs/api/top_25_2020_2026.json",
+      "top_50": "data/outputs/api/top_50_2020_2026.json"
+    },
+    "2020_2023": {
+      "all": "data/outputs/api/hotspots_2020_2023.json",
+      "top_10": "data/outputs/api/top_10_2020_2023.json",
+      "top_25": "data/outputs/api/top_25_2020_2023.json",
+      "top_50": "data/outputs/api/top_50_2020_2023.json"
+    },
+    "2023_2026": {
+      "all": "data/outputs/api/hotspots_2023_2026.json",
+      "top_10": "data/outputs/api/top_10_2023_2026.json",
+      "top_25": "data/outputs/api/top_25_2023_2026.json",
+      "top_50": "data/outputs/api/top_50_2023_2026.json"
+    }
+  },
+  "geojson_paths": {
+    "2020_2026": "data/outputs/api/hotspots_2020_2026.geojson",
+    "2020_2023": "data/outputs/api/hotspots_2020_2023.geojson",
+    "2023_2026": "data/outputs/api/hotspots_2023_2026.geojson"
+  },
+  "evidence_manifest_path": "data/outputs/evidence/evidence_manifest.json",
+  "period_details": {
+    "2020_2026": {
+      "before_date": "2020-03-29T05:06:51.024000+00:00",
+      "after_date": "2026-03-10T05:12:41.024000+00:00",
+      "source": "Sentinel-2 L2A",
+      "description": "Multi-year structural land-cover transition (6-year span)",
+      "total_grid_cells": 1462,
+      "high_priority_cells": 27,
+      "evidence_asset_keys": [
+        "before_rgb",
+        "after_rgb",
+        "ndvi_before",
+        "ndvi_after",
+        "ndvi_change",
+        "ndwi_change",
+        "ndbi_change",
+        "combined_change",
+        "metadata"
+      ]
+    },
+    "2020_2023": {
+      "before_date": "2020-03-29T05:06:51.024000+00:00",
+      "after_date": "2023-01-28T05:10:49.024000+00:00",
+      "source": "Sentinel-2 L2A",
+      "description": "First observation interval change (3-year span)",
+      "total_grid_cells": 1462,
+      "high_priority_cells": 26,
+      "evidence_asset_keys": [
+        "before_rgb",
+        "after_rgb",
+        "ndvi_before",
+        "ndvi_after",
+        "ndvi_change",
+        "ndwi_change",
+        "ndbi_change",
+        "combined_change",
+        "metadata"
+      ]
+    },
+    "2023_2026": {
+      "before_date": "2023-01-28T05:10:49.024000+00:00",
+      "after_date": "2026-03-10T05:12:41.024000+00:00",
+      "source": "Sentinel-2 L2A",
+      "description": "Second observation interval change (3-year span)",
+      "total_grid_cells": 1462,
+      "high_priority_cells": 23,
+      "evidence_asset_keys": [
+        "before_rgb",
+        "after_rgb",
+        "ndvi_before",
+        "ndvi_after",
+        "ndvi_change",
+        "ndwi_change",
+        "ndbi_change",
+        "combined_change",
+        "metadata"
+      ]
+    }
+  },
+  "demo_hotspots": {
+    "HYD_1220": {
+      "grid_id": "HYD_1220",
+      "status": "PRIMARY_RECOMMENDED",
+      "rank": 1,
+      "primary_period": "2020_2026",
+      "supported_periods": ["2020_2026", "2020_2023"],
+      "latitude": 17.372285,
+      "longitude": 78.42256,
+      "priority_score": 0.82,
+      "priority_level": "HIGH",
+      "recommendation": "FIELD_VERIFICATION_RECOMMENDED",
+      "headline": "Strong and persistent land-cover change",
+      "narrative": "Canonical urban expansion site demonstrating acute vegetation loss (-0.5543 NDVI delta) accompanied by built-up increase (+0.2766 NDBI delta). Fully backed by real Sentinel-2 true-color before/after crops and cross-indicator change evidence maps.",
+      "evidence_dir": "data/outputs/evidence/2020_2026/HYD_1220"
+    },
+    "HYD_1223": {
+      "grid_id": "HYD_1223",
+      "status": "BACKUP_1",
+      "rank": 2,
+      "primary_period": "2020_2026",
+      "supported_periods": ["2020_2026", "2023_2026"],
+      "latitude": 17.372466,
+      "longitude": 78.436666,
+      "priority_score": 0.8042,
+      "priority_level": "HIGH",
+      "recommendation": "FIELD_VERIFICATION_RECOMMENDED",
+      "headline": "Strong and persistent land-cover change",
+      "narrative": "Adjacent corridor cell exhibiting coherent conversion from vegetation to impervious surface with multi-year persistence.",
+      "evidence_dir": "data/outputs/evidence/2020_2026/HYD_1223"
+    },
+    "HYD_0863": {
+      "grid_id": "HYD_0863",
+      "status": "BACKUP_2",
+      "rank": 3,
+      "primary_period": "2020_2026",
+      "supported_periods": ["2020_2026", "2020_2023"],
+      "latitude": 17.407605,
+      "longitude": 78.360919,
+      "priority_score": 0.8036,
+      "priority_level": "HIGH",
+      "recommendation": "FIELD_VERIFICATION_RECOMMENDED",
+      "headline": "Strong and persistent land-cover change",
+      "narrative": "North-western peri-urban zone hotspot exhibiting pronounced spectral deviation and persistent vegetation clearing.",
+      "evidence_dir": "data/outputs/evidence/2020_2026/HYD_0863"
+    },
+    "HYD_1200": {
+      "grid_id": "HYD_1200",
+      "status": "BACKUP_3",
+      "rank": 4,
+      "primary_period": "2020_2026",
+      "supported_periods": ["2020_2026", "2020_2023"],
+      "latitude": 17.378174,
+      "longitude": 78.53065,
+      "priority_score": 0.801,
+      "priority_level": "HIGH",
+      "recommendation": "FIELD_VERIFICATION_RECOMMENDED",
+      "headline": "Strong and persistent land-cover change",
+      "narrative": "Eastern development corridor hotspot demonstrating significant land-cover displacement and surface moisture alteration.",
+      "evidence_dir": "data/outputs/evidence/2020_2026/HYD_1200"
+    }
+  }
+}
