@@ -323,8 +323,8 @@ export default function HotspotDetailView() {
             </button>
             <button
               type="button"
-              className={`btn ${activeModule === 'evidence' ? 'btn-primary' : 'btn-outline-primary'}`}
-              onClick={() => setActiveModule(activeModule === 'evidence' ? null : 'evidence')}
+              className="btn btn-outline-primary"
+              onClick={() => navigate(`/hotspot/${gridId}/evidence`)}
             >
               Evidence view
             </button>
