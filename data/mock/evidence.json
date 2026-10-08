@@ -1,440 +1,1711 @@
 {
-  "HS-BLR-01": {
-    "hotspotId": "HS-BLR-01",
-    "cellId": "CELL-1298",
-    "wardName": "Ward 149 - Varthur Wetland Fringe",
-    "zone": "Mahadevapura",
-    "coordinates": [12.9421, 77.7315],
+  "HYD_0421": {
+    "hotspotId": "HYD_0421",
+    "cellId": "HYD_0421",
+    "grid_id": "HYD_0421",
+    "wardName": "Zone 21 - Hyderabad",
+    "coordinates": [
+      17.385,
+      78.486
+    ],
     "category": "built_up_expansion",
     "categoryLabel": "Built-up expansion",
-    "summary": "Rapid built-up expansion (+16.0%) in peri-urban wetland buffer corridor.",
+    "summary": "Rapid built-up expansion",
     "recommendation": "Unusual spatial change detected. Field verification recommended.",
     "pipeline": {
       "change": {
         "title": "Observed change",
-        "description": "Multi-temporal land-cover indicators across Sentinel-2 observation epochs.",
         "metrics": {
-          "periods": ["2020-03", "2023-03", "2026-03"],
-          "builtUpPercent": [31.2, 33.4, 49.4],
-          "vegetationPercent": [42.1, 40.5, 27.8],
-          "waterPercent": [12.4, 12.0, 8.1],
-          "bareLandPercent": [14.3, 14.1, 14.7]
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            31.2,
+            38.5,
+            47.2
+          ],
+          "vegetationPercent": [
+            42.1,
+            36.8,
+            31.4
+          ],
+          "waterPercent": [
+            8.2,
+            6.1,
+            4.8
+          ],
+          "bareLandPercent": [
+            18.5,
+            18.6,
+            16.6
+          ]
         },
-        "observedChangeMetric": "+16.0% built-up expansion",
-        "primaryDelta": 16.0
+        "observedChangeMetric": "+8.7% built-up"
       },
       "historicalBaseline": {
         "title": "Historical baseline comparison",
-        "description": "Evaluated against 2020–2023 baseline trend for this cell.",
-        "baselinePeriod": "2020–2023",
-        "evaluationPeriod": "2023–2026",
-        "expectedPeriodGrowth": 3.3,
-        "observedPeriodGrowth": 16.0,
-        "deviationPoints": 12.7,
-        "deviationSummary": "+12.7% above historical trajectory (4.8x expected pace)"
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 8.7,
+        "deviationSummary": "+2.7x expected baseline rate"
       },
       "localBaseline": {
         "title": "Local neighborhood baseline",
-        "description": "Evaluated against 24 adjacent cells within 500m radius buffer.",
-        "neighborhoodRadiusMeters": 500,
-        "neighborhoodCellsEvaluated": 24,
-        "neighborhoodMeanChange": 2.4,
-        "neighborhoodStdDev": 1.8,
-        "neighborhoodPercentile": 96,
-        "percentileLabel": "96th percentile (top 4% local divergence)"
+        "neighborhoodPercentile": 95,
+        "percentileLabel": "95th percentile against neighbors"
       },
       "anomaly": {
         "title": "Anomaly classification",
-        "description": "Combined temporal acceleration and localized spatial divergence.",
-        "temporalAnomalyScore": 88,
-        "spatialAnomalyScore": 86,
+        "temporalAnomalyScore": 91,
+        "spatialAnomalyScore": 87,
         "compositeAnomalyLevel": "high",
         "persistenceConfirmed": true,
-        "persistenceDetails": "Detected consistently across dry-season acquisitions (2024–2026)"
+        "persistenceDetails": "Persistence score: 0.82"
       },
       "evidence": {
         "title": "Observation evidence dossier",
-        "description": "Source satellite observations and quality metadata.",
-        "sensor": "Sentinel-2 MSI Level-2A (ESA Copernicus)",
-        "resolution": "10m spatial resolution aggregated to 100m grid cell",
-        "cloudCoverPercent": 0.8,
-        "observationEpochs": [
-          { "date": "2020-03-15", "sceneId": "S2B_MSIL2A_20200315_T43PGT", "cloud": "0.4%" },
-          { "date": "2023-03-15", "sceneId": "S2A_MSIL2A_20230315_T43PGT", "cloud": "1.1%" },
-          { "date": "2026-03-15", "sceneId": "S2B_MSIL2A_20260315_T43PGT", "cloud": "0.8%" }
-        ],
-        "qaFlag": "Passed cloud, cloud-shadow and water-adjacency masks"
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0421/2020.svg",
+          "2023": "/data/images/HYD_0421/2023.svg",
+          "2026": "/data/images/HYD_0421/2026.svg"
+        }
       },
       "priority": {
         "title": "Explainable priority score",
-        "description": "Additive factor contribution weights without arbitrary adjustment.",
         "totalScore": 87,
         "priorityLevel": "high",
+        "score_breakdown": {
+          "urban_expansion": 32,
+          "vegetation_loss": 21,
+          "water_body_change": 0,
+          "historical_anomaly": 18,
+          "spatial_anomaly": 10,
+          "persistence": 6
+        },
         "factorBreakdown": [
-          { "factor": "Urban expansion magnitude", "points": 32, "rationale": "High magnitude built-up expansion (+16.0%)" },
-          { "factor": "Green cover reduction", "points": 21, "rationale": "Concomitant vegetation decrease (-12.7%)" },
-          { "factor": "Historical anomaly", "points": 18, "rationale": "Change exceeds 3x multi-year historical trend" },
-          { "factor": "Local neighborhood anomaly", "points": 10, "rationale": "96th percentile against immediate neighborhood" },
-          { "factor": "Multi-temporal persistence", "points": 6, "rationale": "Confirmed across multiple cloud-free passes" }
+          {
+            "factor": "urban expansion",
+            "points": 32
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 21
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 18
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 10
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
         ]
-      },
-      "investigation": {
-        "title": "Field verification directive",
-        "recommendedAction": "Priority 1 field inspection dispatch",
-        "inspectionFocus": "Ground survey of wetland buffer perimeter and impervious surface boundary",
-        "assignedDepartment": "Municipal Town Planning & Lake Protection Task Force",
-        "legalStatement": "Unusual spatial change detected. Field verification recommended."
       }
     }
   },
-  "HS-BLR-02": {
-    "hotspotId": "HS-BLR-02",
-    "cellId": "CELL-1142",
-    "wardName": "Ward 85 - Doddanekkundi Lake Catchment",
-    "zone": "Mahadevapura",
-    "coordinates": [12.9734, 77.7021],
-    "category": "vegetation_loss",
-    "categoryLabel": "Vegetation loss",
-    "summary": "Sudden green canopy reduction (-14.3%) adjacent to reserved storm run-off corridor.",
+  "HYD_0512": {
+    "hotspotId": "HYD_0512",
+    "cellId": "HYD_0512",
+    "grid_id": "HYD_0512",
+    "wardName": "Zone 12 - Hyderabad",
+    "coordinates": [
+      17.442,
+      78.391
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Rapid built-up expansion",
     "recommendation": "Unusual spatial change detected. Field verification recommended.",
     "pipeline": {
       "change": {
         "title": "Observed change",
-        "description": "Multi-temporal land-cover indicators across Sentinel-2 observation epochs.",
         "metrics": {
-          "periods": ["2020-03", "2023-03", "2026-03"],
-          "builtUpPercent": [22.0, 23.5, 30.1],
-          "vegetationPercent": [58.2, 56.4, 42.1],
-          "waterPercent": [8.3, 8.0, 7.5],
-          "bareLandPercent": [11.5, 12.1, 20.3]
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            22.4,
+            29.8,
+            38.9
+          ],
+          "vegetationPercent": [
+            48,
+            41.5,
+            35.7
+          ],
+          "waterPercent": [
+            5,
+            4.6,
+            4.1
+          ],
+          "bareLandPercent": [
+            24.6,
+            24.1,
+            21.3
+          ]
         },
-        "observedChangeMetric": "-14.3% vegetation loss",
-        "primaryDelta": -14.3
+        "observedChangeMetric": "+9.1% built-up"
       },
       "historicalBaseline": {
         "title": "Historical baseline comparison",
-        "description": "Evaluated against 2020–2023 baseline trend for this cell.",
-        "baselinePeriod": "2020–2023",
-        "evaluationPeriod": "2023–2026",
-        "expectedPeriodGrowth": -1.8,
-        "observedPeriodGrowth": -14.3,
-        "deviationPoints": -12.5,
-        "deviationSummary": "-11.8% vs historical canopy trend"
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 9.1,
+        "deviationSummary": "+2.4x expected baseline rate"
       },
       "localBaseline": {
         "title": "Local neighborhood baseline",
-        "description": "Evaluated against 24 adjacent cells within 500m radius buffer.",
-        "neighborhoodRadiusMeters": 500,
-        "neighborhoodCellsEvaluated": 24,
-        "neighborhoodMeanChange": -1.5,
-        "neighborhoodStdDev": 2.1,
         "neighborhoodPercentile": 94,
-        "percentileLabel": "94th percentile (top 6% local divergence)"
+        "percentileLabel": "94th percentile against neighbors"
       },
       "anomaly": {
         "title": "Anomaly classification",
-        "description": "Combined temporal acceleration and localized spatial divergence.",
-        "temporalAnomalyScore": 84,
+        "temporalAnomalyScore": 88,
+        "spatialAnomalyScore": 84,
+        "compositeAnomalyLevel": "high",
+        "persistenceConfirmed": true,
+        "persistenceDetails": "Persistence score: 0.79"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0512/2020.svg",
+          "2023": "/data/images/HYD_0512/2023.svg",
+          "2026": "/data/images/HYD_0512/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 82,
+        "priorityLevel": "high",
+        "score_breakdown": {
+          "urban_expansion": 29,
+          "vegetation_loss": 19,
+          "water_body_change": 0,
+          "historical_anomaly": 17,
+          "spatial_anomaly": 11,
+          "persistence": 6
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 29
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 19
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 17
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 11
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0387": {
+    "hotspotId": "HYD_0387",
+    "cellId": "HYD_0387",
+    "grid_id": "HYD_0387",
+    "wardName": "Zone 87 - Hyderabad",
+    "coordinates": [
+      17.331,
+      78.552
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Sustained vegetation loss",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            18,
+            24.1,
+            31.6
+          ],
+          "vegetationPercent": [
+            55.2,
+            47,
+            39.9
+          ],
+          "waterPercent": [
+            3.1,
+            3,
+            2.9
+          ],
+          "bareLandPercent": [
+            23.7,
+            25.9,
+            25.6
+          ]
+        },
+        "observedChangeMetric": "+7.5% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 7.5,
+        "deviationSummary": "+2.2x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 93,
+        "percentileLabel": "93th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 85,
         "spatialAnomalyScore": 82,
         "compositeAnomalyLevel": "high",
         "persistenceConfirmed": true,
-        "persistenceDetails": "Multi-season canopy loss observed across 2024–2026"
+        "persistenceDetails": "Persistence score: 0.84"
       },
       "evidence": {
         "title": "Observation evidence dossier",
-        "description": "Source satellite observations and quality metadata.",
-        "sensor": "Sentinel-2 MSI Level-2A (ESA Copernicus)",
-        "resolution": "10m spatial resolution aggregated to 100m grid cell",
-        "cloudCoverPercent": 0.5,
-        "observationEpochs": [
-          { "date": "2020-03-15", "sceneId": "S2B_MSIL2A_20200315_T43PGT", "cloud": "0.4%" },
-          { "date": "2023-03-15", "sceneId": "S2A_MSIL2A_20230315_T43PGT", "cloud": "1.1%" },
-          { "date": "2026-03-15", "sceneId": "S2B_MSIL2A_20260315_T43PGT", "cloud": "0.8%" }
-        ],
-        "qaFlag": "Clear observation, cloud mask verified"
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0387/2020.svg",
+          "2023": "/data/images/HYD_0387/2023.svg",
+          "2026": "/data/images/HYD_0387/2026.svg"
+        }
       },
       "priority": {
         "title": "Explainable priority score",
-        "description": "Additive factor contribution weights without arbitrary adjustment.",
-        "totalScore": 81,
+        "totalScore": 79,
         "priorityLevel": "high",
+        "score_breakdown": {
+          "urban_expansion": 24,
+          "vegetation_loss": 22,
+          "water_body_change": 0,
+          "historical_anomaly": 16,
+          "spatial_anomaly": 10,
+          "persistence": 7
+        },
         "factorBreakdown": [
-          { "factor": "Green cover reduction", "points": 30, "rationale": "Severe canopy removal (-14.3%)" },
-          { "factor": "Bare ground exposure", "points": 18, "rationale": "Increase in stripped soil (+8.8%)" },
-          { "factor": "Historical anomaly", "points": 17, "rationale": "7.9x historical vegetation fluctuation" },
-          { "factor": "Local anomaly", "points": 10, "rationale": "94th percentile divergence in lake buffer" },
-          { "factor": "Persistence", "points": 6, "rationale": "Persistent over two dry seasons" }
+          {
+            "factor": "urban expansion",
+            "points": 24
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 22
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 16
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 10
+          },
+          {
+            "factor": "persistence",
+            "points": 7
+          }
         ]
-      },
-      "investigation": {
-        "title": "Field verification directive",
-        "recommendedAction": "Priority 2 field inspection dispatch",
-        "inspectionFocus": "Ground survey of storm channel buffer and tree felling assessment",
-        "assignedDepartment": "Forestry & Stormwater Drain Maintenance",
-        "legalStatement": "Unusual spatial change detected. Field verification recommended."
       }
     }
   },
-  "HS-BLR-03": {
-    "hotspotId": "HS-BLR-03",
-    "cellId": "CELL-1405",
-    "wardName": "Ward 150 - Bellandur South Channel",
-    "zone": "Mahadevapura",
-    "coordinates": [12.9287, 77.6784],
-    "category": "water_body_change",
-    "categoryLabel": "Water-body change",
-    "summary": "Contraction of surface water body area (-11.2%) accompanied by soil compaction.",
+  "HYD_0499": {
+    "hotspotId": "HYD_0499",
+    "cellId": "HYD_0499",
+    "grid_id": "HYD_0499",
+    "wardName": "Zone 99 - Hyderabad",
+    "coordinates": [
+      17.398,
+      78.435
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Rapid built-up growth",
     "recommendation": "Unusual spatial change detected. Field verification recommended.",
     "pipeline": {
       "change": {
         "title": "Observed change",
-        "description": "Multi-temporal land-cover indicators across Sentinel-2 observation epochs.",
         "metrics": {
-          "periods": ["2020-03", "2023-03", "2026-03"],
-          "builtUpPercent": [15.2, 16.0, 22.8],
-          "vegetationPercent": [35.0, 34.2, 28.1],
-          "waterPercent": [38.4, 37.9, 26.7],
-          "bareLandPercent": [11.4, 11.9, 22.4]
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            25,
+            31,
+            39.5
+          ],
+          "vegetationPercent": [
+            45,
+            40,
+            32.5
+          ],
+          "waterPercent": [
+            6,
+            5.5,
+            4.8
+          ],
+          "bareLandPercent": [
+            24,
+            23.5,
+            23.2
+          ]
         },
-        "observedChangeMetric": "-11.2% water area",
-        "primaryDelta": -11.2
+        "observedChangeMetric": "+8.5% built-up"
       },
       "historicalBaseline": {
         "title": "Historical baseline comparison",
-        "description": "Evaluated against 2020–2023 baseline trend for this cell.",
-        "baselinePeriod": "2020–2023",
-        "evaluationPeriod": "2023–2026",
-        "expectedPeriodGrowth": -0.5,
-        "observedPeriodGrowth": -11.2,
-        "deviationPoints": -10.7,
-        "deviationSummary": "-9.4% vs historical dry-season average"
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 8.5,
+        "deviationSummary": "+2.1x expected baseline rate"
       },
       "localBaseline": {
         "title": "Local neighborhood baseline",
-        "description": "Evaluated against 24 adjacent cells within 500m radius buffer.",
-        "neighborhoodRadiusMeters": 500,
-        "neighborhoodCellsEvaluated": 24,
-        "neighborhoodMeanChange": -1.2,
-        "neighborhoodStdDev": 1.4,
-        "neighborhoodPercentile": 92,
-        "percentileLabel": "92nd percentile (top 8% local divergence)"
+        "neighborhoodPercentile": 91,
+        "percentileLabel": "91th percentile against neighbors"
       },
       "anomaly": {
         "title": "Anomaly classification",
-        "description": "Combined temporal acceleration and localized spatial divergence.",
         "temporalAnomalyScore": 82,
         "spatialAnomalyScore": 80,
         "compositeAnomalyLevel": "high",
         "persistenceConfirmed": true,
-        "persistenceDetails": "Non-seasonal contraction confirmed across dry and wet cycles"
+        "persistenceDetails": "Persistence score: 0.81"
       },
       "evidence": {
         "title": "Observation evidence dossier",
-        "description": "Source satellite observations and quality metadata.",
-        "sensor": "Sentinel-2 MSI Level-2A (ESA Copernicus)",
-        "resolution": "10m spatial resolution aggregated to 100m grid cell",
-        "cloudCoverPercent": 0.7,
-        "observationEpochs": [
-          { "date": "2020-03-15", "sceneId": "S2B_MSIL2A_20200315_T43PGT", "cloud": "0.4%" },
-          { "date": "2023-03-15", "sceneId": "S2A_MSIL2A_20230315_T43PGT", "cloud": "1.1%" },
-          { "date": "2026-03-15", "sceneId": "S2B_MSIL2A_20260315_T43PGT", "cloud": "0.8%" }
-        ],
-        "qaFlag": "Verified edge water body classification"
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0499/2020.svg",
+          "2023": "/data/images/HYD_0499/2023.svg",
+          "2026": "/data/images/HYD_0499/2026.svg"
+        }
       },
       "priority": {
         "title": "Explainable priority score",
-        "description": "Additive factor contribution weights without arbitrary adjustment.",
-        "totalScore": 78,
+        "totalScore": 76,
         "priorityLevel": "high",
+        "score_breakdown": {
+          "urban_expansion": 26,
+          "vegetation_loss": 18,
+          "water_body_change": 0,
+          "historical_anomaly": 16,
+          "spatial_anomaly": 10,
+          "persistence": 6
+        },
         "factorBreakdown": [
-          { "factor": "Water surface contraction", "points": 28, "rationale": "Water area loss (-11.2%)" },
-          { "factor": "Adjacent earth compaction", "points": 20, "rationale": "Soil fill detected (+10.5%)" },
-          { "factor": "Historical anomaly", "points": 15, "rationale": "Significantly exceeds normal dry-season fluctuation" },
-          { "factor": "Local anomaly", "points": 9, "rationale": "92nd percentile deviation along lake shore" },
-          { "factor": "Persistence", "points": 6, "rationale": "Observed across consecutive seasons" }
+          {
+            "factor": "urban expansion",
+            "points": 26
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 18
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 16
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 10
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
         ]
-      },
-      "investigation": {
-        "title": "Field verification directive",
-        "recommendedAction": "Priority 3 field inspection dispatch",
-        "inspectionFocus": "Waterbody shoreline survey and bund integrity verification",
-        "assignedDepartment": "Lake Conservation Authority & Revenue Department",
-        "legalStatement": "Unusual spatial change detected. Field verification recommended."
       }
     }
   },
-  "HS-BLR-04": {
-    "hotspotId": "HS-BLR-04",
-    "cellId": "CELL-1380",
-    "wardName": "Ward 84 - Hagadur Peripheral Belt",
-    "zone": "Whitefield",
-    "coordinates": [12.9612, 77.7538],
+  "HYD_0555": {
+    "hotspotId": "HYD_0555",
+    "cellId": "HYD_0555",
+    "grid_id": "HYD_0555",
+    "wardName": "Zone 55 - Hyderabad",
+    "coordinates": [
+      17.42,
+      78.51
+    ],
     "category": "built_up_expansion",
     "categoryLabel": "Built-up expansion",
-    "summary": "Concentrated expansion of impervious surface (+13.4%) replacing agricultural fallow.",
+    "summary": "Built-up expansion in transition corridor",
     "recommendation": "Unusual spatial change detected. Field verification recommended.",
     "pipeline": {
       "change": {
         "title": "Observed change",
-        "description": "Multi-temporal land-cover indicators across Sentinel-2 observation epochs.",
         "metrics": {
-          "periods": ["2020-03", "2023-03", "2026-03"],
-          "builtUpPercent": [24.1, 26.3, 39.7],
-          "vegetationPercent": [46.3, 44.0, 31.8],
-          "waterPercent": [4.0, 3.9, 3.8],
-          "bareLandPercent": [25.6, 25.8, 24.7]
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            28.5,
+            34.2,
+            42
+          ],
+          "vegetationPercent": [
+            41,
+            36.5,
+            29.5
+          ],
+          "waterPercent": [
+            4.5,
+            4,
+            3.8
+          ],
+          "bareLandPercent": [
+            26,
+            25.3,
+            24.7
+          ]
         },
-        "observedChangeMetric": "+13.4% built-up expansion",
-        "primaryDelta": 13.4
+        "observedChangeMetric": "+7.8% built-up"
       },
       "historicalBaseline": {
         "title": "Historical baseline comparison",
-        "description": "Evaluated against 2020–2023 baseline trend for this cell.",
-        "baselinePeriod": "2020–2023",
-        "evaluationPeriod": "2023–2026",
-        "expectedPeriodGrowth": 2.2,
-        "observedPeriodGrowth": 13.4,
-        "deviationPoints": 11.2,
-        "deviationSummary": "+9.8% vs historical trend"
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 7.8,
+        "deviationSummary": "+2x expected baseline rate"
       },
       "localBaseline": {
         "title": "Local neighborhood baseline",
-        "description": "Evaluated against 24 adjacent cells within 500m radius buffer.",
-        "neighborhoodRadiusMeters": 500,
-        "neighborhoodCellsEvaluated": 24,
-        "neighborhoodMeanChange": 3.1,
-        "neighborhoodStdDev": 2.0,
-        "neighborhoodPercentile": 91,
-        "percentileLabel": "91st percentile (top 9% local divergence)"
+        "neighborhoodPercentile": 90,
+        "percentileLabel": "90th percentile against neighbors"
       },
       "anomaly": {
         "title": "Anomaly classification",
-        "description": "Combined temporal acceleration and localized spatial divergence.",
         "temporalAnomalyScore": 79,
-        "spatialAnomalyScore": 76,
+        "spatialAnomalyScore": 78,
         "compositeAnomalyLevel": "high",
         "persistenceConfirmed": true,
-        "persistenceDetails": "Continuous structural signatures over past 18 months"
+        "persistenceDetails": "Persistence score: 0.78"
       },
       "evidence": {
         "title": "Observation evidence dossier",
-        "description": "Source satellite observations and quality metadata.",
-        "sensor": "Sentinel-2 MSI Level-2A (ESA Copernicus)",
-        "resolution": "10m spatial resolution aggregated to 100m grid cell",
-        "cloudCoverPercent": 0.4,
-        "observationEpochs": [
-          { "date": "2020-03-15", "sceneId": "S2B_MSIL2A_20200315_T43PGT", "cloud": "0.4%" },
-          { "date": "2023-03-15", "sceneId": "S2A_MSIL2A_20230315_T43PGT", "cloud": "1.1%" },
-          { "date": "2026-03-15", "sceneId": "S2B_MSIL2A_20260315_T43PGT", "cloud": "0.8%" }
-        ],
-        "qaFlag": "High confidence spectral composite"
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0555/2020.svg",
+          "2023": "/data/images/HYD_0555/2023.svg",
+          "2026": "/data/images/HYD_0555/2026.svg"
+        }
       },
       "priority": {
         "title": "Explainable priority score",
-        "description": "Additive factor contribution weights without arbitrary adjustment.",
         "totalScore": 74,
         "priorityLevel": "high",
+        "score_breakdown": {
+          "urban_expansion": 25,
+          "vegetation_loss": 18,
+          "water_body_change": 0,
+          "historical_anomaly": 15,
+          "spatial_anomaly": 10,
+          "persistence": 6
+        },
         "factorBreakdown": [
-          { "factor": "Urban expansion magnitude", "points": 28, "rationale": "Substantial built-up surge (+13.4%)" },
-          { "factor": "Green cover reduction", "points": 18, "rationale": "Vegetation converted (-12.2%)" },
-          { "factor": "Historical anomaly", "points": 14, "rationale": "5.1x historical growth rate" },
-          { "factor": "Local anomaly", "points": 8, "rationale": "91st percentile against peripheral neighbors" },
-          { "factor": "Persistence", "points": 6, "rationale": "Multi-temporal consistency verified" }
+          {
+            "factor": "urban expansion",
+            "points": 25
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 18
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 15
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 10
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
         ]
-      },
-      "investigation": {
-        "title": "Field verification directive",
-        "recommendedAction": "Priority 4 field inspection dispatch",
-        "inspectionFocus": "Inspect newly constructed foundations and site access roads",
-        "assignedDepartment": "Town Planning Enforcement Wing",
-        "legalStatement": "Unusual spatial change detected. Field verification recommended."
       }
     }
   },
-  "HS-BLR-11": {
-    "hotspotId": "HS-BLR-11",
-    "cellId": "CELL-1102",
-    "wardName": "Ward 81 - Hoodi Greenbelt",
-    "zone": "Mahadevapura",
-    "coordinates": [12.9912, 77.7188],
-    "category": "vegetation_loss",
-    "categoryLabel": "Vegetation loss (seasonal)",
-    "summary": "Seasonal canopy thinning (-3.2%) consistent with typical pre-monsoon leaf drop.",
-    "recommendation": "Change within expected historical variance. Baseline monitoring continued.",
+  "HYD_0621": {
+    "hotspotId": "HYD_0621",
+    "cellId": "HYD_0621",
+    "grid_id": "HYD_0621",
+    "wardName": "Zone 21 - Hyderabad",
+    "coordinates": [
+      17.497,
+      78.331
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Built-up growth exceeds baseline",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
     "pipeline": {
       "change": {
         "title": "Observed change",
-        "description": "Multi-temporal land-cover indicators across Sentinel-2 observation epochs.",
         "metrics": {
-          "periods": ["2020-03", "2023-03", "2026-03"],
-          "builtUpPercent": [14.0, 14.2, 14.4],
-          "vegetationPercent": [68.0, 67.5, 64.3],
-          "waterPercent": [2.0, 2.0, 2.0],
-          "bareLandPercent": [16.0, 16.3, 19.3]
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            40.1,
+            44.8,
+            49.5
+          ],
+          "vegetationPercent": [
+            30.5,
+            28,
+            24.2
+          ],
+          "waterPercent": [
+            6,
+            5.5,
+            5.1
+          ],
+          "bareLandPercent": [
+            23.4,
+            21.7,
+            21.2
+          ]
         },
-        "observedChangeMetric": "-3.2% vegetation",
-        "primaryDelta": -3.2
+        "observedChangeMetric": "+4.7% built-up"
       },
       "historicalBaseline": {
         "title": "Historical baseline comparison",
-        "description": "Evaluated against 2020–2023 baseline trend for this cell.",
-        "baselinePeriod": "2020–2023",
-        "evaluationPeriod": "2023–2026",
-        "expectedPeriodGrowth": -2.8,
-        "observedPeriodGrowth": -3.2,
-        "deviationPoints": -0.4,
-        "deviationSummary": "-0.4% vs historical trend (within normal variance bounds)"
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 4.7,
+        "deviationSummary": "+1.9x expected baseline rate"
       },
       "localBaseline": {
         "title": "Local neighborhood baseline",
-        "description": "Evaluated against 24 adjacent cells within 500m radius buffer.",
-        "neighborhoodRadiusMeters": 500,
-        "neighborhoodCellsEvaluated": 24,
-        "neighborhoodMeanChange": -2.9,
-        "neighborhoodStdDev": 1.2,
-        "neighborhoodPercentile": 42,
-        "percentileLabel": "42nd percentile (typical regional behavior)"
+        "neighborhoodPercentile": 88,
+        "percentileLabel": "88th percentile against neighbors"
       },
       "anomaly": {
         "title": "Anomaly classification",
-        "description": "Low temporal acceleration and uniform neighborhood pattern.",
-        "temporalAnomalyScore": 18,
-        "spatialAnomalyScore": 15,
-        "compositeAnomalyLevel": "normal",
-        "persistenceConfirmed": false,
-        "persistenceDetails": "Seasonal cycle (recovers during post-monsoon period)"
+        "temporalAnomalyScore": 74,
+        "spatialAnomalyScore": 79,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": true,
+        "persistenceDetails": "Persistence score: 0.71"
       },
       "evidence": {
         "title": "Observation evidence dossier",
-        "description": "Source satellite observations and quality metadata.",
-        "sensor": "Sentinel-2 MSI Level-2A (ESA Copernicus)",
-        "resolution": "10m spatial resolution aggregated to 100m grid cell",
-        "cloudCoverPercent": 0.6,
-        "observationEpochs": [
-          { "date": "2020-03-15", "sceneId": "S2B_MSIL2A_20200315_T43PGT", "cloud": "0.4%" },
-          { "date": "2023-03-15", "sceneId": "S2A_MSIL2A_20230315_T43PGT", "cloud": "1.1%" },
-          { "date": "2026-03-15", "sceneId": "S2B_MSIL2A_20260315_T43PGT", "cloud": "0.8%" }
-        ],
-        "qaFlag": "Clear observation"
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0621/2020.svg",
+          "2023": "/data/images/HYD_0621/2023.svg",
+          "2026": "/data/images/HYD_0621/2026.svg"
+        }
       },
       "priority": {
         "title": "Explainable priority score",
-        "description": "Additive factor contribution weights without arbitrary adjustment.",
-        "totalScore": 28,
-        "priorityLevel": "normal",
+        "totalScore": 73,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 22,
+          "vegetation_loss": 15,
+          "water_body_change": 0,
+          "historical_anomaly": 18,
+          "spatial_anomaly": 12,
+          "persistence": 6
+        },
         "factorBreakdown": [
-          { "factor": "Minor seasonal variation", "points": 14, "rationale": "Normal dry season canopy variation (-3.2%)" },
-          { "factor": "Historical alignment", "points": 5, "rationale": "Consistent with historical seasonal patterns" },
-          { "factor": "Neighborhood alignment", "points": 5, "rationale": "42nd percentile matches adjacent vegetation" },
-          { "factor": "Non-persistent flag", "points": 4, "rationale": "Periodic cyclical change" }
+          {
+            "factor": "urban expansion",
+            "points": 22
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 15
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 18
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 12
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
         ]
+      }
+    }
+  },
+  "HYD_0298": {
+    "hotspotId": "HYD_0298",
+    "cellId": "HYD_0298",
+    "grid_id": "HYD_0298",
+    "wardName": "Zone 98 - Hyderabad",
+    "coordinates": [
+      17.412,
+      78.612
+    ],
+    "category": "water_body_change",
+    "categoryLabel": "Water-body change",
+    "summary": "Water-body area shrinking faster than baseline",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            12,
+            13.5,
+            15
+          ],
+          "vegetationPercent": [
+            35.2,
+            32.1,
+            28.5
+          ],
+          "waterPercent": [
+            14.5,
+            11,
+            7.8
+          ],
+          "bareLandPercent": [
+            38.3,
+            43.4,
+            48.7
+          ]
+        },
+        "observedChangeMetric": "+1.5% built-up"
       },
-      "investigation": {
-        "title": "Field verification directive",
-        "recommendedAction": "No field dispatch required",
-        "inspectionFocus": "Standard routine sensor logging",
-        "assignedDepartment": "Routine Parks & Urban Forestry Monitoring",
-        "legalStatement": "Change within expected historical variance. Baseline monitoring continued."
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 1.5,
+        "deviationSummary": "+2x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 86,
+        "percentileLabel": "86th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 72,
+        "spatialAnomalyScore": 70,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.69"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0298/2020.svg",
+          "2023": "/data/images/HYD_0298/2023.svg",
+          "2026": "/data/images/HYD_0298/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 68,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 0,
+          "vegetation_loss": 14,
+          "water_body_change": 24,
+          "historical_anomaly": 14,
+          "spatial_anomaly": 10,
+          "persistence": 6
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 0
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 14
+          },
+          {
+            "factor": "water body change",
+            "points": 24
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 14
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 10
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0733": {
+    "hotspotId": "HYD_0733",
+    "cellId": "HYD_0733",
+    "grid_id": "HYD_0733",
+    "wardName": "Zone 33 - Hyderabad",
+    "coordinates": [
+      17.298,
+      78.431
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Built-up growth higher than nearby areas",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            27,
+            31.5,
+            36.4
+          ],
+          "vegetationPercent": [
+            43.1,
+            39.2,
+            35.8
+          ],
+          "waterPercent": [
+            4.2,
+            4,
+            3.8
+          ],
+          "bareLandPercent": [
+            25.7,
+            25.3,
+            24
+          ]
+        },
+        "observedChangeMetric": "+4.9% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 4.9,
+        "deviationSummary": "+1.6x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 82,
+        "percentileLabel": "82th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 68,
+        "spatialAnomalyScore": 71,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.66"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0733/2020.svg",
+          "2023": "/data/images/HYD_0733/2023.svg",
+          "2026": "/data/images/HYD_0733/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 61,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 20,
+          "vegetation_loss": 12,
+          "water_body_change": 0,
+          "historical_anomaly": 15,
+          "spatial_anomaly": 8,
+          "persistence": 6
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 20
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 12
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 15
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 8
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0488": {
+    "hotspotId": "HYD_0488",
+    "cellId": "HYD_0488",
+    "grid_id": "HYD_0488",
+    "wardName": "Zone 88 - Hyderabad",
+    "coordinates": [
+      17.458,
+      78.445
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Continuous commercial strip expansion",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            35,
+            38.2,
+            42.1
+          ],
+          "vegetationPercent": [
+            38,
+            35.1,
+            31.8
+          ],
+          "waterPercent": [
+            3.5,
+            3.2,
+            3
+          ],
+          "bareLandPercent": [
+            23.5,
+            23.5,
+            23.1
+          ]
+        },
+        "observedChangeMetric": "+3.9% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3.9,
+        "deviationSummary": "+1.5x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 80,
+        "percentileLabel": "80th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 65,
+        "spatialAnomalyScore": 67,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.64"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0488/2020.svg",
+          "2023": "/data/images/HYD_0488/2023.svg",
+          "2026": "/data/images/HYD_0488/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 58,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 18,
+          "vegetation_loss": 12,
+          "water_body_change": 0,
+          "historical_anomaly": 14,
+          "spatial_anomaly": 8,
+          "persistence": 6
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 18
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 12
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 14
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 8
+          },
+          {
+            "factor": "persistence",
+            "points": 6
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0542": {
+    "hotspotId": "HYD_0542",
+    "cellId": "HYD_0542",
+    "grid_id": "HYD_0542",
+    "wardName": "Zone 42 - Hyderabad",
+    "coordinates": [
+      17.43,
+      78.53
+    ],
+    "category": "water_body_change",
+    "categoryLabel": "Water-body change",
+    "summary": "Localized pond periphery alteration",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            22,
+            25.4,
+            29
+          ],
+          "vegetationPercent": [
+            46,
+            43.1,
+            39.8
+          ],
+          "waterPercent": [
+            9,
+            8.1,
+            7.2
+          ],
+          "bareLandPercent": [
+            23,
+            23.4,
+            24
+          ]
+        },
+        "observedChangeMetric": "+3.6% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3.6,
+        "deviationSummary": "+1.4x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 78,
+        "percentileLabel": "78th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 63,
+        "spatialAnomalyScore": 62,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.62"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0542/2020.svg",
+          "2023": "/data/images/HYD_0542/2023.svg",
+          "2026": "/data/images/HYD_0542/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 55,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 16,
+          "vegetation_loss": 11,
+          "water_body_change": 4,
+          "historical_anomaly": 12,
+          "spatial_anomaly": 7,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 16
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 11
+          },
+          {
+            "factor": "water body change",
+            "points": 4
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 12
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 7
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0365": {
+    "hotspotId": "HYD_0365",
+    "cellId": "HYD_0365",
+    "grid_id": "HYD_0365",
+    "wardName": "Zone 65 - Hyderabad",
+    "coordinates": [
+      17.37,
+      78.52
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Incremental industrial shed construction",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            33,
+            36.2,
+            39.8
+          ],
+          "vegetationPercent": [
+            36,
+            33.5,
+            30.2
+          ],
+          "waterPercent": [
+            5.2,
+            5,
+            4.8
+          ],
+          "bareLandPercent": [
+            25.8,
+            25.3,
+            25.2
+          ]
+        },
+        "observedChangeMetric": "+3.6% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3.6,
+        "deviationSummary": "+1.3x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 76,
+        "percentileLabel": "76th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 60,
+        "spatialAnomalyScore": 60,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.6"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0365/2020.svg",
+          "2023": "/data/images/HYD_0365/2023.svg",
+          "2026": "/data/images/HYD_0365/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 52,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 15,
+          "vegetation_loss": 10,
+          "water_body_change": 0,
+          "historical_anomaly": 14,
+          "spatial_anomaly": 8,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 15
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 10
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 14
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 8
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0615": {
+    "hotspotId": "HYD_0615",
+    "cellId": "HYD_0615",
+    "grid_id": "HYD_0615",
+    "wardName": "Zone 15 - Hyderabad",
+    "coordinates": [
+      17.48,
+      78.36
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Moderate residential cluster extension",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            28,
+            31,
+            34.5
+          ],
+          "vegetationPercent": [
+            42,
+            39.2,
+            36.1
+          ],
+          "waterPercent": [
+            4,
+            3.8,
+            3.7
+          ],
+          "bareLandPercent": [
+            26,
+            26,
+            25.7
+          ]
+        },
+        "observedChangeMetric": "+3.5% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3.5,
+        "deviationSummary": "+1.3x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 75,
+        "percentileLabel": "75th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 58,
+        "spatialAnomalyScore": 59,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.58"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0615/2020.svg",
+          "2023": "/data/images/HYD_0615/2023.svg",
+          "2026": "/data/images/HYD_0615/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 50,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 14,
+          "vegetation_loss": 11,
+          "water_body_change": 0,
+          "historical_anomaly": 13,
+          "spatial_anomaly": 7,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 14
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 11
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 13
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 7
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0410": {
+    "hotspotId": "HYD_0410",
+    "cellId": "HYD_0410",
+    "grid_id": "HYD_0410",
+    "wardName": "Zone 10 - Hyderabad",
+    "coordinates": [
+      17.405,
+      78.475
+    ],
+    "category": "water_body_change",
+    "categoryLabel": "Water-body change",
+    "summary": "Infill built-up expansion near canal",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            42,
+            44.5,
+            47.8
+          ],
+          "vegetationPercent": [
+            29,
+            27.2,
+            25.1
+          ],
+          "waterPercent": [
+            6.5,
+            6,
+            5.4
+          ],
+          "bareLandPercent": [
+            22.5,
+            22.3,
+            21.7
+          ]
+        },
+        "observedChangeMetric": "+3.3% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3.3,
+        "deviationSummary": "+1.2x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 74,
+        "percentileLabel": "74th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 56,
+        "spatialAnomalyScore": 57,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.57"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0410/2020.svg",
+          "2023": "/data/images/HYD_0410/2023.svg",
+          "2026": "/data/images/HYD_0410/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 48,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 14,
+          "vegetation_loss": 9,
+          "water_body_change": 3,
+          "historical_anomaly": 11,
+          "spatial_anomaly": 6,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 14
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 9
+          },
+          {
+            "factor": "water body change",
+            "points": 3
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 11
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 6
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0325": {
+    "hotspotId": "HYD_0325",
+    "cellId": "HYD_0325",
+    "grid_id": "HYD_0325",
+    "wardName": "Zone 25 - Hyderabad",
+    "coordinates": [
+      17.345,
+      78.49
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Vegetation clearing along bypass access",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            24,
+            26.5,
+            29.5
+          ],
+          "vegetationPercent": [
+            49,
+            46.8,
+            44
+          ],
+          "waterPercent": [
+            3.8,
+            3.6,
+            3.5
+          ],
+          "bareLandPercent": [
+            23.2,
+            23.1,
+            23
+          ]
+        },
+        "observedChangeMetric": "+3.0% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 3,
+        "deviationSummary": "+1.2x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 72,
+        "percentileLabel": "72th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 54,
+        "spatialAnomalyScore": 55,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.55"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0325/2020.svg",
+          "2023": "/data/images/HYD_0325/2023.svg",
+          "2026": "/data/images/HYD_0325/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 46,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 13,
+          "vegetation_loss": 9,
+          "water_body_change": 0,
+          "historical_anomaly": 12,
+          "spatial_anomaly": 7,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 13
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 9
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 12
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 7
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
+      }
+    }
+  },
+  "HYD_0580": {
+    "hotspotId": "HYD_0580",
+    "cellId": "HYD_0580",
+    "grid_id": "HYD_0580",
+    "wardName": "Zone 80 - Hyderabad",
+    "coordinates": [
+      17.465,
+      78.505
+    ],
+    "category": "built_up_expansion",
+    "categoryLabel": "Built-up expansion",
+    "summary": "Secondary warehouse extension",
+    "recommendation": "Unusual spatial change detected. Field verification recommended.",
+    "pipeline": {
+      "change": {
+        "title": "Observed change",
+        "metrics": {
+          "periods": [
+            "2020-03",
+            "2023-03",
+            "2026-03"
+          ],
+          "builtUpPercent": [
+            31,
+            33.4,
+            36.2
+          ],
+          "vegetationPercent": [
+            39,
+            36.8,
+            34.2
+          ],
+          "waterPercent": [
+            5,
+            4.8,
+            4.6
+          ],
+          "bareLandPercent": [
+            25,
+            25,
+            25
+          ]
+        },
+        "observedChangeMetric": "+2.8% built-up"
+      },
+      "historicalBaseline": {
+        "title": "Historical baseline comparison",
+        "expectedPeriodGrowth": 1.5,
+        "observedPeriodGrowth": 2.8,
+        "deviationSummary": "+1.1x expected baseline rate"
+      },
+      "localBaseline": {
+        "title": "Local neighborhood baseline",
+        "neighborhoodPercentile": 71,
+        "percentileLabel": "71th percentile against neighbors"
+      },
+      "anomaly": {
+        "title": "Anomaly classification",
+        "temporalAnomalyScore": 52,
+        "spatialAnomalyScore": 54,
+        "compositeAnomalyLevel": "medium",
+        "persistenceConfirmed": false,
+        "persistenceDetails": "Persistence score: 0.53"
+      },
+      "evidence": {
+        "title": "Observation evidence dossier",
+        "sensor": "Sentinel-2 MSI Level-2A (Copernicus)",
+        "imageUrls": {
+          "2020": "/data/images/HYD_0580/2020.svg",
+          "2023": "/data/images/HYD_0580/2023.svg",
+          "2026": "/data/images/HYD_0580/2026.svg"
+        }
+      },
+      "priority": {
+        "title": "Explainable priority score",
+        "totalScore": 45,
+        "priorityLevel": "medium",
+        "score_breakdown": {
+          "urban_expansion": 12,
+          "vegetation_loss": 10,
+          "water_body_change": 0,
+          "historical_anomaly": 11,
+          "spatial_anomaly": 7,
+          "persistence": 5
+        },
+        "factorBreakdown": [
+          {
+            "factor": "urban expansion",
+            "points": 12
+          },
+          {
+            "factor": "vegetation loss",
+            "points": 10
+          },
+          {
+            "factor": "water body change",
+            "points": 0
+          },
+          {
+            "factor": "historical anomaly",
+            "points": 11
+          },
+          {
+            "factor": "spatial anomaly",
+            "points": 7
+          },
+          {
+            "factor": "persistence",
+            "points": 5
+          }
+        ]
       }
     }
   }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Evidence-Based Urban Change & Field Investigation Intelligence",
   "private": true,
+  "type": "module",
   "scripts": {
+    "test": "node scripts/selftest.js",
     "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",

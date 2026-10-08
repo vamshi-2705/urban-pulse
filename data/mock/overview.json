@@ -1,32 +1,48 @@
 {
-  "regionId": "blr-east-corridor",
-  "regionName": "Bengaluru East Growth Corridor (Mahadevapura – Varthur – Whitefield)",
-  "state": "Karnataka",
-  "center": [12.9698, 77.7499],
-  "defaultZoom": 13,
-  "bounds": [
-    [12.9200, 77.6800],
-    [13.0200, 77.8200]
+  "regionId": "hyd-metro-core",
+  "regionName": "Hyderabad Metropolitan Growth Corridor",
+  "city": "Hyderabad",
+  "state": "Telangana",
+  "center": [
+    17.385,
+    78.486
   ],
-  "monitoringCycle": "Quarterly Multi-temporal Satellite Observation",
-  "observationDates": ["2020-03-15", "2023-03-15", "2026-03-15"],
+  "defaultZoom": 12,
+  "bounds": [
+    [
+      17.25,
+      78.3
+    ],
+    [
+      17.55,
+      78.65
+    ]
+  ],
+  "monitoringCycle": "Multi-temporal Satellite Observation",
+  "observationDates": [
+    "2020-03-15",
+    "2023-03-15",
+    "2026-03-15"
+  ],
   "latestObservationDate": "2026-03-15",
   "baselinePeriod": "2020–2023",
   "currentEvaluationPeriod": "2023–2026",
-  "monitoredCellsCount": 1240,
-  "anomalousCellsCount": 18,
+  "monitoredCellsCount": 150,
+  "anomalousCellsCount": 15,
   "priorityCounts": {
-    "high": 6,
-    "medium": 8,
-    "normal": 4
+    "high": 5,
+    "medium": 10,
+    "low": 135,
+    "normal": 135
   },
   "categoryCounts": {
-    "built_up_expansion": 8,
-    "vegetation_loss": 5,
-    "water_body_change": 3,
-    "bare_land_change": 2
+    "built_up_expansion": 9,
+    "vegetation_loss": 9,
+    "water_body_change": 97,
+    "bare_land_change": 4
   },
   "isMock": true,
-  "dataSource": "Preloaded development observations (data/mock)",
+  "is_mock": true,
+  "dataSource": "Preloaded development observations (Hyderabad ~500m grid)",
   "legalNotice": "Unusual spatial change detected. Field verification recommended."
 }

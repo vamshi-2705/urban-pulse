@@ -35,12 +35,14 @@ const pipelineData = loadJsonFile('pipeline.json');
 const hotspotsData = loadJsonFile('hotspots.json');
 const evidenceData = loadJsonFile('evidence.json');
 const cellsData = loadJsonFile('cells.json');
+const investigationListData = loadJsonFile('investigation_list.json');
 
 console.log(`[MockProvider] Successfully preloaded mock data:`);
 console.log(` - Region: ${overviewData.regionName}`);
 console.log(` - Monitored cells: ${cellsData.length}`);
 console.log(` - Hotspots: ${hotspotsData.length}`);
 console.log(` - Evidence dossiers: ${Object.keys(evidenceData).length}`);
+console.log(` - Investigation list records: ${investigationListData.records.length}`);
 
 export const mockProvider = {
   isMockActive() {
@@ -57,6 +59,10 @@ export const mockProvider = {
 
   getPipeline() {
     return pipelineData;
+  },
+
+  getInvestigationList() {
+    return investigationListData;
   },
 
   getHotspots(filters = {}) {

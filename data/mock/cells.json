@@ -1,218 +1,9302 @@
 [
   {
-    "cellId": "CELL-1298",
-    "hotspotId": "HS-BLR-01",
-    "wardName": "Ward 149 - Varthur Wetland Fringe",
-    "bounds": [[12.937, 77.727], [12.947, 77.737]],
-    "center": [12.9421, 77.7315],
+    "cellId": "HYD_0421",
+    "grid_id": "HYD_0421",
+    "hotspotId": "HYD_0421",
+    "wardName": "Zone 21 - Hyderabad",
+    "center": [
+      17.385,
+      78.486
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.483643,
+            17.382751
+          ],
+          [
+            78.488358,
+            17.382751
+          ],
+          [
+            78.488358,
+            17.38725
+          ],
+          [
+            78.483643,
+            17.38725
+          ],
+          [
+            78.483643,
+            17.382751
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.382751,
+        78.483643
+      ],
+      [
+        17.38725,
+        78.488358
+      ]
+    ],
     "priorityLevel": "high",
+    "priority_level": "HIGH",
     "priorityScore": 87,
+    "priority_score": 87,
+    "score_breakdown": {
+      "urban_expansion": 32,
+      "vegetation_loss": 21,
+      "water_body_change": 0,
+      "historical_anomaly": 18,
+      "spatial_anomaly": 10,
+      "persistence": 6
+    },
     "anomalyStatus": "flagged",
     "category": "built_up_expansion",
-    "changeMetric": "+16.0% built-up"
+    "changeMetric": "+8.7% built-up"
   },
   {
-    "cellId": "CELL-1142",
-    "hotspotId": "HS-BLR-02",
-    "wardName": "Ward 85 - Doddanekkundi Lake Catchment",
-    "bounds": [[12.968, 77.697], [12.978, 77.707]],
-    "center": [12.9734, 77.7021],
+    "cellId": "HYD_0512",
+    "grid_id": "HYD_0512",
+    "hotspotId": "HYD_0512",
+    "wardName": "Zone 12 - Hyderabad",
+    "center": [
+      17.442,
+      78.391
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.388643,
+            17.43975
+          ],
+          [
+            78.393358,
+            17.43975
+          ],
+          [
+            78.393358,
+            17.44425
+          ],
+          [
+            78.388643,
+            17.44425
+          ],
+          [
+            78.388643,
+            17.43975
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.43975,
+        78.388643
+      ],
+      [
+        17.44425,
+        78.393358
+      ]
+    ],
     "priorityLevel": "high",
-    "priorityScore": 81,
+    "priority_level": "HIGH",
+    "priorityScore": 82,
+    "priority_score": 82,
+    "score_breakdown": {
+      "urban_expansion": 29,
+      "vegetation_loss": 19,
+      "water_body_change": 0,
+      "historical_anomaly": 17,
+      "spatial_anomaly": 11,
+      "persistence": 6
+    },
     "anomalyStatus": "flagged",
-    "category": "vegetation_loss",
-    "changeMetric": "-14.3% vegetation"
+    "category": "built_up_expansion",
+    "changeMetric": "+9.1% built-up"
   },
   {
-    "cellId": "CELL-1405",
-    "hotspotId": "HS-BLR-03",
-    "wardName": "Ward 150 - Bellandur South Channel",
-    "bounds": [[12.923, 77.673], [12.933, 77.683]],
-    "center": [12.9287, 77.6784],
+    "cellId": "HYD_0387",
+    "grid_id": "HYD_0387",
+    "hotspotId": "HYD_0387",
+    "wardName": "Zone 87 - Hyderabad",
+    "center": [
+      17.331,
+      78.552
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.549643,
+            17.32875
+          ],
+          [
+            78.554358,
+            17.32875
+          ],
+          [
+            78.554358,
+            17.33325
+          ],
+          [
+            78.549643,
+            17.33325
+          ],
+          [
+            78.549643,
+            17.32875
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.32875,
+        78.549643
+      ],
+      [
+        17.33325,
+        78.554358
+      ]
+    ],
     "priorityLevel": "high",
-    "priorityScore": 78,
+    "priority_level": "HIGH",
+    "priorityScore": 79,
+    "priority_score": 79,
+    "score_breakdown": {
+      "urban_expansion": 24,
+      "vegetation_loss": 22,
+      "water_body_change": 0,
+      "historical_anomaly": 16,
+      "spatial_anomaly": 10,
+      "persistence": 7
+    },
     "anomalyStatus": "flagged",
-    "category": "water_body_change",
-    "changeMetric": "-11.2% water area"
+    "category": "built_up_expansion",
+    "changeMetric": "+7.5% built-up"
   },
   {
-    "cellId": "CELL-1380",
-    "hotspotId": "HS-BLR-04",
-    "wardName": "Ward 84 - Hagadur Peripheral Belt",
-    "bounds": [[12.956, 77.748], [12.966, 77.758]],
-    "center": [12.9612, 77.7538],
+    "cellId": "HYD_0499",
+    "grid_id": "HYD_0499",
+    "hotspotId": "HYD_0499",
+    "wardName": "Zone 99 - Hyderabad",
+    "center": [
+      17.398,
+      78.435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.432643,
+            17.39575
+          ],
+          [
+            78.437358,
+            17.39575
+          ],
+          [
+            78.437358,
+            17.40025
+          ],
+          [
+            78.432643,
+            17.40025
+          ],
+          [
+            78.432643,
+            17.39575
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.39575,
+        78.432643
+      ],
+      [
+        17.40025,
+        78.437358
+      ]
+    ],
     "priorityLevel": "high",
+    "priority_level": "HIGH",
+    "priorityScore": 76,
+    "priority_score": 76,
+    "score_breakdown": {
+      "urban_expansion": 26,
+      "vegetation_loss": 18,
+      "water_body_change": 0,
+      "historical_anomaly": 16,
+      "spatial_anomaly": 10,
+      "persistence": 6
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+8.5% built-up"
+  },
+  {
+    "cellId": "HYD_0555",
+    "grid_id": "HYD_0555",
+    "hotspotId": "HYD_0555",
+    "wardName": "Zone 55 - Hyderabad",
+    "center": [
+      17.42,
+      78.51
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.507643,
+            17.417751
+          ],
+          [
+            78.512358,
+            17.417751
+          ],
+          [
+            78.512358,
+            17.42225
+          ],
+          [
+            78.507643,
+            17.42225
+          ],
+          [
+            78.507643,
+            17.417751
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.417751,
+        78.507643
+      ],
+      [
+        17.42225,
+        78.512358
+      ]
+    ],
+    "priorityLevel": "high",
+    "priority_level": "HIGH",
     "priorityScore": 74,
+    "priority_score": 74,
+    "score_breakdown": {
+      "urban_expansion": 25,
+      "vegetation_loss": 18,
+      "water_body_change": 0,
+      "historical_anomaly": 15,
+      "spatial_anomaly": 10,
+      "persistence": 6
+    },
     "anomalyStatus": "flagged",
     "category": "built_up_expansion",
-    "changeMetric": "+13.4% built-up"
+    "changeMetric": "+7.8% built-up"
   },
   {
-    "cellId": "CELL-1510",
-    "hotspotId": "HS-BLR-05",
-    "wardName": "Ward 83 - Kadugodi Rail Boundary",
-    "bounds": [[12.989, 77.756], [12.999, 77.766]],
-    "center": [12.9945, 77.7612],
-    "priorityLevel": "high",
-    "priorityScore": 71,
+    "cellId": "HYD_0621",
+    "grid_id": "HYD_0621",
+    "hotspotId": "HYD_0621",
+    "wardName": "Zone 21 - Hyderabad",
+    "center": [
+      17.497,
+      78.331
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.328643,
+            17.49475
+          ],
+          [
+            78.333358,
+            17.49475
+          ],
+          [
+            78.333358,
+            17.49925
+          ],
+          [
+            78.328643,
+            17.49925
+          ],
+          [
+            78.328643,
+            17.49475
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.49475,
+        78.328643
+      ],
+      [
+        17.49925,
+        78.333358
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 73,
+    "priority_score": 73,
+    "score_breakdown": {
+      "urban_expansion": 22,
+      "vegetation_loss": 15,
+      "water_body_change": 0,
+      "historical_anomaly": 18,
+      "spatial_anomaly": 12,
+      "persistence": 6
+    },
     "anomalyStatus": "flagged",
-    "category": "vegetation_loss",
-    "changeMetric": "-12.1% vegetation"
+    "category": "built_up_expansion",
+    "changeMetric": "+4.7% built-up"
   },
   {
-    "cellId": "CELL-1622",
-    "hotspotId": "HS-BLR-06",
-    "wardName": "Ward 149 - Gunjur Peripheral Plain",
-    "bounds": [[12.914, 77.721], [12.924, 77.731]],
-    "center": [12.9195, 77.7265],
-    "priorityLevel": "high",
+    "cellId": "HYD_0298",
+    "grid_id": "HYD_0298",
+    "hotspotId": "HYD_0298",
+    "wardName": "Zone 98 - Hyderabad",
+    "center": [
+      17.412,
+      78.612
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.609642,
+            17.40975
+          ],
+          [
+            78.614357,
+            17.40975
+          ],
+          [
+            78.614357,
+            17.41425
+          ],
+          [
+            78.609642,
+            17.41425
+          ],
+          [
+            78.609642,
+            17.40975
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.40975,
+        78.609642
+      ],
+      [
+        17.41425,
+        78.614357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
     "priorityScore": 68,
-    "anomalyStatus": "flagged",
-    "category": "bare_land_change",
-    "changeMetric": "+18.2% bare soil"
-  },
-  {
-    "cellId": "CELL-1088",
-    "hotspotId": "HS-BLR-07",
-    "wardName": "Ward 82 - Garudacharpalya Industrial Edge",
-    "bounds": [[12.979, 77.707], [12.989, 77.717]],
-    "center": [12.9842, 77.7124],
-    "priorityLevel": "medium",
-    "priorityScore": 54,
-    "anomalyStatus": "flagged",
-    "category": "built_up_expansion",
-    "changeMetric": "+8.1% built-up"
-  },
-  {
-    "cellId": "CELL-1215",
-    "hotspotId": "HS-BLR-08",
-    "wardName": "Ward 85 - Marathahalli Canal Route",
-    "bounds": [[12.951, 77.693], [12.961, 77.703]],
-    "center": [12.9567, 77.6988],
-    "priorityLevel": "medium",
-    "priorityScore": 49,
-    "anomalyStatus": "flagged",
-    "category": "vegetation_loss",
-    "changeMetric": "-7.4% vegetation"
-  },
-  {
-    "cellId": "CELL-1344",
-    "hotspotId": "HS-BLR-09",
-    "wardName": "Ward 84 - Siddapura Fringe",
-    "bounds": [[12.946, 77.734], [12.956, 77.744]],
-    "center": [12.9511, 77.7392],
-    "priorityLevel": "medium",
-    "priorityScore": 45,
-    "anomalyStatus": "flagged",
-    "category": "built_up_expansion",
-    "changeMetric": "+6.9% built-up"
-  },
-  {
-    "cellId": "CELL-1456",
-    "hotspotId": "HS-BLR-10",
-    "wardName": "Ward 150 - Panathur Stream Sector",
-    "bounds": [[12.932, 77.703], [12.942, 77.713]],
-    "center": [12.9378, 77.7089],
-    "priorityLevel": "medium",
-    "priorityScore": 42,
+    "priority_score": 68,
+    "score_breakdown": {
+      "urban_expansion": 0,
+      "vegetation_loss": 14,
+      "water_body_change": 24,
+      "historical_anomaly": 14,
+      "spatial_anomaly": 10,
+      "persistence": 6
+    },
     "anomalyStatus": "flagged",
     "category": "water_body_change",
-    "changeMetric": "-5.8% water area"
+    "changeMetric": "+1.5% built-up"
   },
   {
-    "cellId": "CELL-1102",
-    "hotspotId": "HS-BLR-11",
-    "wardName": "Ward 81 - Hoodi Greenbelt",
-    "bounds": [[12.986, 77.713], [12.996, 77.723]],
-    "center": [12.9912, 77.7188],
-    "priorityLevel": "normal",
-    "priorityScore": 28,
-    "anomalyStatus": "normal",
-    "category": "vegetation_loss",
-    "changeMetric": "-3.2% vegetation"
+    "cellId": "HYD_0733",
+    "grid_id": "HYD_0733",
+    "hotspotId": "HYD_0733",
+    "wardName": "Zone 33 - Hyderabad",
+    "center": [
+      17.298,
+      78.431
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.428642,
+            17.29575
+          ],
+          [
+            78.433357,
+            17.29575
+          ],
+          [
+            78.433357,
+            17.300249
+          ],
+          [
+            78.428642,
+            17.300249
+          ],
+          [
+            78.428642,
+            17.29575
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.29575,
+        78.428642
+      ],
+      [
+        17.300249,
+        78.433357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 61,
+    "priority_score": 61,
+    "score_breakdown": {
+      "urban_expansion": 20,
+      "vegetation_loss": 12,
+      "water_body_change": 0,
+      "historical_anomaly": 15,
+      "spatial_anomaly": 8,
+      "persistence": 6
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+4.9% built-up"
   },
   {
-    "cellId": "CELL-1180",
-    "hotspotId": "HS-BLR-12",
-    "wardName": "Ward 83 - Seegehalli Farm Zone",
-    "bounds": [[12.998, 77.740], [13.008, 77.750]],
-    "center": [13.0034, 77.7456],
-    "priorityLevel": "normal",
-    "priorityScore": 22,
-    "anomalyStatus": "normal",
-    "category": "bare_land_change",
-    "changeMetric": "+4.1% bare soil"
+    "cellId": "HYD_0488",
+    "grid_id": "HYD_0488",
+    "hotspotId": "HYD_0488",
+    "wardName": "Zone 88 - Hyderabad",
+    "center": [
+      17.458,
+      78.445
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.442642,
+            17.45575
+          ],
+          [
+            78.447357,
+            17.45575
+          ],
+          [
+            78.447357,
+            17.460249
+          ],
+          [
+            78.442642,
+            17.460249
+          ],
+          [
+            78.442642,
+            17.45575
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.45575,
+        78.442642
+      ],
+      [
+        17.460249,
+        78.447357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 58,
+    "priority_score": 58,
+    "score_breakdown": {
+      "urban_expansion": 18,
+      "vegetation_loss": 12,
+      "water_body_change": 0,
+      "historical_anomaly": 14,
+      "spatial_anomaly": 8,
+      "persistence": 6
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+3.9% built-up"
   },
   {
-    "cellId": "CELL-1001",
+    "cellId": "HYD_0542",
+    "grid_id": "HYD_0542",
+    "hotspotId": "HYD_0542",
+    "wardName": "Zone 42 - Hyderabad",
+    "center": [
+      17.43,
+      78.53
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.527642,
+            17.42775
+          ],
+          [
+            78.532358,
+            17.42775
+          ],
+          [
+            78.532358,
+            17.43225
+          ],
+          [
+            78.527642,
+            17.43225
+          ],
+          [
+            78.527642,
+            17.42775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.42775,
+        78.527642
+      ],
+      [
+        17.43225,
+        78.532358
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 55,
+    "priority_score": 55,
+    "score_breakdown": {
+      "urban_expansion": 16,
+      "vegetation_loss": 11,
+      "water_body_change": 4,
+      "historical_anomaly": 12,
+      "spatial_anomaly": 7,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "water_body_change",
+    "changeMetric": "+3.6% built-up"
+  },
+  {
+    "cellId": "HYD_0365",
+    "grid_id": "HYD_0365",
+    "hotspotId": "HYD_0365",
+    "wardName": "Zone 65 - Hyderabad",
+    "center": [
+      17.37,
+      78.52
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.517642,
+            17.36775
+          ],
+          [
+            78.522357,
+            17.36775
+          ],
+          [
+            78.522357,
+            17.37225
+          ],
+          [
+            78.517642,
+            17.37225
+          ],
+          [
+            78.517642,
+            17.36775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.36775,
+        78.517642
+      ],
+      [
+        17.37225,
+        78.522357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 52,
+    "priority_score": 52,
+    "score_breakdown": {
+      "urban_expansion": 15,
+      "vegetation_loss": 10,
+      "water_body_change": 0,
+      "historical_anomaly": 14,
+      "spatial_anomaly": 8,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+3.6% built-up"
+  },
+  {
+    "cellId": "HYD_0615",
+    "grid_id": "HYD_0615",
+    "hotspotId": "HYD_0615",
+    "wardName": "Zone 15 - Hyderabad",
+    "center": [
+      17.48,
+      78.36
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.357642,
+            17.47775
+          ],
+          [
+            78.362358,
+            17.47775
+          ],
+          [
+            78.362358,
+            17.48225
+          ],
+          [
+            78.357642,
+            17.48225
+          ],
+          [
+            78.357642,
+            17.47775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.47775,
+        78.357642
+      ],
+      [
+        17.48225,
+        78.362358
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 50,
+    "priority_score": 50,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 13,
+      "spatial_anomaly": 7,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+3.5% built-up"
+  },
+  {
+    "cellId": "HYD_0410",
+    "grid_id": "HYD_0410",
+    "hotspotId": "HYD_0410",
+    "wardName": "Zone 10 - Hyderabad",
+    "center": [
+      17.405,
+      78.475
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.472642,
+            17.40275
+          ],
+          [
+            78.477357,
+            17.40275
+          ],
+          [
+            78.477357,
+            17.40725
+          ],
+          [
+            78.472642,
+            17.40725
+          ],
+          [
+            78.472642,
+            17.40275
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.40275,
+        78.472642
+      ],
+      [
+        17.40725,
+        78.477357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 48,
+    "priority_score": 48,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 9,
+      "water_body_change": 3,
+      "historical_anomaly": 11,
+      "spatial_anomaly": 6,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "water_body_change",
+    "changeMetric": "+3.3% built-up"
+  },
+  {
+    "cellId": "HYD_0325",
+    "grid_id": "HYD_0325",
+    "hotspotId": "HYD_0325",
+    "wardName": "Zone 25 - Hyderabad",
+    "center": [
+      17.345,
+      78.49
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.487642,
+            17.34275
+          ],
+          [
+            78.492357,
+            17.34275
+          ],
+          [
+            78.492357,
+            17.34725
+          ],
+          [
+            78.487642,
+            17.34725
+          ],
+          [
+            78.487642,
+            17.34275
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.34275,
+        78.487642
+      ],
+      [
+        17.34725,
+        78.492357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 46,
+    "priority_score": 46,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 12,
+      "spatial_anomaly": 7,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+3.0% built-up"
+  },
+  {
+    "cellId": "HYD_0580",
+    "grid_id": "HYD_0580",
+    "hotspotId": "HYD_0580",
+    "wardName": "Zone 80 - Hyderabad",
+    "center": [
+      17.465,
+      78.505
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.502642,
+            17.46275
+          ],
+          [
+            78.507357,
+            17.46275
+          ],
+          [
+            78.507357,
+            17.46725
+          ],
+          [
+            78.502642,
+            17.46725
+          ],
+          [
+            78.502642,
+            17.46275
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.46275,
+        78.502642
+      ],
+      [
+        17.46725,
+        78.507357
+      ]
+    ],
+    "priorityLevel": "medium",
+    "priority_level": "MEDIUM",
+    "priorityScore": 45,
+    "priority_score": 45,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 10,
+      "water_body_change": 0,
+      "historical_anomaly": 11,
+      "spatial_anomaly": 7,
+      "persistence": 5
+    },
+    "anomalyStatus": "flagged",
+    "category": "built_up_expansion",
+    "changeMetric": "+2.8% built-up"
+  },
+  {
+    "cellId": "HYD_0289",
+    "grid_id": "HYD_0289",
     "hotspotId": null,
-    "wardName": "Ward 82 - KR Puram South",
-    "bounds": [[12.995, 77.695], [13.005, 77.705]],
-    "center": [13.0000, 77.7000],
-    "priorityLevel": "normal",
-    "priorityScore": 12,
+    "wardName": "Zone 89 - Hyderabad",
+    "center": [
+      17.318998,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.316748
+          ],
+          [
+            78.342358,
+            17.316748
+          ],
+          [
+            78.342358,
+            17.321248
+          ],
+          [
+            78.337643,
+            17.321248
+          ],
+          [
+            78.337643,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.337643
+      ],
+      [
+        17.321248,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 13,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
     "anomalyStatus": "normal",
-    "category": "stable",
-    "changeMetric": "+0.5% built-up"
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
   },
   {
-    "cellId": "CELL-1002",
+    "cellId": "HYD_0436",
+    "grid_id": "HYD_0436",
     "hotspotId": null,
-    "wardName": "Ward 82 - Mahadevapura Core",
-    "bounds": [[12.985, 77.695], [12.995, 77.705]],
-    "center": [12.9900, 77.7000],
-    "priorityLevel": "normal",
-    "priorityScore": 14,
+    "wardName": "Zone 36 - Hyderabad",
+    "center": [
+      17.323497,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.321247
+          ],
+          [
+            78.375363,
+            17.321247
+          ],
+          [
+            78.375363,
+            17.325747
+          ],
+          [
+            78.370648,
+            17.325747
+          ],
+          [
+            78.370648,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.370648
+      ],
+      [
+        17.325747,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 12,
+      "water_body_change": 1,
+      "historical_anomaly": 9,
+      "spatial_anomaly": 6,
+      "persistence": 3
+    },
     "anomalyStatus": "normal",
-    "category": "stable",
-    "changeMetric": "+0.8% built-up"
-  },
-  {
-    "cellId": "CELL-1003",
-    "hotspotId": null,
-    "wardName": "Ward 85 - Brookefield North",
-    "bounds": [[12.965, 77.715], [12.975, 77.725]],
-    "center": [12.9700, 77.7200],
-    "priorityLevel": "normal",
-    "priorityScore": 15,
-    "anomalyStatus": "normal",
-    "category": "stable",
-    "changeMetric": "+1.1% built-up"
-  },
-  {
-    "cellId": "CELL-1004",
-    "hotspotId": null,
-    "wardName": "Ward 84 - ITPL Tech Corridor",
-    "bounds": [[12.980, 77.735], [12.990, 77.745]],
-    "center": [12.9850, 77.7400],
-    "priorityLevel": "normal",
-    "priorityScore": 11,
-    "anomalyStatus": "normal",
-    "category": "stable",
-    "changeMetric": "+0.3% built-up"
-  },
-  {
-    "cellId": "CELL-1005",
-    "hotspotId": null,
-    "wardName": "Ward 84 - Whitefield Main",
-    "bounds": [[12.960, 77.735], [12.970, 77.745]],
-    "center": [12.9650, 77.7400],
-    "priorityLevel": "normal",
-    "priorityScore": 13,
-    "anomalyStatus": "normal",
-    "category": "stable",
+    "category": "water_body_change",
     "changeMetric": "+0.7% built-up"
   },
   {
-    "cellId": "CELL-1006",
+    "cellId": "HYD_0506",
+    "grid_id": "HYD_0506",
     "hotspotId": null,
-    "wardName": "Ward 150 - Bellandur North",
-    "bounds": [[12.935, 77.675], [12.945, 77.685]],
-    "center": [12.9400, 77.6800],
-    "priorityLevel": "normal",
-    "priorityScore": 16,
+    "wardName": "Zone 06 - Hyderabad",
+    "center": [
+      17.327996,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.325746
+          ],
+          [
+            78.356503,
+            17.325746
+          ],
+          [
+            78.356503,
+            17.330246
+          ],
+          [
+            78.351788,
+            17.330246
+          ],
+          [
+            78.351788,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.351788
+      ],
+      [
+        17.330246,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 12,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
     "anomalyStatus": "normal",
-    "category": "stable",
+    "category": "water_body_change",
+    "changeMetric": "+0.1% built-up"
+  },
+  {
+    "cellId": "HYD_0814",
+    "grid_id": "HYD_0814",
+    "hotspotId": null,
+    "wardName": "Zone 14 - Hyderabad",
+    "center": [
+      17.341493,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.339243
+          ],
+          [
+            78.375363,
+            17.339243
+          ],
+          [
+            78.375363,
+            17.343743
+          ],
+          [
+            78.370648,
+            17.343743
+          ],
+          [
+            78.370648,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.370648
+      ],
+      [
+        17.343743,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 12,
+      "water_body_change": 0,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0996",
+    "grid_id": "HYD_0996",
+    "hotspotId": null,
+    "wardName": "Zone 96 - Hyderabad",
+    "center": [
+      17.350491,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.348242
+          ],
+          [
+            78.375363,
+            17.348242
+          ],
+          [
+            78.375363,
+            17.352741
+          ],
+          [
+            78.370648,
+            17.352741
+          ],
+          [
+            78.370648,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.370648
+      ],
+      [
+        17.352741,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 15,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_1059",
+    "grid_id": "HYD_1059",
+    "hotspotId": null,
+    "wardName": "Zone 59 - Hyderabad",
+    "center": [
+      17.35499,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.35274
+          ],
+          [
+            78.356503,
+            17.35274
+          ],
+          [
+            78.356503,
+            17.35724
+          ],
+          [
+            78.351788,
+            17.35724
+          ],
+          [
+            78.351788,
+            17.35274
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.35274,
+        78.351788
+      ],
+      [
+        17.35724,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 43,
+    "priority_score": 43,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 9,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0107",
+    "grid_id": "HYD_0107",
+    "hotspotId": null,
+    "wardName": "Zone 07 - Hyderabad",
+    "center": [
+      17.31,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.30775
+          ],
+          [
+            78.342358,
+            17.30775
+          ],
+          [
+            78.342358,
+            17.31225
+          ],
+          [
+            78.337643,
+            17.31225
+          ],
+          [
+            78.337643,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.337643
+      ],
+      [
+        17.31225,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 42,
+    "priority_score": 42,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 12,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0660",
+    "grid_id": "HYD_0660",
+    "hotspotId": null,
+    "wardName": "Zone 60 - Hyderabad",
+    "center": [
+      17.332495,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.330246
+          ],
+          [
+            78.394222,
+            17.330246
+          ],
+          [
+            78.394222,
+            17.334745
+          ],
+          [
+            78.389507,
+            17.334745
+          ],
+          [
+            78.389507,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.389507
+      ],
+      [
+        17.334745,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 42,
+    "priority_score": 42,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 12,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0709",
+    "grid_id": "HYD_0709",
+    "hotspotId": null,
+    "wardName": "Zone 09 - Hyderabad",
+    "center": [
+      17.336994,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.334744
+          ],
+          [
+            78.365932,
+            17.334744
+          ],
+          [
+            78.365932,
+            17.339244
+          ],
+          [
+            78.361217,
+            17.339244
+          ],
+          [
+            78.361217,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.361217
+      ],
+      [
+        17.339244,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 42,
+    "priority_score": 42,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 13,
+      "water_body_change": 1,
+      "historical_anomaly": 9,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
     "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0933",
+    "grid_id": "HYD_0933",
+    "hotspotId": null,
+    "wardName": "Zone 33 - Hyderabad",
+    "center": [
+      17.345992,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.343742
+          ],
+          [
+            78.394222,
+            17.343742
+          ],
+          [
+            78.394222,
+            17.348242
+          ],
+          [
+            78.389507,
+            17.348242
+          ],
+          [
+            78.389507,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.389507
+      ],
+      [
+        17.348242,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 42,
+    "priority_score": 42,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 12,
+      "water_body_change": 1,
+      "historical_anomaly": 9,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_1052",
+    "grid_id": "HYD_1052",
+    "hotspotId": null,
+    "wardName": "Zone 52 - Hyderabad",
+    "center": [
+      17.35499,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.35274
+          ],
+          [
+            78.351788,
+            17.35274
+          ],
+          [
+            78.351788,
+            17.35724
+          ],
+          [
+            78.347072,
+            17.35724
+          ],
+          [
+            78.347072,
+            17.35274
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.35274,
+        78.347072
+      ],
+      [
+        17.35724,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 42,
+    "priority_score": 42,
+    "score_breakdown": {
+      "urban_expansion": 15,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0324",
+    "grid_id": "HYD_0324",
+    "hotspotId": null,
+    "wardName": "Zone 24 - Hyderabad",
+    "center": [
+      17.318998,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.316748
+          ],
+          [
+            78.365932,
+            17.316748
+          ],
+          [
+            78.365932,
+            17.321248
+          ],
+          [
+            78.361217,
+            17.321248
+          ],
+          [
+            78.361217,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.361217
+      ],
+      [
+        17.321248,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 41,
+    "priority_score": 41,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0429",
+    "grid_id": "HYD_0429",
+    "hotspotId": null,
+    "wardName": "Zone 29 - Hyderabad",
+    "center": [
+      17.323497,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.321247
+          ],
+          [
+            78.370648,
+            17.321247
+          ],
+          [
+            78.370648,
+            17.325747
+          ],
+          [
+            78.365932,
+            17.325747
+          ],
+          [
+            78.365932,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.365932
+      ],
+      [
+        17.325747,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 41,
+    "priority_score": 41,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 11,
+      "water_body_change": 2,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.9% built-up"
+  },
+  {
+    "cellId": "HYD_1003",
+    "grid_id": "HYD_1003",
+    "hotspotId": null,
+    "wardName": "Zone 03 - Hyderabad",
+    "center": [
+      17.350491,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.348242
+          ],
+          [
+            78.380077,
+            17.348242
+          ],
+          [
+            78.380077,
+            17.352741
+          ],
+          [
+            78.375362,
+            17.352741
+          ],
+          [
+            78.375362,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.375362
+      ],
+      [
+        17.352741,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 41,
+    "priority_score": 41,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0394",
+    "grid_id": "HYD_0394",
+    "hotspotId": null,
+    "wardName": "Zone 94 - Hyderabad",
+    "center": [
+      17.323497,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.321247
+          ],
+          [
+            78.347072,
+            17.321247
+          ],
+          [
+            78.347072,
+            17.325747
+          ],
+          [
+            78.342357,
+            17.325747
+          ],
+          [
+            78.342357,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.342357
+      ],
+      [
+        17.325747,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 40,
+    "priority_score": 40,
+    "score_breakdown": {
+      "urban_expansion": 14,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0618",
+    "grid_id": "HYD_0618",
+    "hotspotId": null,
+    "wardName": "Zone 18 - Hyderabad",
+    "center": [
+      17.332495,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.330246
+          ],
+          [
+            78.365932,
+            17.330246
+          ],
+          [
+            78.365932,
+            17.334745
+          ],
+          [
+            78.361217,
+            17.334745
+          ],
+          [
+            78.361217,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.361217
+      ],
+      [
+        17.334745,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 40,
+    "priority_score": 40,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 10,
+      "water_body_change": 2,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0114",
+    "grid_id": "HYD_0114",
+    "hotspotId": null,
+    "wardName": "Zone 14 - Hyderabad",
+    "center": [
+      17.31,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.30775
+          ],
+          [
+            78.347072,
+            17.30775
+          ],
+          [
+            78.347072,
+            17.31225
+          ],
+          [
+            78.342357,
+            17.31225
+          ],
+          [
+            78.342357,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.342357
+      ],
+      [
+        17.31225,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 39,
+    "priority_score": 39,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 6,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0723",
+    "grid_id": "HYD_0723",
+    "hotspotId": null,
+    "wardName": "Zone 23 - Hyderabad",
+    "center": [
+      17.336994,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.334744
+          ],
+          [
+            78.375363,
+            17.334744
+          ],
+          [
+            78.375363,
+            17.339244
+          ],
+          [
+            78.370648,
+            17.339244
+          ],
+          [
+            78.370648,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.370648
+      ],
+      [
+        17.339244,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 39,
+    "priority_score": 39,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 10,
+      "water_body_change": 0,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0275",
+    "grid_id": "HYD_0275",
+    "hotspotId": null,
+    "wardName": "Zone 75 - Hyderabad",
+    "center": [
+      17.314499,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.31225
+          ],
+          [
+            78.394222,
+            17.31225
+          ],
+          [
+            78.394222,
+            17.316749
+          ],
+          [
+            78.389507,
+            17.316749
+          ],
+          [
+            78.389507,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.389507
+      ],
+      [
+        17.316749,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 38,
+    "priority_score": 38,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 2,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0282",
+    "grid_id": "HYD_0282",
+    "hotspotId": null,
+    "wardName": "Zone 82 - Hyderabad",
+    "center": [
+      17.314499,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.31225
+          ],
+          [
+            78.398938,
+            17.31225
+          ],
+          [
+            78.398938,
+            17.316749
+          ],
+          [
+            78.394222,
+            17.316749
+          ],
+          [
+            78.394222,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.394222
+      ],
+      [
+        17.316749,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 38,
+    "priority_score": 38,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0576",
+    "grid_id": "HYD_0576",
+    "hotspotId": null,
+    "wardName": "Zone 76 - Hyderabad",
+    "center": [
+      17.327996,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.325746
+          ],
+          [
+            78.398938,
+            17.325746
+          ],
+          [
+            78.398938,
+            17.330246
+          ],
+          [
+            78.394222,
+            17.330246
+          ],
+          [
+            78.394222,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.394222
+      ],
+      [
+        17.330246,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 38,
+    "priority_score": 38,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 4,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_1045",
+    "grid_id": "HYD_1045",
+    "hotspotId": null,
+    "wardName": "Zone 45 - Hyderabad",
+    "center": [
+      17.35499,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.35274
+          ],
+          [
+            78.347072,
+            17.35274
+          ],
+          [
+            78.347072,
+            17.35724
+          ],
+          [
+            78.342357,
+            17.35724
+          ],
+          [
+            78.342357,
+            17.35274
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.35274,
+        78.342357
+      ],
+      [
+        17.35724,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 38,
+    "priority_score": 38,
+    "score_breakdown": {
+      "urban_expansion": 13,
+      "vegetation_loss": 9,
+      "water_body_change": 2,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0177",
+    "grid_id": "HYD_0177",
+    "hotspotId": null,
+    "wardName": "Zone 77 - Hyderabad",
+    "center": [
+      17.31,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.30775
+          ],
+          [
+            78.389508,
+            17.30775
+          ],
+          [
+            78.389508,
+            17.31225
+          ],
+          [
+            78.384793,
+            17.31225
+          ],
+          [
+            78.384793,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.384793
+      ],
+      [
+        17.31225,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0226",
+    "grid_id": "HYD_0226",
+    "hotspotId": null,
+    "wardName": "Zone 26 - Hyderabad",
+    "center": [
+      17.314499,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.31225
+          ],
+          [
+            78.361218,
+            17.31225
+          ],
+          [
+            78.361218,
+            17.316749
+          ],
+          [
+            78.356503,
+            17.316749
+          ],
+          [
+            78.356503,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.356503
+      ],
+      [
+        17.316749,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0569",
+    "grid_id": "HYD_0569",
+    "hotspotId": null,
+    "wardName": "Zone 69 - Hyderabad",
+    "center": [
+      17.327996,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.325746
+          ],
+          [
+            78.394222,
+            17.325746
+          ],
+          [
+            78.394222,
+            17.330246
+          ],
+          [
+            78.389507,
+            17.330246
+          ],
+          [
+            78.389507,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.389507
+      ],
+      [
+        17.330246,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 11,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 5,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0625",
+    "grid_id": "HYD_0625",
+    "hotspotId": null,
+    "wardName": "Zone 25 - Hyderabad",
+    "center": [
+      17.332495,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.330246
+          ],
+          [
+            78.370648,
+            17.330246
+          ],
+          [
+            78.370648,
+            17.334745
+          ],
+          [
+            78.365932,
+            17.334745
+          ],
+          [
+            78.365932,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.365932
+      ],
+      [
+        17.334745,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 5,
+      "persistence": 4
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0772",
+    "grid_id": "HYD_0772",
+    "hotspotId": null,
+    "wardName": "Zone 72 - Hyderabad",
+    "center": [
+      17.341493,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.339243
+          ],
+          [
+            78.347072,
+            17.339243
+          ],
+          [
+            78.347072,
+            17.343743
+          ],
+          [
+            78.342357,
+            17.343743
+          ],
+          [
+            78.342357,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.342357
+      ],
+      [
+        17.343743,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_0807",
+    "grid_id": "HYD_0807",
+    "hotspotId": null,
+    "wardName": "Zone 07 - Hyderabad",
+    "center": [
+      17.341493,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.339243
+          ],
+          [
+            78.370648,
+            17.339243
+          ],
+          [
+            78.370648,
+            17.343743
+          ],
+          [
+            78.365932,
+            17.343743
+          ],
+          [
+            78.365932,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.365932
+      ],
+      [
+        17.343743,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 11,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0849",
+    "grid_id": "HYD_0849",
+    "hotspotId": null,
+    "wardName": "Zone 49 - Hyderabad",
+    "center": [
+      17.341493,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.339243
+          ],
+          [
+            78.398938,
+            17.339243
+          ],
+          [
+            78.398938,
+            17.343743
+          ],
+          [
+            78.394222,
+            17.343743
+          ],
+          [
+            78.394222,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.394222
+      ],
+      [
+        17.343743,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.9% built-up"
+  },
+  {
+    "cellId": "HYD_0912",
+    "grid_id": "HYD_0912",
+    "hotspotId": null,
+    "wardName": "Zone 12 - Hyderabad",
+    "center": [
+      17.345992,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.343742
+          ],
+          [
+            78.380077,
+            17.343742
+          ],
+          [
+            78.380077,
+            17.348242
+          ],
+          [
+            78.375362,
+            17.348242
+          ],
+          [
+            78.375362,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.375362
+      ],
+      [
+        17.348242,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 37,
+    "priority_score": 37,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0737",
+    "grid_id": "HYD_0737",
+    "hotspotId": null,
+    "wardName": "Zone 37 - Hyderabad",
+    "center": [
+      17.336994,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.334744
+          ],
+          [
+            78.384793,
+            17.334744
+          ],
+          [
+            78.384793,
+            17.339244
+          ],
+          [
+            78.380077,
+            17.339244
+          ],
+          [
+            78.380077,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.380077
+      ],
+      [
+        17.339244,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 36,
+    "priority_score": 36,
+    "score_breakdown": {
+      "urban_expansion": 11,
+      "vegetation_loss": 10,
+      "water_body_change": 1,
+      "historical_anomaly": 8,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_1038",
+    "grid_id": "HYD_1038",
+    "hotspotId": null,
+    "wardName": "Zone 38 - Hyderabad",
+    "center": [
+      17.35499,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.35274
+          ],
+          [
+            78.342358,
+            17.35274
+          ],
+          [
+            78.342358,
+            17.35724
+          ],
+          [
+            78.337643,
+            17.35724
+          ],
+          [
+            78.337643,
+            17.35274
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.35274,
+        78.337643
+      ],
+      [
+        17.35724,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 36,
+    "priority_score": 36,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 11,
+      "water_body_change": 0,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0121",
+    "grid_id": "HYD_0121",
+    "hotspotId": null,
+    "wardName": "Zone 21 - Hyderabad",
+    "center": [
+      17.31,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.30775
+          ],
+          [
+            78.351788,
+            17.30775
+          ],
+          [
+            78.351788,
+            17.31225
+          ],
+          [
+            78.347072,
+            17.31225
+          ],
+          [
+            78.347072,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.347072
+      ],
+      [
+        17.31225,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 35,
+    "priority_score": 35,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 9,
+      "water_body_change": 2,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0233",
+    "grid_id": "HYD_0233",
+    "hotspotId": null,
+    "wardName": "Zone 33 - Hyderabad",
+    "center": [
+      17.314499,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.31225
+          ],
+          [
+            78.365932,
+            17.31225
+          ],
+          [
+            78.365932,
+            17.316749
+          ],
+          [
+            78.361217,
+            17.316749
+          ],
+          [
+            78.361217,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.361217
+      ],
+      [
+        17.316749,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 34,
+    "priority_score": 34,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0352",
+    "grid_id": "HYD_0352",
+    "hotspotId": null,
+    "wardName": "Zone 52 - Hyderabad",
+    "center": [
+      17.318998,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.316748
+          ],
+          [
+            78.384793,
+            17.316748
+          ],
+          [
+            78.384793,
+            17.321248
+          ],
+          [
+            78.380077,
+            17.321248
+          ],
+          [
+            78.380077,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.380077
+      ],
+      [
+        17.321248,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 34,
+    "priority_score": 34,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 5,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0688",
+    "grid_id": "HYD_0688",
+    "hotspotId": null,
+    "wardName": "Zone 88 - Hyderabad",
+    "center": [
+      17.336994,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.334744
+          ],
+          [
+            78.351788,
+            17.334744
+          ],
+          [
+            78.351788,
+            17.339244
+          ],
+          [
+            78.347072,
+            17.339244
+          ],
+          [
+            78.347072,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.347072
+      ],
+      [
+        17.339244,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 34,
+    "priority_score": 34,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0968",
+    "grid_id": "HYD_0968",
+    "hotspotId": null,
+    "wardName": "Zone 68 - Hyderabad",
+    "center": [
+      17.350491,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.348242
+          ],
+          [
+            78.356503,
+            17.348242
+          ],
+          [
+            78.356503,
+            17.352741
+          ],
+          [
+            78.351788,
+            17.352741
+          ],
+          [
+            78.351788,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.351788
+      ],
+      [
+        17.352741,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 34,
+    "priority_score": 34,
+    "score_breakdown": {
+      "urban_expansion": 12,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.9% built-up"
+  },
+  {
+    "cellId": "HYD_0128",
+    "grid_id": "HYD_0128",
+    "hotspotId": null,
+    "wardName": "Zone 28 - Hyderabad",
+    "center": [
+      17.31,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.30775
+          ],
+          [
+            78.356503,
+            17.30775
+          ],
+          [
+            78.356503,
+            17.31225
+          ],
+          [
+            78.351788,
+            17.31225
+          ],
+          [
+            78.351788,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.351788
+      ],
+      [
+        17.31225,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 33,
+    "priority_score": 33,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0198",
+    "grid_id": "HYD_0198",
+    "hotspotId": null,
+    "wardName": "Zone 98 - Hyderabad",
+    "center": [
+      17.314499,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.31225
+          ],
+          [
+            78.342358,
+            17.31225
+          ],
+          [
+            78.342358,
+            17.316749
+          ],
+          [
+            78.337643,
+            17.316749
+          ],
+          [
+            78.337643,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.337643
+      ],
+      [
+        17.316749,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 33,
+    "priority_score": 33,
+    "score_breakdown": {
+      "urban_expansion": 11,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 7,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0296",
+    "grid_id": "HYD_0296",
+    "hotspotId": null,
+    "wardName": "Zone 96 - Hyderabad",
+    "center": [
+      17.318998,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.316748
+          ],
+          [
+            78.347072,
+            17.316748
+          ],
+          [
+            78.347072,
+            17.321248
+          ],
+          [
+            78.342357,
+            17.321248
+          ],
+          [
+            78.342357,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.342357
+      ],
+      [
+        17.321248,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 32,
+    "priority_score": 32,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 7,
+      "water_body_change": 3,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0513",
+    "grid_id": "HYD_0513",
+    "hotspotId": null,
+    "wardName": "Zone 13 - Hyderabad",
+    "center": [
+      17.327996,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.325746
+          ],
+          [
+            78.361218,
+            17.325746
+          ],
+          [
+            78.361218,
+            17.330246
+          ],
+          [
+            78.356503,
+            17.330246
+          ],
+          [
+            78.356503,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.356503
+      ],
+      [
+        17.330246,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 32,
+    "priority_score": 32,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 9,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 5,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.9% built-up"
+  },
+  {
+    "cellId": "HYD_0926",
+    "grid_id": "HYD_0926",
+    "hotspotId": null,
+    "wardName": "Zone 26 - Hyderabad",
+    "center": [
+      17.345992,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.343742
+          ],
+          [
+            78.389508,
+            17.343742
+          ],
+          [
+            78.389508,
+            17.348242
+          ],
+          [
+            78.384793,
+            17.348242
+          ],
+          [
+            78.384793,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.384793
+      ],
+      [
+        17.348242,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 32,
+    "priority_score": 32,
+    "score_breakdown": {
+      "urban_expansion": 11,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0156",
+    "grid_id": "HYD_0156",
+    "hotspotId": null,
+    "wardName": "Zone 56 - Hyderabad",
+    "center": [
+      17.31,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.30775
+          ],
+          [
+            78.375363,
+            17.30775
+          ],
+          [
+            78.375363,
+            17.31225
+          ],
+          [
+            78.370648,
+            17.31225
+          ],
+          [
+            78.370648,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.370648
+      ],
+      [
+        17.31225,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 31,
+    "priority_score": 31,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 8,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0219",
+    "grid_id": "HYD_0219",
+    "hotspotId": null,
+    "wardName": "Zone 19 - Hyderabad",
+    "center": [
+      17.314499,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.31225
+          ],
+          [
+            78.356503,
+            17.31225
+          ],
+          [
+            78.356503,
+            17.316749
+          ],
+          [
+            78.351788,
+            17.316749
+          ],
+          [
+            78.351788,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.351788
+      ],
+      [
+        17.316749,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 31,
+    "priority_score": 31,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 8,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0317",
+    "grid_id": "HYD_0317",
+    "hotspotId": null,
+    "wardName": "Zone 17 - Hyderabad",
+    "center": [
+      17.318998,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.316748
+          ],
+          [
+            78.361218,
+            17.316748
+          ],
+          [
+            78.361218,
+            17.321248
+          ],
+          [
+            78.356503,
+            17.321248
+          ],
+          [
+            78.356503,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.356503
+      ],
+      [
+        17.321248,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 31,
+    "priority_score": 31,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 8,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0835",
+    "grid_id": "HYD_0835",
+    "hotspotId": null,
+    "wardName": "Zone 35 - Hyderabad",
+    "center": [
+      17.341493,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.339243
+          ],
+          [
+            78.389508,
+            17.339243
+          ],
+          [
+            78.389508,
+            17.343743
+          ],
+          [
+            78.384793,
+            17.343743
+          ],
+          [
+            78.384793,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.384793
+      ],
+      [
+        17.343743,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 31,
+    "priority_score": 31,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0247",
+    "grid_id": "HYD_0247",
+    "hotspotId": null,
+    "wardName": "Zone 47 - Hyderabad",
+    "center": [
+      17.314499,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.31225
+          ],
+          [
+            78.375363,
+            17.31225
+          ],
+          [
+            78.375363,
+            17.316749
+          ],
+          [
+            78.370648,
+            17.316749
+          ],
+          [
+            78.370648,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.370648
+      ],
+      [
+        17.316749,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 30,
+    "priority_score": 30,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 9,
+      "water_body_change": 0,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0583",
+    "grid_id": "HYD_0583",
+    "hotspotId": null,
+    "wardName": "Zone 83 - Hyderabad",
+    "center": [
+      17.332495,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.330246
+          ],
+          [
+            78.342358,
+            17.330246
+          ],
+          [
+            78.342358,
+            17.334745
+          ],
+          [
+            78.337643,
+            17.334745
+          ],
+          [
+            78.337643,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.337643
+      ],
+      [
+        17.334745,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 30,
+    "priority_score": 30,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 2,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0954",
+    "grid_id": "HYD_0954",
+    "hotspotId": null,
+    "wardName": "Zone 54 - Hyderabad",
+    "center": [
+      17.350491,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.348242
+          ],
+          [
+            78.347072,
+            17.348242
+          ],
+          [
+            78.347072,
+            17.352741
+          ],
+          [
+            78.342357,
+            17.352741
+          ],
+          [
+            78.342357,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.342357
+      ],
+      [
+        17.352741,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 30,
+    "priority_score": 30,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0338",
+    "grid_id": "HYD_0338",
+    "hotspotId": null,
+    "wardName": "Zone 38 - Hyderabad",
+    "center": [
+      17.318998,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.316748
+          ],
+          [
+            78.375363,
+            17.316748
+          ],
+          [
+            78.375363,
+            17.321248
+          ],
+          [
+            78.370648,
+            17.321248
+          ],
+          [
+            78.370648,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.370648
+      ],
+      [
+        17.321248,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 29,
+    "priority_score": 29,
+    "score_breakdown": {
+      "urban_expansion": 10,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 3
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_0842",
+    "grid_id": "HYD_0842",
+    "hotspotId": null,
+    "wardName": "Zone 42 - Hyderabad",
+    "center": [
+      17.341493,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.339243
+          ],
+          [
+            78.394222,
+            17.339243
+          ],
+          [
+            78.394222,
+            17.343743
+          ],
+          [
+            78.389507,
+            17.343743
+          ],
+          [
+            78.389507,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.389507
+      ],
+      [
+        17.343743,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 29,
+    "priority_score": 29,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0856",
+    "grid_id": "HYD_0856",
+    "hotspotId": null,
+    "wardName": "Zone 56 - Hyderabad",
+    "center": [
+      17.345992,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.343742
+          ],
+          [
+            78.342358,
+            17.343742
+          ],
+          [
+            78.342358,
+            17.348242
+          ],
+          [
+            78.337643,
+            17.348242
+          ],
+          [
+            78.337643,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.337643
+      ],
+      [
+        17.348242,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 29,
+    "priority_score": 29,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 2,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0905",
+    "grid_id": "HYD_0905",
+    "hotspotId": null,
+    "wardName": "Zone 05 - Hyderabad",
+    "center": [
+      17.345992,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.343742
+          ],
+          [
+            78.375363,
+            17.343742
+          ],
+          [
+            78.375363,
+            17.348242
+          ],
+          [
+            78.370648,
+            17.348242
+          ],
+          [
+            78.370648,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.370648
+      ],
+      [
+        17.348242,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 29,
+    "priority_score": 29,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0268",
+    "grid_id": "HYD_0268",
+    "hotspotId": null,
+    "wardName": "Zone 68 - Hyderabad",
+    "center": [
+      17.314499,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.31225
+          ],
+          [
+            78.389508,
+            17.31225
+          ],
+          [
+            78.389508,
+            17.316749
+          ],
+          [
+            78.384793,
+            17.316749
+          ],
+          [
+            78.384793,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.384793
+      ],
+      [
+        17.316749,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 28,
+    "priority_score": 28,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 2,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0457",
+    "grid_id": "HYD_0457",
+    "hotspotId": null,
+    "wardName": "Zone 57 - Hyderabad",
+    "center": [
+      17.323497,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.321247
+          ],
+          [
+            78.389508,
+            17.321247
+          ],
+          [
+            78.389508,
+            17.325747
+          ],
+          [
+            78.384793,
+            17.325747
+          ],
+          [
+            78.384793,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.384793
+      ],
+      [
+        17.325747,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 28,
+    "priority_score": 28,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 0,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0534",
+    "grid_id": "HYD_0534",
+    "hotspotId": null,
+    "wardName": "Zone 34 - Hyderabad",
+    "center": [
+      17.327996,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.325746
+          ],
+          [
+            78.375363,
+            17.325746
+          ],
+          [
+            78.375363,
+            17.330246
+          ],
+          [
+            78.370648,
+            17.330246
+          ],
+          [
+            78.370648,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.370648
+      ],
+      [
+        17.330246,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 28,
+    "priority_score": 28,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_0548",
+    "grid_id": "HYD_0548",
+    "hotspotId": null,
+    "wardName": "Zone 48 - Hyderabad",
+    "center": [
+      17.327996,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.325746
+          ],
+          [
+            78.384793,
+            17.325746
+          ],
+          [
+            78.384793,
+            17.330246
+          ],
+          [
+            78.380077,
+            17.330246
+          ],
+          [
+            78.380077,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.380077
+      ],
+      [
+        17.330246,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 28,
+    "priority_score": 28,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0961",
+    "grid_id": "HYD_0961",
+    "hotspotId": null,
+    "wardName": "Zone 61 - Hyderabad",
+    "center": [
+      17.350491,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.348242
+          ],
+          [
+            78.351788,
+            17.348242
+          ],
+          [
+            78.351788,
+            17.352741
+          ],
+          [
+            78.347072,
+            17.352741
+          ],
+          [
+            78.347072,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.347072
+      ],
+      [
+        17.352741,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 28,
+    "priority_score": 28,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0142",
+    "grid_id": "HYD_0142",
+    "hotspotId": null,
+    "wardName": "Zone 42 - Hyderabad",
+    "center": [
+      17.31,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.30775
+          ],
+          [
+            78.365932,
+            17.30775
+          ],
+          [
+            78.365932,
+            17.31225
+          ],
+          [
+            78.361217,
+            17.31225
+          ],
+          [
+            78.361217,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.361217
+      ],
+      [
+        17.31225,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_0331",
+    "grid_id": "HYD_0331",
+    "hotspotId": null,
+    "wardName": "Zone 31 - Hyderabad",
+    "center": [
+      17.318998,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.316748
+          ],
+          [
+            78.370648,
+            17.316748
+          ],
+          [
+            78.370648,
+            17.321248
+          ],
+          [
+            78.365932,
+            17.321248
+          ],
+          [
+            78.365932,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.365932
+      ],
+      [
+        17.321248,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0359",
+    "grid_id": "HYD_0359",
+    "hotspotId": null,
+    "wardName": "Zone 59 - Hyderabad",
+    "center": [
+      17.318998,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.316748
+          ],
+          [
+            78.389508,
+            17.316748
+          ],
+          [
+            78.389508,
+            17.321248
+          ],
+          [
+            78.384793,
+            17.321248
+          ],
+          [
+            78.384793,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.384793
+      ],
+      [
+        17.321248,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 8,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0632",
+    "grid_id": "HYD_0632",
+    "hotspotId": null,
+    "wardName": "Zone 32 - Hyderabad",
+    "center": [
+      17.332495,
+      78.373005
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.370648,
+            17.330246
+          ],
+          [
+            78.375363,
+            17.330246
+          ],
+          [
+            78.375363,
+            17.334745
+          ],
+          [
+            78.370648,
+            17.334745
+          ],
+          [
+            78.370648,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.370648
+      ],
+      [
+        17.334745,
+        78.375363
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0639",
+    "grid_id": "HYD_0639",
+    "hotspotId": null,
+    "wardName": "Zone 39 - Hyderabad",
+    "center": [
+      17.332495,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.330246
+          ],
+          [
+            78.380077,
+            17.330246
+          ],
+          [
+            78.380077,
+            17.334745
+          ],
+          [
+            78.375362,
+            17.334745
+          ],
+          [
+            78.375362,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.375362
+      ],
+      [
+        17.334745,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0716",
+    "grid_id": "HYD_0716",
+    "hotspotId": null,
+    "wardName": "Zone 16 - Hyderabad",
+    "center": [
+      17.336994,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.334744
+          ],
+          [
+            78.370648,
+            17.334744
+          ],
+          [
+            78.370648,
+            17.339244
+          ],
+          [
+            78.365932,
+            17.339244
+          ],
+          [
+            78.365932,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.365932
+      ],
+      [
+        17.339244,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0779",
+    "grid_id": "HYD_0779",
+    "hotspotId": null,
+    "wardName": "Zone 79 - Hyderabad",
+    "center": [
+      17.341493,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.339243
+          ],
+          [
+            78.351788,
+            17.339243
+          ],
+          [
+            78.351788,
+            17.343743
+          ],
+          [
+            78.347072,
+            17.343743
+          ],
+          [
+            78.347072,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.347072
+      ],
+      [
+        17.343743,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0975",
+    "grid_id": "HYD_0975",
+    "hotspotId": null,
+    "wardName": "Zone 75 - Hyderabad",
+    "center": [
+      17.350491,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.348242
+          ],
+          [
+            78.361218,
+            17.348242
+          ],
+          [
+            78.361218,
+            17.352741
+          ],
+          [
+            78.356503,
+            17.352741
+          ],
+          [
+            78.356503,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.356503
+      ],
+      [
+        17.352741,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 27,
+    "priority_score": 27,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0527",
+    "grid_id": "HYD_0527",
+    "hotspotId": null,
+    "wardName": "Zone 27 - Hyderabad",
+    "center": [
+      17.327996,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.325746
+          ],
+          [
+            78.370648,
+            17.325746
+          ],
+          [
+            78.370648,
+            17.330246
+          ],
+          [
+            78.365932,
+            17.330246
+          ],
+          [
+            78.365932,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.365932
+      ],
+      [
+        17.330246,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 26,
+    "priority_score": 26,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 2,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0695",
+    "grid_id": "HYD_0695",
+    "hotspotId": null,
+    "wardName": "Zone 95 - Hyderabad",
+    "center": [
+      17.336994,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.334744
+          ],
+          [
+            78.356503,
+            17.334744
+          ],
+          [
+            78.356503,
+            17.339244
+          ],
+          [
+            78.351788,
+            17.339244
+          ],
+          [
+            78.351788,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.351788
+      ],
+      [
+        17.339244,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 26,
+    "priority_score": 26,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0870",
+    "grid_id": "HYD_0870",
+    "hotspotId": null,
+    "wardName": "Zone 70 - Hyderabad",
+    "center": [
+      17.345992,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.343742
+          ],
+          [
+            78.351788,
+            17.343742
+          ],
+          [
+            78.351788,
+            17.348242
+          ],
+          [
+            78.347072,
+            17.348242
+          ],
+          [
+            78.347072,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.347072
+      ],
+      [
+        17.348242,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 26,
+    "priority_score": 26,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_1031",
+    "grid_id": "HYD_1031",
+    "hotspotId": null,
+    "wardName": "Zone 31 - Hyderabad",
+    "center": [
+      17.350491,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.348242
+          ],
+          [
+            78.398938,
+            17.348242
+          ],
+          [
+            78.398938,
+            17.352741
+          ],
+          [
+            78.394222,
+            17.352741
+          ],
+          [
+            78.394222,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.394222
+      ],
+      [
+        17.352741,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 26,
+    "priority_score": 26,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 6,
+      "spatial_anomaly": 4,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0471",
+    "grid_id": "HYD_0471",
+    "hotspotId": null,
+    "wardName": "Zone 71 - Hyderabad",
+    "center": [
+      17.323497,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.321247
+          ],
+          [
+            78.398938,
+            17.321247
+          ],
+          [
+            78.398938,
+            17.325747
+          ],
+          [
+            78.394222,
+            17.325747
+          ],
+          [
+            78.394222,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.394222
+      ],
+      [
+        17.325747,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 25,
+    "priority_score": 25,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0702",
+    "grid_id": "HYD_0702",
+    "hotspotId": null,
+    "wardName": "Zone 02 - Hyderabad",
+    "center": [
+      17.336994,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.334744
+          ],
+          [
+            78.361218,
+            17.334744
+          ],
+          [
+            78.361218,
+            17.339244
+          ],
+          [
+            78.356503,
+            17.339244
+          ],
+          [
+            78.356503,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.356503
+      ],
+      [
+        17.339244,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 25,
+    "priority_score": 25,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0758",
+    "grid_id": "HYD_0758",
+    "hotspotId": null,
+    "wardName": "Zone 58 - Hyderabad",
+    "center": [
+      17.336994,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.334744
+          ],
+          [
+            78.398938,
+            17.334744
+          ],
+          [
+            78.398938,
+            17.339244
+          ],
+          [
+            78.394222,
+            17.339244
+          ],
+          [
+            78.394222,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.394222
+      ],
+      [
+        17.339244,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 25,
+    "priority_score": 25,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 8,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.9% built-up"
+  },
+  {
+    "cellId": "HYD_0877",
+    "grid_id": "HYD_0877",
+    "hotspotId": null,
+    "wardName": "Zone 77 - Hyderabad",
+    "center": [
+      17.345992,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.343742
+          ],
+          [
+            78.356503,
+            17.343742
+          ],
+          [
+            78.356503,
+            17.348242
+          ],
+          [
+            78.351788,
+            17.348242
+          ],
+          [
+            78.351788,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.351788
+      ],
+      [
+        17.348242,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 25,
+    "priority_score": 25,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0149",
+    "grid_id": "HYD_0149",
+    "hotspotId": null,
+    "wardName": "Zone 49 - Hyderabad",
+    "center": [
+      17.31,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.30775
+          ],
+          [
+            78.370648,
+            17.30775
+          ],
+          [
+            78.370648,
+            17.31225
+          ],
+          [
+            78.365932,
+            17.31225
+          ],
+          [
+            78.365932,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.365932
+      ],
+      [
+        17.31225,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 24,
+    "priority_score": 24,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 7,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0240",
+    "grid_id": "HYD_0240",
+    "hotspotId": null,
+    "wardName": "Zone 40 - Hyderabad",
+    "center": [
+      17.314499,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.31225
+          ],
+          [
+            78.370648,
+            17.31225
+          ],
+          [
+            78.370648,
+            17.316749
+          ],
+          [
+            78.365932,
+            17.316749
+          ],
+          [
+            78.365932,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.365932
+      ],
+      [
+        17.316749,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 24,
+    "priority_score": 24,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0310",
+    "grid_id": "HYD_0310",
+    "hotspotId": null,
+    "wardName": "Zone 10 - Hyderabad",
+    "center": [
+      17.318998,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.316748
+          ],
+          [
+            78.356503,
+            17.316748
+          ],
+          [
+            78.356503,
+            17.321248
+          ],
+          [
+            78.351788,
+            17.321248
+          ],
+          [
+            78.351788,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.351788
+      ],
+      [
+        17.321248,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 24,
+    "priority_score": 24,
+    "score_breakdown": {
+      "urban_expansion": 9,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0520",
+    "grid_id": "HYD_0520",
+    "hotspotId": null,
+    "wardName": "Zone 20 - Hyderabad",
+    "center": [
+      17.327996,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.325746
+          ],
+          [
+            78.365932,
+            17.325746
+          ],
+          [
+            78.365932,
+            17.330246
+          ],
+          [
+            78.361217,
+            17.330246
+          ],
+          [
+            78.361217,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.361217
+      ],
+      [
+        17.330246,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 23,
+    "priority_score": 23,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0828",
+    "grid_id": "HYD_0828",
+    "hotspotId": null,
+    "wardName": "Zone 28 - Hyderabad",
+    "center": [
+      17.341493,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.339243
+          ],
+          [
+            78.384793,
+            17.339243
+          ],
+          [
+            78.384793,
+            17.343743
+          ],
+          [
+            78.380077,
+            17.343743
+          ],
+          [
+            78.380077,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.380077
+      ],
+      [
+        17.343743,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 23,
+    "priority_score": 23,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 6,
+      "water_body_change": 2,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0212",
+    "grid_id": "HYD_0212",
+    "hotspotId": null,
+    "wardName": "Zone 12 - Hyderabad",
+    "center": [
+      17.314499,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.31225
+          ],
+          [
+            78.351788,
+            17.31225
+          ],
+          [
+            78.351788,
+            17.316749
+          ],
+          [
+            78.347072,
+            17.316749
+          ],
+          [
+            78.347072,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.347072
+      ],
+      [
+        17.316749,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 22,
+    "priority_score": 22,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0597",
+    "grid_id": "HYD_0597",
+    "hotspotId": null,
+    "wardName": "Zone 97 - Hyderabad",
+    "center": [
+      17.332495,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.330246
+          ],
+          [
+            78.351788,
+            17.330246
+          ],
+          [
+            78.351788,
+            17.334745
+          ],
+          [
+            78.347072,
+            17.334745
+          ],
+          [
+            78.347072,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.347072
+      ],
+      [
+        17.334745,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 22,
+    "priority_score": 22,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 7,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0611",
+    "grid_id": "HYD_0611",
+    "hotspotId": null,
+    "wardName": "Zone 11 - Hyderabad",
+    "center": [
+      17.332495,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.330246
+          ],
+          [
+            78.361218,
+            17.330246
+          ],
+          [
+            78.361218,
+            17.334745
+          ],
+          [
+            78.356503,
+            17.334745
+          ],
+          [
+            78.356503,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.356503
+      ],
+      [
+        17.334745,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 22,
+    "priority_score": 22,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0667",
+    "grid_id": "HYD_0667",
+    "hotspotId": null,
+    "wardName": "Zone 67 - Hyderabad",
+    "center": [
+      17.332495,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.330246
+          ],
+          [
+            78.398938,
+            17.330246
+          ],
+          [
+            78.398938,
+            17.334745
+          ],
+          [
+            78.394222,
+            17.334745
+          ],
+          [
+            78.394222,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.394222
+      ],
+      [
+        17.334745,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 22,
+    "priority_score": 22,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0884",
+    "grid_id": "HYD_0884",
+    "hotspotId": null,
+    "wardName": "Zone 84 - Hyderabad",
+    "center": [
+      17.345992,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.343742
+          ],
+          [
+            78.361218,
+            17.343742
+          ],
+          [
+            78.361218,
+            17.348242
+          ],
+          [
+            78.356503,
+            17.348242
+          ],
+          [
+            78.356503,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.356503
+      ],
+      [
+        17.348242,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 22,
+    "priority_score": 22,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0646",
+    "grid_id": "HYD_0646",
+    "hotspotId": null,
+    "wardName": "Zone 46 - Hyderabad",
+    "center": [
+      17.332495,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.330246
+          ],
+          [
+            78.384793,
+            17.330246
+          ],
+          [
+            78.384793,
+            17.334745
+          ],
+          [
+            78.380077,
+            17.334745
+          ],
+          [
+            78.380077,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.380077
+      ],
+      [
+        17.334745,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 8,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0730",
+    "grid_id": "HYD_0730",
+    "hotspotId": null,
+    "wardName": "Zone 30 - Hyderabad",
+    "center": [
+      17.336994,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.334744
+          ],
+          [
+            78.380077,
+            17.334744
+          ],
+          [
+            78.380077,
+            17.339244
+          ],
+          [
+            78.375362,
+            17.339244
+          ],
+          [
+            78.375362,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.375362
+      ],
+      [
+        17.339244,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0765",
+    "grid_id": "HYD_0765",
+    "hotspotId": null,
+    "wardName": "Zone 65 - Hyderabad",
+    "center": [
+      17.341493,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.339243
+          ],
+          [
+            78.342358,
+            17.339243
+          ],
+          [
+            78.342358,
+            17.343743
+          ],
+          [
+            78.337643,
+            17.343743
+          ],
+          [
+            78.337643,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.337643
+      ],
+      [
+        17.343743,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 3,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0786",
+    "grid_id": "HYD_0786",
+    "hotspotId": null,
+    "wardName": "Zone 86 - Hyderabad",
+    "center": [
+      17.341493,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.339243
+          ],
+          [
+            78.356503,
+            17.339243
+          ],
+          [
+            78.356503,
+            17.343743
+          ],
+          [
+            78.351788,
+            17.343743
+          ],
+          [
+            78.351788,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.351788
+      ],
+      [
+        17.343743,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 2,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0891",
+    "grid_id": "HYD_0891",
+    "hotspotId": null,
+    "wardName": "Zone 91 - Hyderabad",
+    "center": [
+      17.345992,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.343742
+          ],
+          [
+            78.365932,
+            17.343742
+          ],
+          [
+            78.365932,
+            17.348242
+          ],
+          [
+            78.361217,
+            17.348242
+          ],
+          [
+            78.361217,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.361217
+      ],
+      [
+        17.348242,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 5,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_1066",
+    "grid_id": "HYD_1066",
+    "hotspotId": null,
+    "wardName": "Zone 66 - Hyderabad",
+    "center": [
+      17.35499,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.35274
+          ],
+          [
+            78.361218,
+            17.35274
+          ],
+          [
+            78.361218,
+            17.35724
+          ],
+          [
+            78.356503,
+            17.35724
+          ],
+          [
+            78.356503,
+            17.35274
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.35274,
+        78.356503
+      ],
+      [
+        17.35724,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 21,
+    "priority_score": 21,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.6% built-up"
+  },
+  {
+    "cellId": "HYD_0366",
+    "grid_id": "HYD_0366",
+    "hotspotId": null,
+    "wardName": "Zone 66 - Hyderabad",
+    "center": [
+      17.318998,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.316748
+          ],
+          [
+            78.394222,
+            17.316748
+          ],
+          [
+            78.394222,
+            17.321248
+          ],
+          [
+            78.389507,
+            17.321248
+          ],
+          [
+            78.389507,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.389507
+      ],
+      [
+        17.321248,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 20,
+    "priority_score": 20,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_1010",
+    "grid_id": "HYD_1010",
+    "hotspotId": null,
+    "wardName": "Zone 10 - Hyderabad",
+    "center": [
+      17.350491,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.348242
+          ],
+          [
+            78.384793,
+            17.348242
+          ],
+          [
+            78.384793,
+            17.352741
+          ],
+          [
+            78.380077,
+            17.352741
+          ],
+          [
+            78.380077,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.380077
+      ],
+      [
+        17.352741,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 20,
+    "priority_score": 20,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 6,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0135",
+    "grid_id": "HYD_0135",
+    "hotspotId": null,
+    "wardName": "Zone 35 - Hyderabad",
+    "center": [
+      17.31,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.30775
+          ],
+          [
+            78.361218,
+            17.30775
+          ],
+          [
+            78.361218,
+            17.31225
+          ],
+          [
+            78.356503,
+            17.31225
+          ],
+          [
+            78.356503,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.356503
+      ],
+      [
+        17.31225,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 19,
+    "priority_score": 19,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0184",
+    "grid_id": "HYD_0184",
+    "hotspotId": null,
+    "wardName": "Zone 84 - Hyderabad",
+    "center": [
+      17.31,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.30775
+          ],
+          [
+            78.394222,
+            17.30775
+          ],
+          [
+            78.394222,
+            17.31225
+          ],
+          [
+            78.389507,
+            17.31225
+          ],
+          [
+            78.389507,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.389507
+      ],
+      [
+        17.31225,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 19,
+    "priority_score": 19,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 6,
+      "water_body_change": 0,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.3% built-up"
+  },
+  {
+    "cellId": "HYD_0205",
+    "grid_id": "HYD_0205",
+    "hotspotId": null,
+    "wardName": "Zone 05 - Hyderabad",
+    "center": [
+      17.314499,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.31225
+          ],
+          [
+            78.347072,
+            17.31225
+          ],
+          [
+            78.347072,
+            17.316749
+          ],
+          [
+            78.342357,
+            17.316749
+          ],
+          [
+            78.342357,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.342357
+      ],
+      [
+        17.316749,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 19,
+    "priority_score": 19,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 5,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 2
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0303",
+    "grid_id": "HYD_0303",
+    "hotspotId": null,
+    "wardName": "Zone 03 - Hyderabad",
+    "center": [
+      17.318998,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.316748
+          ],
+          [
+            78.351788,
+            17.316748
+          ],
+          [
+            78.351788,
+            17.321248
+          ],
+          [
+            78.347072,
+            17.321248
+          ],
+          [
+            78.347072,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.347072
+      ],
+      [
+        17.321248,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 19,
+    "priority_score": 19,
+    "score_breakdown": {
+      "urban_expansion": 7,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0478",
+    "grid_id": "HYD_0478",
+    "hotspotId": null,
+    "wardName": "Zone 78 - Hyderabad",
+    "center": [
+      17.327996,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.325746
+          ],
+          [
+            78.342358,
+            17.325746
+          ],
+          [
+            78.342358,
+            17.330246
+          ],
+          [
+            78.337643,
+            17.330246
+          ],
+          [
+            78.337643,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.337643
+      ],
+      [
+        17.330246,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 19,
+    "priority_score": 19,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0653",
+    "grid_id": "HYD_0653",
+    "hotspotId": null,
+    "wardName": "Zone 53 - Hyderabad",
+    "center": [
+      17.332495,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.330246
+          ],
+          [
+            78.389508,
+            17.330246
+          ],
+          [
+            78.389508,
+            17.334745
+          ],
+          [
+            78.384793,
+            17.334745
+          ],
+          [
+            78.384793,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.384793
+      ],
+      [
+        17.334745,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 18,
+    "priority_score": 18,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0898",
+    "grid_id": "HYD_0898",
+    "hotspotId": null,
+    "wardName": "Zone 98 - Hyderabad",
+    "center": [
+      17.345992,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.343742
+          ],
+          [
+            78.370648,
+            17.343742
+          ],
+          [
+            78.370648,
+            17.348242
+          ],
+          [
+            78.365932,
+            17.348242
+          ],
+          [
+            78.365932,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.365932
+      ],
+      [
+        17.348242,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 18,
+    "priority_score": 18,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 5,
+      "water_body_change": 0,
+      "historical_anomaly": 4,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0170",
+    "grid_id": "HYD_0170",
+    "hotspotId": null,
+    "wardName": "Zone 70 - Hyderabad",
+    "center": [
+      17.31,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.30775
+          ],
+          [
+            78.384793,
+            17.30775
+          ],
+          [
+            78.384793,
+            17.31225
+          ],
+          [
+            78.380077,
+            17.31225
+          ],
+          [
+            78.380077,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.380077
+      ],
+      [
+        17.31225,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 17,
+    "priority_score": 17,
+    "score_breakdown": {
+      "urban_expansion": 6,
+      "vegetation_loss": 5,
+      "water_body_change": 0,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0674",
+    "grid_id": "HYD_0674",
+    "hotspotId": null,
+    "wardName": "Zone 74 - Hyderabad",
+    "center": [
+      17.336994,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.334744
+          ],
+          [
+            78.342358,
+            17.334744
+          ],
+          [
+            78.342358,
+            17.339244
+          ],
+          [
+            78.337643,
+            17.339244
+          ],
+          [
+            78.337643,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.337643
+      ],
+      [
+        17.339244,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 17,
+    "priority_score": 17,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_1024",
+    "grid_id": "HYD_1024",
+    "hotspotId": null,
+    "wardName": "Zone 24 - Hyderabad",
+    "center": [
+      17.350491,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.348242
+          ],
+          [
+            78.394222,
+            17.348242
+          ],
+          [
+            78.394222,
+            17.352741
+          ],
+          [
+            78.389507,
+            17.352741
+          ],
+          [
+            78.389507,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.389507
+      ],
+      [
+        17.352741,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 17,
+    "priority_score": 17,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0604",
+    "grid_id": "HYD_0604",
+    "hotspotId": null,
+    "wardName": "Zone 04 - Hyderabad",
+    "center": [
+      17.332495,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.330246
+          ],
+          [
+            78.356503,
+            17.330246
+          ],
+          [
+            78.356503,
+            17.334745
+          ],
+          [
+            78.351788,
+            17.334745
+          ],
+          [
+            78.351788,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.351788
+      ],
+      [
+        17.334745,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 16,
+    "priority_score": 16,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0681",
+    "grid_id": "HYD_0681",
+    "hotspotId": null,
+    "wardName": "Zone 81 - Hyderabad",
+    "center": [
+      17.336994,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.334744
+          ],
+          [
+            78.347072,
+            17.334744
+          ],
+          [
+            78.347072,
+            17.339244
+          ],
+          [
+            78.342357,
+            17.339244
+          ],
+          [
+            78.342357,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.342357
+      ],
+      [
+        17.339244,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 16,
+    "priority_score": 16,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0751",
+    "grid_id": "HYD_0751",
+    "hotspotId": null,
+    "wardName": "Zone 51 - Hyderabad",
+    "center": [
+      17.336994,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.334744
+          ],
+          [
+            78.394222,
+            17.334744
+          ],
+          [
+            78.394222,
+            17.339244
+          ],
+          [
+            78.389507,
+            17.339244
+          ],
+          [
+            78.389507,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.389507
+      ],
+      [
+        17.339244,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 16,
+    "priority_score": 16,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 5,
+      "water_body_change": 0,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0408",
+    "grid_id": "HYD_0408",
+    "hotspotId": null,
+    "wardName": "Zone 08 - Hyderabad",
+    "center": [
+      17.323497,
+      78.354145
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.351788,
+            17.321247
+          ],
+          [
+            78.356503,
+            17.321247
+          ],
+          [
+            78.356503,
+            17.325747
+          ],
+          [
+            78.351788,
+            17.325747
+          ],
+          [
+            78.351788,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.351788
+      ],
+      [
+        17.325747,
+        78.356503
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 15,
+    "priority_score": 15,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.5% built-up"
+  },
+  {
+    "cellId": "HYD_0821",
+    "grid_id": "HYD_0821",
+    "hotspotId": null,
+    "wardName": "Zone 21 - Hyderabad",
+    "center": [
+      17.341493,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.339243
+          ],
+          [
+            78.380077,
+            17.339243
+          ],
+          [
+            78.380077,
+            17.343743
+          ],
+          [
+            78.375362,
+            17.343743
+          ],
+          [
+            78.375362,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.375362
+      ],
+      [
+        17.343743,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 15,
+    "priority_score": 15,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_1017",
+    "grid_id": "HYD_1017",
+    "hotspotId": null,
+    "wardName": "Zone 17 - Hyderabad",
+    "center": [
+      17.350491,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.348242
+          ],
+          [
+            78.389508,
+            17.348242
+          ],
+          [
+            78.389508,
+            17.352741
+          ],
+          [
+            78.384793,
+            17.352741
+          ],
+          [
+            78.384793,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.384793
+      ],
+      [
+        17.352741,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 15,
+    "priority_score": 15,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0254",
+    "grid_id": "HYD_0254",
+    "hotspotId": null,
+    "wardName": "Zone 54 - Hyderabad",
+    "center": [
+      17.314499,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.31225
+          ],
+          [
+            78.380077,
+            17.31225
+          ],
+          [
+            78.380077,
+            17.316749
+          ],
+          [
+            78.375362,
+            17.316749
+          ],
+          [
+            78.375362,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.375362
+      ],
+      [
+        17.316749,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0345",
+    "grid_id": "HYD_0345",
+    "hotspotId": null,
+    "wardName": "Zone 45 - Hyderabad",
+    "center": [
+      17.318998,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.316748
+          ],
+          [
+            78.380077,
+            17.316748
+          ],
+          [
+            78.380077,
+            17.321248
+          ],
+          [
+            78.375362,
+            17.321248
+          ],
+          [
+            78.375362,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.375362
+      ],
+      [
+        17.321248,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 0,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0401",
+    "grid_id": "HYD_0401",
+    "hotspotId": null,
+    "wardName": "Zone 01 - Hyderabad",
+    "center": [
+      17.323497,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.321247
+          ],
+          [
+            78.351788,
+            17.321247
+          ],
+          [
+            78.351788,
+            17.325747
+          ],
+          [
+            78.347072,
+            17.325747
+          ],
+          [
+            78.347072,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.347072
+      ],
+      [
+        17.325747,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0590",
+    "grid_id": "HYD_0590",
+    "hotspotId": null,
+    "wardName": "Zone 90 - Hyderabad",
+    "center": [
+      17.332495,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.330246
+          ],
+          [
+            78.347072,
+            17.330246
+          ],
+          [
+            78.347072,
+            17.334745
+          ],
+          [
+            78.342357,
+            17.334745
+          ],
+          [
+            78.342357,
+            17.330246
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.330246,
+        78.342357
+      ],
+      [
+        17.334745,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0793",
+    "grid_id": "HYD_0793",
+    "hotspotId": null,
+    "wardName": "Zone 93 - Hyderabad",
+    "center": [
+      17.341493,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.339243
+          ],
+          [
+            78.361218,
+            17.339243
+          ],
+          [
+            78.361218,
+            17.343743
+          ],
+          [
+            78.356503,
+            17.343743
+          ],
+          [
+            78.356503,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.356503
+      ],
+      [
+        17.343743,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 2,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0940",
+    "grid_id": "HYD_0940",
+    "hotspotId": null,
+    "wardName": "Zone 40 - Hyderabad",
+    "center": [
+      17.345992,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.343742
+          ],
+          [
+            78.398938,
+            17.343742
+          ],
+          [
+            78.398938,
+            17.348242
+          ],
+          [
+            78.394222,
+            17.348242
+          ],
+          [
+            78.394222,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.394222
+      ],
+      [
+        17.348242,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 5,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0947",
+    "grid_id": "HYD_0947",
+    "hotspotId": null,
+    "wardName": "Zone 47 - Hyderabad",
+    "center": [
+      17.350491,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.348242
+          ],
+          [
+            78.342358,
+            17.348242
+          ],
+          [
+            78.342358,
+            17.352741
+          ],
+          [
+            78.337643,
+            17.352741
+          ],
+          [
+            78.337643,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.337643
+      ],
+      [
+        17.352741,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 14,
+    "priority_score": 14,
+    "score_breakdown": {
+      "urban_expansion": 5,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.2% built-up"
+  },
+  {
+    "cellId": "HYD_0989",
+    "grid_id": "HYD_0989",
+    "hotspotId": null,
+    "wardName": "Zone 89 - Hyderabad",
+    "center": [
+      17.350491,
+      78.36829
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.365932,
+            17.348242
+          ],
+          [
+            78.370648,
+            17.348242
+          ],
+          [
+            78.370648,
+            17.352741
+          ],
+          [
+            78.365932,
+            17.352741
+          ],
+          [
+            78.365932,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.365932
+      ],
+      [
+        17.352741,
+        78.370648
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 13,
+    "priority_score": 13,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 3,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0261",
+    "grid_id": "HYD_0261",
+    "hotspotId": null,
+    "wardName": "Zone 61 - Hyderabad",
+    "center": [
+      17.314499,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.31225
+          ],
+          [
+            78.384793,
+            17.31225
+          ],
+          [
+            78.384793,
+            17.316749
+          ],
+          [
+            78.380077,
+            17.316749
+          ],
+          [
+            78.380077,
+            17.31225
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.31225,
+        78.380077
+      ],
+      [
+        17.316749,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 12,
+    "priority_score": 12,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 4,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0380",
+    "grid_id": "HYD_0380",
+    "hotspotId": null,
+    "wardName": "Zone 80 - Hyderabad",
+    "center": [
+      17.323497,
+      78.34
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.337643,
+            17.321247
+          ],
+          [
+            78.342358,
+            17.321247
+          ],
+          [
+            78.342358,
+            17.325747
+          ],
+          [
+            78.337643,
+            17.325747
+          ],
+          [
+            78.337643,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.337643
+      ],
+      [
+        17.325747,
+        78.342358
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 12,
+    "priority_score": 12,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0485",
+    "grid_id": "HYD_0485",
+    "hotspotId": null,
+    "wardName": "Zone 85 - Hyderabad",
+    "center": [
+      17.327996,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.325746
+          ],
+          [
+            78.347072,
+            17.325746
+          ],
+          [
+            78.347072,
+            17.330246
+          ],
+          [
+            78.342357,
+            17.330246
+          ],
+          [
+            78.342357,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.342357
+      ],
+      [
+        17.330246,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 12,
+    "priority_score": 12,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 4,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.5% built-up"
+  },
+  {
+    "cellId": "HYD_0919",
+    "grid_id": "HYD_0919",
+    "hotspotId": null,
+    "wardName": "Zone 19 - Hyderabad",
+    "center": [
+      17.345992,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.343742
+          ],
+          [
+            78.384793,
+            17.343742
+          ],
+          [
+            78.384793,
+            17.348242
+          ],
+          [
+            78.380077,
+            17.348242
+          ],
+          [
+            78.380077,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.380077
+      ],
+      [
+        17.348242,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 12,
+    "priority_score": 12,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 4,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0982",
+    "grid_id": "HYD_0982",
+    "hotspotId": null,
+    "wardName": "Zone 82 - Hyderabad",
+    "center": [
+      17.350491,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.348242
+          ],
+          [
+            78.365932,
+            17.348242
+          ],
+          [
+            78.365932,
+            17.352741
+          ],
+          [
+            78.361217,
+            17.352741
+          ],
+          [
+            78.361217,
+            17.348242
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.348242,
+        78.361217
+      ],
+      [
+        17.352741,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 12,
+    "priority_score": 12,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0492",
+    "grid_id": "HYD_0492",
+    "hotspotId": null,
+    "wardName": "Zone 92 - Hyderabad",
+    "center": [
+      17.327996,
+      78.34943
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.347072,
+            17.325746
+          ],
+          [
+            78.351788,
+            17.325746
+          ],
+          [
+            78.351788,
+            17.330246
+          ],
+          [
+            78.347072,
+            17.330246
+          ],
+          [
+            78.347072,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.347072
+      ],
+      [
+        17.330246,
+        78.351788
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 11,
+    "priority_score": 11,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0163",
+    "grid_id": "HYD_0163",
+    "hotspotId": null,
+    "wardName": "Zone 63 - Hyderabad",
+    "center": [
+      17.31,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.30775
+          ],
+          [
+            78.380077,
+            17.30775
+          ],
+          [
+            78.380077,
+            17.31225
+          ],
+          [
+            78.375362,
+            17.31225
+          ],
+          [
+            78.375362,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.375362
+      ],
+      [
+        17.31225,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 10,
+    "priority_score": 10,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0373",
+    "grid_id": "HYD_0373",
+    "hotspotId": null,
+    "wardName": "Zone 73 - Hyderabad",
+    "center": [
+      17.318998,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.316748
+          ],
+          [
+            78.398938,
+            17.316748
+          ],
+          [
+            78.398938,
+            17.321248
+          ],
+          [
+            78.394222,
+            17.321248
+          ],
+          [
+            78.394222,
+            17.316748
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.316748,
+        78.394222
+      ],
+      [
+        17.321248,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 10,
+    "priority_score": 10,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.0% built-up"
+  },
+  {
+    "cellId": "HYD_0443",
+    "grid_id": "HYD_0443",
+    "hotspotId": null,
+    "wardName": "Zone 43 - Hyderabad",
+    "center": [
+      17.323497,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.321247
+          ],
+          [
+            78.380077,
+            17.321247
+          ],
+          [
+            78.380077,
+            17.325747
+          ],
+          [
+            78.375362,
+            17.325747
+          ],
+          [
+            78.375362,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.375362
+      ],
+      [
+        17.325747,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 10,
+    "priority_score": 10,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0450",
+    "grid_id": "HYD_0450",
+    "hotspotId": null,
+    "wardName": "Zone 50 - Hyderabad",
+    "center": [
+      17.323497,
+      78.382435
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.380077,
+            17.321247
+          ],
+          [
+            78.384793,
+            17.321247
+          ],
+          [
+            78.384793,
+            17.325747
+          ],
+          [
+            78.380077,
+            17.325747
+          ],
+          [
+            78.380077,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.380077
+      ],
+      [
+        17.325747,
+        78.384793
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 10,
+    "priority_score": 10,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 2,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 1
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+0.8% built-up"
+  },
+  {
+    "cellId": "HYD_0744",
+    "grid_id": "HYD_0744",
+    "hotspotId": null,
+    "wardName": "Zone 44 - Hyderabad",
+    "center": [
+      17.336994,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.334744
+          ],
+          [
+            78.389508,
+            17.334744
+          ],
+          [
+            78.389508,
+            17.339244
+          ],
+          [
+            78.384793,
+            17.339244
+          ],
+          [
+            78.384793,
+            17.334744
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.334744,
+        78.384793
+      ],
+      [
+        17.339244,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 10,
+    "priority_score": 10,
+    "score_breakdown": {
+      "urban_expansion": 4,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.3% built-up"
+  },
+  {
+    "cellId": "HYD_0464",
+    "grid_id": "HYD_0464",
+    "hotspotId": null,
+    "wardName": "Zone 64 - Hyderabad",
+    "center": [
+      17.323497,
+      78.391865
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.389507,
+            17.321247
+          ],
+          [
+            78.394222,
+            17.321247
+          ],
+          [
+            78.394222,
+            17.325747
+          ],
+          [
+            78.389507,
+            17.325747
+          ],
+          [
+            78.389507,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.389507
+      ],
+      [
+        17.325747,
+        78.394222
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 9,
+    "priority_score": 9,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.4% built-up"
+  },
+  {
+    "cellId": "HYD_0541",
+    "grid_id": "HYD_0541",
+    "hotspotId": null,
+    "wardName": "Zone 41 - Hyderabad",
+    "center": [
+      17.327996,
+      78.37772
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.375362,
+            17.325746
+          ],
+          [
+            78.380077,
+            17.325746
+          ],
+          [
+            78.380077,
+            17.330246
+          ],
+          [
+            78.375362,
+            17.330246
+          ],
+          [
+            78.375362,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.375362
+      ],
+      [
+        17.330246,
+        78.380077
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 9,
+    "priority_score": 9,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 0,
+      "historical_anomaly": 2,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0863",
+    "grid_id": "HYD_0863",
+    "hotspotId": null,
+    "wardName": "Zone 63 - Hyderabad",
+    "center": [
+      17.345992,
+      78.344715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.342357,
+            17.343742
+          ],
+          [
+            78.347072,
+            17.343742
+          ],
+          [
+            78.347072,
+            17.348242
+          ],
+          [
+            78.342357,
+            17.348242
+          ],
+          [
+            78.342357,
+            17.343742
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.343742,
+        78.342357
+      ],
+      [
+        17.348242,
+        78.347072
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 9,
+    "priority_score": 9,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0191",
+    "grid_id": "HYD_0191",
+    "hotspotId": null,
+    "wardName": "Zone 91 - Hyderabad",
+    "center": [
+      17.31,
+      78.39658
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.394222,
+            17.30775
+          ],
+          [
+            78.398938,
+            17.30775
+          ],
+          [
+            78.398938,
+            17.31225
+          ],
+          [
+            78.394222,
+            17.31225
+          ],
+          [
+            78.394222,
+            17.30775
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.30775,
+        78.394222
+      ],
+      [
+        17.31225,
+        78.398938
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 8,
+    "priority_score": 8,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 0,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "built_up_expansion",
+    "changeMetric": "+1.1% built-up"
+  },
+  {
+    "cellId": "HYD_0415",
+    "grid_id": "HYD_0415",
+    "hotspotId": null,
+    "wardName": "Zone 15 - Hyderabad",
+    "center": [
+      17.323497,
+      78.35886
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.356503,
+            17.321247
+          ],
+          [
+            78.361218,
+            17.321247
+          ],
+          [
+            78.361218,
+            17.325747
+          ],
+          [
+            78.356503,
+            17.325747
+          ],
+          [
+            78.356503,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.356503
+      ],
+      [
+        17.325747,
+        78.361218
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 8,
+    "priority_score": 8,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 3,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 0,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.2% built-up"
+  },
+  {
+    "cellId": "HYD_0422",
+    "grid_id": "HYD_0422",
+    "hotspotId": null,
+    "wardName": "Zone 22 - Hyderabad",
+    "center": [
+      17.323497,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.321247
+          ],
+          [
+            78.365932,
+            17.321247
+          ],
+          [
+            78.365932,
+            17.325747
+          ],
+          [
+            78.361217,
+            17.325747
+          ],
+          [
+            78.361217,
+            17.321247
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.321247,
+        78.361217
+      ],
+      [
+        17.325747,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 8,
+    "priority_score": 8,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 2,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.7% built-up"
+  },
+  {
+    "cellId": "HYD_0562",
+    "grid_id": "HYD_0562",
+    "hotspotId": null,
+    "wardName": "Zone 62 - Hyderabad",
+    "center": [
+      17.327996,
+      78.38715
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.384793,
+            17.325746
+          ],
+          [
+            78.389508,
+            17.325746
+          ],
+          [
+            78.389508,
+            17.330246
+          ],
+          [
+            78.384793,
+            17.330246
+          ],
+          [
+            78.384793,
+            17.325746
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.325746,
+        78.384793
+      ],
+      [
+        17.330246,
+        78.389508
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 8,
+    "priority_score": 8,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 2,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+1.4% built-up"
+  },
+  {
+    "cellId": "HYD_0800",
+    "grid_id": "HYD_0800",
+    "hotspotId": null,
+    "wardName": "Zone 00 - Hyderabad",
+    "center": [
+      17.341493,
+      78.363575
+    ],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.361217,
+            17.339243
+          ],
+          [
+            78.365932,
+            17.339243
+          ],
+          [
+            78.365932,
+            17.343743
+          ],
+          [
+            78.361217,
+            17.343743
+          ],
+          [
+            78.361217,
+            17.339243
+          ]
+        ]
+      ]
+    },
+    "bounds": [
+      [
+        17.339243,
+        78.361217
+      ],
+      [
+        17.343743,
+        78.365932
+      ]
+    ],
+    "priorityLevel": "low",
+    "priority_level": "LOW",
+    "priorityScore": 8,
+    "priority_score": 8,
+    "score_breakdown": {
+      "urban_expansion": 3,
+      "vegetation_loss": 2,
+      "water_body_change": 1,
+      "historical_anomaly": 1,
+      "spatial_anomaly": 1,
+      "persistence": 0
+    },
+    "anomalyStatus": "normal",
+    "category": "water_body_change",
+    "changeMetric": "+0.5% built-up"
   }
 ]

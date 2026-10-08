@@ -7,6 +7,8 @@
  * - Never calculates or recalculates priority or anomaly scores
  */
 
+import path from 'path';
+import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -14,12 +16,18 @@ import { mockProvider } from './providers/mockProvider.js';
 
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
+
+// Serve placeholder imagery from data/images
+app.use('/data/images', express.static(path.resolve(__dirname, '../../data/images')));
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -60,6 +68,16 @@ app.get('/api/pipeline', (req, res) => {
     res.json(pipeline);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve pipeline metadata', details: error.message });
+  }
+});
+
+// Full Investigation List (Standard Member 1 contract)
+app.get('/api/investigation-list', (req, res) => {
+  try {
+    const list = mockProvider.getInvestigationList();
+    res.json(list);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to retrieve investigation list', details: error.message });
   }
 });
 

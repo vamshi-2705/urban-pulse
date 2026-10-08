@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <pattern id="gridPattern" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="hatchPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2" stroke="#94a3b8" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Technical Canvas Surface -->
+  <rect width="500" height="500" fill="#fef2f2"/>
+  <rect width="500" height="500" fill="url(#gridPattern)"/>
+  <rect x="8" y="8" width="484" height="484" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Prominent Watermark / Mock Badge -->
+  <g transform="translate(250, 250) rotate(-35)">
+    <rect x="-210" y="-36" width="420" height="72" fill="#ffffff" fill-opacity="0.92" stroke="#dc2626" stroke-width="2"/>
+    <text x="0" y="8" font-family="Inter, -apple-system, sans-serif" font-size="34" font-weight="900" fill="#dc2626" text-anchor="middle" letter-spacing="4">
+      MOCK IMAGERY
+    </text>
+    <text x="0" y="26" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="2">
+      SYNTHETIC TEST ASSET &bull; NOT SATELLITE PHOTO
+    </text>
+  </g>
+
+  <!-- Technical Telemetry Header -->
+  <rect x="18" y="18" width="464" height="42" fill="#0f172a" rx="4"/>
+  <text x="32" y="44" font-family="monospace" font-size="15" font-weight="700" fill="#38bdf8">
+    URBANPULSE SYNTHETIC OBSERVATION
+  </text>
+  <text x="466" y="44" font-family="monospace" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="end">
+    EPOCH: 2026
+  </text>
+
+  <!-- Abstract Vector Schematic Blocks -->
+  <rect x="36" y="80" width="140" height="120" fill="#3b82f6" fill-opacity="0.25" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="44" y="100" font-family="monospace" font-size="11" fill="#1e3a8a">SECTOR A: BUILT-UP</text>
+
+  <rect x="190" y="80" width="274" height="120" fill="#22c55e" fill-opacity="0.25" stroke="#15803d" stroke-width="1.5"/>
+  <text x="198" y="100" font-family="monospace" font-size="11" fill="#14532d">SECTOR B: VEGETATION</text>
+
+  <rect x="36" y="310" width="210" height="110" fill="#06b6d4" fill-opacity="0.25" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="44" y="330" font-family="monospace" font-size="11" fill="#164e63">SECTOR C: WATER BODY</text>
+
+  <rect x="260" y="310" width="204" height="110" fill="url(#hatchPattern)" stroke="#475569" stroke-width="1.5"/>
+  <text x="268" y="330" font-family="monospace" font-size="11" fill="#1e293b">SECTOR D: BARE SOIL</text>
+
+  <!-- Coordinate Crosshair -->
+  <circle cx="250" cy="250" r="40" fill="none" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="250" y1="190" x2="250" y2="310" stroke="#dc2626" stroke-width="1"/>
+  <line x1="190" y1="250" x2="310" y2="250" stroke="#dc2626" stroke-width="1"/>
+
+  <!-- Footer Metadata Bar -->
+  <rect x="18" y="440" width="464" height="42" fill="#ffffff" stroke="#cbd5e1" rx="4"/>
+  <text x="32" y="466" font-family="monospace" font-size="12" fill="#0f172a" font-weight="600">
+    GRID ID: HYD_0499 &bull; PRIORITY: 76 (HIGH)
+  </text>
+  <text x="466" y="466" font-family="monospace" font-size="11" fill="#64748b" text-anchor="end">
+    500m &times; 500m CELL
+  </text>
+</svg>
