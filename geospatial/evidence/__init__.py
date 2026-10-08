@@ -1,21 +1,36 @@
 """
-UrbanPulse - Evidence Generation Module.
+UrbanPulse - Evidence Asset Generation Package (Step 9).
 
-Responsibilities:
-- Assemble structured, evidence-backed dossiers for priority investigation candidates.
-- Structure observations according to the agreed data schema:
-  {
-    "grid_id": "HYD_0421",
-    "lat": 17.385,
-    "lng": 78.486,
-    "date": "2026-09-15",
-    "built_up": 47.2,
-    "vegetation": 31.4,
-    "water": 4.8,
-    "bare": 16.6
-  }
-- Generate auditable time-series trajectories, baseline deviations, and rationale descriptions.
-- Export GeoJSON/JSON payloads consumed by Member 2 API and frontend inspection tools.
+Exports:
+- generate_hotspot_evidence: Extracts crops and renders visual evidence for a single hotspot.
+- generate_batch_hotspot_evidence: Generates crops for the Top-K hotspots in a period.
+- generate_all_evidence_manifests: Compiles global evidence_manifest.json across epochs.
 """
 
-__all__: list[str] = []
+from __future__ import annotations
+
+from geospatial.evidence.evidence_assets import (
+    compute_raster_crop_window,
+    generate_all_evidence_manifests,
+    generate_batch_hotspot_evidence,
+    generate_hotspot_evidence,
+    get_acquisition_dates,
+    get_hotspot_coordinates,
+    render_combined_evidence_preview,
+    render_rgb_preview,
+    render_single_index_preview,
+    stretch_rgb_reflectance,
+)
+
+__all__ = [
+    "compute_raster_crop_window",
+    "generate_all_evidence_manifests",
+    "generate_batch_hotspot_evidence",
+    "generate_hotspot_evidence",
+    "get_acquisition_dates",
+    "get_hotspot_coordinates",
+    "render_combined_evidence_preview",
+    "render_rgb_preview",
+    "render_single_index_preview",
+    "stretch_rgb_reflectance",
+]

@@ -79,6 +79,7 @@ def generate_why_flagged(
 def format_hotspot_record(
     raw_record: Dict[str, Any],
     period: str,
+    assets: Optional[Dict[str, str]] = None,
 ) -> HotspotRecord:
     """
     Transform a raw Step 7 cell record into the stable HotspotRecord contract.
@@ -86,6 +87,7 @@ def format_hotspot_record(
     Args:
         raw_record: Dictionary from priority_hotspots.json.
         period: Period string (e.g. '2020_2026').
+        assets: Optional dictionary of visual evidence asset paths.
 
     Returns:
         Validated HotspotRecord instance.
@@ -166,6 +168,7 @@ def format_hotspot_record(
         evidence=evidence,
         change=change,
         why_flagged=why_flagged,
+        assets=assets,
     )
 
 
@@ -238,8 +241,24 @@ def export_period_api_artifacts(
     with open(stats_file, encoding="utf-8") as f:
         stats = json.load(f)
 
+    manifest_file = output_dir.parent / "evidence" / "evidence_manifest.json"
+    evidence_manifest: Dict[str, Any] = {}
+    if manifest_file.exists():
+        try:
+            with open(manifest_file, encoding="utf-8") as mf:
+                evidence_manifest = json.load(mf)
+        except Exception:
+            pass
+
     logger.info(f"Formatting {len(raw_hotspots)} hotspot records for period {period}...")
-    hotspot_records = [format_hotspot_record(r, period) for r in raw_hotspots]
+    hotspot_records = [
+        format_hotspot_record(
+            raw_record=r,
+            period=period,
+            assets=evidence_manifest.get(r.get("grid_id"), {}).get(period),
+        )
+        for r in raw_hotspots
+    ]
     hotspot_dicts = [h.to_dict() for h in hotspot_records]
 
     # 1. Full hotspots list JSON

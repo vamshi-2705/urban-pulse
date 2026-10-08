@@ -133,9 +133,10 @@ class HotspotRecord:
     evidence: HotspotEvidence
     change: HotspotChange
     why_flagged: WhyFlagged
+    assets: Optional[Dict[str, str]] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        return {
+        d = {
             "rank": int(self.rank),
             "grid_id": self.grid_id,
             "period": self.period,
@@ -148,6 +149,9 @@ class HotspotRecord:
             "change": self.change.to_dict(),
             "why_flagged": self.why_flagged.to_dict(),
         }
+        if self.assets is not None:
+            d["assets"] = self.assets
+        return d
 
 
 @dataclass
