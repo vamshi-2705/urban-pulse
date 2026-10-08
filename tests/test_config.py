@@ -88,3 +88,17 @@ def test_change_detection_config():
     assert cfg.change_detection.ndvi_epsilon > 0.0
     assert cfg.change_detection.ndwi_epsilon > 0.0
     assert cfg.change_detection.ndbi_epsilon > 0.0
+
+
+def test_anomaly_config():
+    """Verify anomaly detection configuration parameters."""
+    cfg = get_config(reload=True)
+    assert hasattr(cfg, "anomaly")
+    assert cfg.anomaly.temporal.mad_scale > 0.0
+    assert cfg.anomaly.temporal.z_clip > 0.0
+    assert cfg.anomaly.spatial.window_size_pixels % 2 == 1  # Must be odd window
+    assert cfg.anomaly.spatial.minimum_valid_neighbors > 0
+    assert 0.0 <= cfg.anomaly.combined.temporal_weight <= 1.0
+    assert 0.0 <= cfg.anomaly.combined.spatial_weight <= 1.0
+    assert abs((cfg.anomaly.combined.temporal_weight + cfg.anomaly.combined.spatial_weight) - 1.0) < 1e-5
+    assert 0.0 < cfg.anomaly.evidence.anomaly_threshold < 1.0

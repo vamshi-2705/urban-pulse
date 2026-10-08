@@ -73,6 +73,26 @@ change_detection:
   ndbi:
     epsilon: 0.10  # Delta > 0.10 or < -0.10 represents built-up-sensitive directional change signal
 
+# Anomaly Detection Parameters (Step 6)
+anomaly:
+  temporal:
+    mad_scale: 0.6745            # Standard normal consistency factor for MAD
+    z_clip: 3.5                  # Robust z-score at which anomaly saturates to 1.0
+    mad_floor: 0.001             # Minimum dispersion floor preventing zero-division
+    minimum_valid_samples: 100   # Minimum valid samples for empirical distribution
+  spatial:
+    window_size_pixels: 21       # 21x21 window = 210m x 210m at 10m resolution (urban block scale)
+    minimum_valid_neighbors: 20  # Minimum valid neighbors required in window
+    mad_floor: 0.001             # Minimum local dispersion floor
+    z_clip: 3.5                  # Robust local z-score saturation threshold
+  combined:
+    temporal_weight: 0.6         # Relative weight for scene change anomaly component
+    spatial_weight: 0.4          # Relative weight for spatial neighborhood anomaly component
+    fallback_to_available_component: true # If one component is missing, use available with metadata
+    aggregation_method: "max"    # Multi-indicator overall aggregation: "max" (ceiling), "mean" (diluted), "corroborated" (top-two weighted)
+  evidence:
+    anomaly_threshold: 0.50      # Threshold [0, 1] to flag component anomaly in evidence raster
+
 # Logging Settings
 logging:
   level: "INFO"

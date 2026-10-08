@@ -98,6 +98,43 @@ class ChangeDetectionConfig:
 
 
 @dataclass(frozen=True)
+class TemporalAnomalyConfig:
+    mad_scale: float = 0.6745
+    z_clip: float = 3.5
+    mad_floor: float = 0.001
+    minimum_valid_samples: int = 100
+
+
+@dataclass(frozen=True)
+class SpatialAnomalyConfig:
+    window_size_pixels: int = 21
+    minimum_valid_neighbors: int = 20
+    mad_floor: float = 0.001
+    z_clip: float = 3.5
+
+
+@dataclass(frozen=True)
+class CombinedAnomalyConfig:
+    temporal_weight: float = 0.6
+    spatial_weight: float = 0.4
+    fallback_to_available_component: bool = True
+    aggregation_method: str = "max"  # Options: "max", "mean", "corroborated"
+
+
+@dataclass(frozen=True)
+class EvidenceConfig:
+    anomaly_threshold: float = 0.50
+
+
+@dataclass(frozen=True)
+class AnomalyConfig:
+    temporal: TemporalAnomalyConfig = field(default_factory=TemporalAnomalyConfig)
+    spatial: SpatialAnomalyConfig = field(default_factory=SpatialAnomalyConfig)
+    combined: CombinedAnomalyConfig = field(default_factory=CombinedAnomalyConfig)
+    evidence: EvidenceConfig = field(default_factory=EvidenceConfig)
+
+
+@dataclass(frozen=True)
 class AppConfig:
     study_area: StudyAreaConfig
     crs: CRSConfig
@@ -108,6 +145,7 @@ class AppConfig:
     logging: LoggingConfig
     indicators: IndicatorThresholdsConfig = field(default_factory=IndicatorThresholdsConfig)
     change_detection: ChangeDetectionConfig = field(default_factory=ChangeDetectionConfig)
+    anomaly: AnomalyConfig = field(default_factory=AnomalyConfig)
     raw_dict: Dict[str, Any] = field(default_factory=dict)
 
 
@@ -167,6 +205,38 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         ndbi_epsilon=float(cd_data.get("ndbi", {}).get("epsilon", 0.10)),
     )
 
+    anom_data = data.get("anomaly", {})
+    t_data = anom_data.get("temporal", {})
+    s_data = anom_data.get("spatial", {})
+    c_data = anom_data.get("combined", {})
+    e_data = anom_data.get("evidence", {})
+
+    anomaly_cfg = AnomalyConfig(
+        temporal=TemporalAnomalyConfig(
+            mad_scale=float(t_data.get("mad_scale", 0.6745)),
+            z_clip=float(t_data.get("z_clip", 3.5)),
+            mad_floor=float(t_data.get("mad_floor", 0.001)),
+            minimum_valid_samples=int(t_data.get("minimum_valid_samples", 100)),
+        ),
+        spatial=SpatialAnomalyConfig(
+            window_size_pixels=int(s_data.get("window_size_pixels", 21)),
+            minimum_valid_neighbors=int(s_data.get("minimum_valid_neighbors", 20)),
+            mad_floor=float(s_data.get("mad_floor", 0.001)),
+            z_clip=float(s_data.get("z_clip", 3.5)),
+        ),
+        combined=CombinedAnomalyConfig(
+            temporal_weight=float(c_data.get("temporal_weight", 0.6)),
+            spatial_weight=float(c_data.get("spatial_weight", 0.4)),
+            fallback_to_available_component=bool(
+                c_data.get("fallback_to_available_component", True)
+            ),
+            aggregation_method=str(c_data.get("aggregation_method", "max")),
+        ),
+        evidence=EvidenceConfig(
+            anomaly_threshold=float(e_data.get("anomaly_threshold", 0.50)),
+        ),
+    )
+
     app_config = AppConfig(
         study_area=StudyAreaConfig(**data["study_area"]),
         crs=CRSConfig(**data["crs"]),
@@ -177,6 +247,7 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         logging=logging_cfg,
         indicators=indicators_cfg,
         change_detection=change_detection_cfg,
+        anomaly=anomaly_cfg,
         raw_dict=data,
     )
 

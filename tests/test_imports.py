@@ -15,6 +15,7 @@ import pytest
         "geospatial.indicators",
         "geospatial.change_detection",
         "geospatial.anomaly",
+        "geospatial.anomaly_detection",
         "geospatial.priority",
         "geospatial.evidence",
         "geospatial.validation",
