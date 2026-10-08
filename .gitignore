@@ -23,13 +23,18 @@ venv.bak/
 *.swo
 *~
 
-# Data directories (ignore actual data files but track .gitkeep)
+# Data directories (ignore large data files but track catalogs and .gitkeep)
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/*.json
+!data/processed/*/*.json
+!data/processed/*/*/*.json
 data/outputs/*
 !data/outputs/.gitkeep
+!data/outputs/*.json
+!data/outputs/*/*.json
 
 # Geospatial binary & large file formats
 *.tif

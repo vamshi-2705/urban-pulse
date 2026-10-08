@@ -1,0 +1,315 @@
+{
+  "study_area": "Hyderabad_Prototype",
+  "region": "Hyderabad, Telangana, India",
+  "bbox": [
+    78.35,
+    17.35,
+    78.55,
+    17.5
+  ],
+  "collection": "sentinel-2-l2a",
+  "cloud_threshold": 15.0,
+  "preferred_months": [
+    1,
+    2,
+    3
+  ],
+  "crs": {
+    "geographic": "EPSG:4326",
+    "projected": "EPSG:32644"
+  },
+  "discovery_timestamp": "2026-10-08T11:52:57.681323Z",
+  "periods": {
+    "2020": {
+      "selected_scene": {
+        "item_id": "S2A_MSIL2A_20200329T050651_R019_T43QHV_20201020T215529",
+        "datetime": "2020-03-29T05:06:51.024000+00:00",
+        "cloud_cover": 0.0567,
+        "bbox": [
+          77.818422,
+          17.06005,
+          78.8695698,
+          18.066403
+        ],
+        "collection": "sentinel-2-l2a",
+        "platform": "Sentinel-2A",
+        "mgrs_tile": "43QHV",
+        "suitability_score": 99.9603,
+        "fully_contains_aoi": true,
+        "assets": {
+          "blue": {
+            "asset_key": "B02",
+            "title": "Band 2 - Blue - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R10m/T43QHV_20200329T050651_B02_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "green": {
+            "asset_key": "B03",
+            "title": "Band 3 - Green - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R10m/T43QHV_20200329T050651_B03_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "red": {
+            "asset_key": "B04",
+            "title": "Band 4 - Red - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R10m/T43QHV_20200329T050651_B04_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "nir": {
+            "asset_key": "B08",
+            "title": "Band 8 - NIR - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R10m/T43QHV_20200329T050651_B08_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir1": {
+            "asset_key": "B11",
+            "title": "Band 11 - SWIR (1.6) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R20m/T43QHV_20200329T050651_B11_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir2": {
+            "asset_key": "B12",
+            "title": "Band 12 - SWIR (2.2) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R20m/T43QHV_20200329T050651_B12_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "scl": {
+            "asset_key": "SCL",
+            "title": "Scene classfication map (SCL)",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R20m/T43QHV_20200329T050651_SCL_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "visual": {
+            "asset_key": "visual",
+            "title": "True color image",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2020/03/29/S2A_MSIL2A_20200329T050651_N0212_R019_T43QHV_20201020T215529.SAFE/GRANULE/L2A_T43QHV_A024898_20200329T051221/IMG_DATA/R10m/T43QHV_20200329T050651_TCI_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          }
+        },
+        "available_asset_count": 24,
+        "all_spectral_bands_present": true
+      },
+      "candidates_considered": 24,
+      "search_window": "2020-01-01/2020-03-31",
+      "status": "SUCCESS"
+    },
+    "2023": {
+      "selected_scene": {
+        "item_id": "S2B_MSIL2A_20230128T051049_R019_T44QKE_20230130T005242",
+        "datetime": "2023-01-28T05:10:49.024000+00:00",
+        "cloud_cover": 0.0012,
+        "bbox": [
+          78.16579705,
+          17.07698503,
+          79.21234266,
+          18.0806987
+        ],
+        "collection": "sentinel-2-l2a",
+        "platform": "Sentinel-2B",
+        "mgrs_tile": "44QKE",
+        "suitability_score": 99.9992,
+        "fully_contains_aoi": true,
+        "assets": {
+          "blue": {
+            "asset_key": "B02",
+            "title": "Band 2 - Blue - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R10m/T44QKE_20230128T051049_B02_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "green": {
+            "asset_key": "B03",
+            "title": "Band 3 - Green - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R10m/T44QKE_20230128T051049_B03_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "red": {
+            "asset_key": "B04",
+            "title": "Band 4 - Red - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R10m/T44QKE_20230128T051049_B04_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "nir": {
+            "asset_key": "B08",
+            "title": "Band 8 - NIR - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R10m/T44QKE_20230128T051049_B08_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir1": {
+            "asset_key": "B11",
+            "title": "Band 11 - SWIR (1.6) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R20m/T44QKE_20230128T051049_B11_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir2": {
+            "asset_key": "B12",
+            "title": "Band 12 - SWIR (2.2) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R20m/T44QKE_20230128T051049_B12_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "scl": {
+            "asset_key": "SCL",
+            "title": "Scene classfication map (SCL)",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R20m/T44QKE_20230128T051049_SCL_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "visual": {
+            "asset_key": "visual",
+            "title": "True color image",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/44/Q/KE/2023/01/28/S2B_MSIL2A_20230128T051049_N0400_R019_T44QKE_20230130T005242.SAFE/GRANULE/L2A_T44QKE_A030790_20230128T052242/IMG_DATA/R10m/T44QKE_20230128T051049_TCI_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          }
+        },
+        "available_asset_count": 24,
+        "all_spectral_bands_present": true
+      },
+      "candidates_considered": 51,
+      "search_window": "2023-01-01/2023-03-31",
+      "status": "SUCCESS"
+    },
+    "2026": {
+      "selected_scene": {
+        "item_id": "S2A_MSIL2A_20260310T051241_R019_T43QHV_20260310T105217",
+        "datetime": "2026-03-10T05:12:41.024000+00:00",
+        "cloud_cover": 0.001,
+        "bbox": [
+          77.818422,
+          17.06005,
+          78.8695698,
+          18.0665158
+        ],
+        "collection": "sentinel-2-l2a",
+        "platform": "Sentinel-2A",
+        "mgrs_tile": "43QHV",
+        "suitability_score": 99.9993,
+        "fully_contains_aoi": true,
+        "assets": {
+          "blue": {
+            "asset_key": "B02",
+            "title": "Band 2 - Blue - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R10m/T43QHV_20260310T051241_B02_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "green": {
+            "asset_key": "B03",
+            "title": "Band 3 - Green - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R10m/T43QHV_20260310T051241_B03_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "red": {
+            "asset_key": "B04",
+            "title": "Band 4 - Red - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R10m/T43QHV_20260310T051241_B04_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "nir": {
+            "asset_key": "B08",
+            "title": "Band 8 - NIR - 10m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R10m/T43QHV_20260310T051241_B08_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir1": {
+            "asset_key": "B11",
+            "title": "Band 11 - SWIR (1.6) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R20m/T43QHV_20260310T051241_B11_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "swir2": {
+            "asset_key": "B12",
+            "title": "Band 12 - SWIR (2.2) - 20m",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R20m/T43QHV_20260310T051241_B12_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "scl": {
+            "asset_key": "SCL",
+            "title": "Scene classfication map (SCL)",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R20m/T43QHV_20260310T051241_SCL_20m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          },
+          "visual": {
+            "asset_key": "visual",
+            "title": "True color image",
+            "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/Q/HV/2026/03/10/S2A_MSIL2A_20260310T051241_N0512_R019_T43QHV_20260310T105217.SAFE/GRANULE/L2A_T43QHV_A055958_20260310T051808/IMG_DATA/R10m/T43QHV_20260310T051241_TCI_10m.tif?st=2026-10-07T11%3A53%3A16Z&se=2026-10-08T12%3A38%3A16Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-08T11%3A51%3A01Z&ske=2026-10-15T11%3A51%3A01Z&sks=b&skv=2025-07-05&sig=UcdVzsqiwQnAFi7a3z47%2BhuqHwBjEnF/zoW8M90rcRk%3D",
+            "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+              "data"
+            ]
+          }
+        },
+        "available_asset_count": 23,
+        "all_spectral_bands_present": true
+      },
+      "candidates_considered": 35,
+      "search_window": "2026-01-01/2026-03-31",
+      "status": "SUCCESS"
+    }
+  }
+}

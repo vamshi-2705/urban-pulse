@@ -2,10 +2,38 @@
 UrbanPulse - Satellite Preprocessing Module.
 
 Responsibilities:
-- Validate band resolutions and alignment (e.g. 10m vs 20m resampled to common grid).
+- Standardize multi-temporal Sentinel-2 scenes to common analysis CRS (EPSG:32644) and resolution (10m).
 - Apply cloud and shadow masks using Sentinel-2 Scene Classification Layer (SCL).
-- Clip raster arrays to the defined study Area of Interest (AOI).
-- Standardize nodata values and scale surface reflectance factors (0-10,000 to 0.0-1.0).
+- Normalize surface reflectance across processing baselines (offset correction for PB >= 04.00).
+- Produce analysis-ready 6-band stacks [blue, green, red, nir, swir1, swir2] and valid masks.
 """
 
-__all__: list[str] = []
+from geospatial.preprocessing.sentinel2_preprocessor import (
+    MASKED_SCL_CLASSES,
+    STACK_BAND_ORDER,
+    VALID_SCL_CLASSES,
+    apply_cloud_shadow_mask,
+    create_scene_stack,
+    download_scene_assets,
+    get_analysis_grid_geometry,
+    normalize_reflectance,
+    preprocess_all_selected_scenes,
+    preprocess_scene,
+    reproject_to_analysis_crs,
+    validate_preprocessed_scene,
+)
+
+__all__ = [
+    "MASKED_SCL_CLASSES",
+    "STACK_BAND_ORDER",
+    "VALID_SCL_CLASSES",
+    "apply_cloud_shadow_mask",
+    "create_scene_stack",
+    "download_scene_assets",
+    "get_analysis_grid_geometry",
+    "normalize_reflectance",
+    "preprocess_all_selected_scenes",
+    "preprocess_scene",
+    "reproject_to_analysis_crs",
+    "validate_preprocessed_scene",
+]
