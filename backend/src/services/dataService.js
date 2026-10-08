@@ -15,7 +15,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getProviderType, fileProvider, postgresProvider } from '../providers/index.js';
+import { getProviderType, fileProvider, postgresProvider, realProvider } from '../providers/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,8 +38,11 @@ function loadData() {
 const rawData = loadData();
 
 export const dataService = {
-  getMeta() {
+  getMeta(period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getMeta(period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getMeta();
     }
@@ -58,8 +61,11 @@ export const dataService = {
     };
   },
 
-  getAllRecords() {
+  getAllRecords(period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getHotspots({ period });
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getInvestigationList().then(res => res.records);
     }
@@ -69,11 +75,14 @@ export const dataService = {
     return rawData.records;
   },
 
-  getRecordById(gridId) {
+  getRecordById(gridId, period) {
     if (!gridId) return null;
     const cleanId = String(gridId).trim();
 
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getHotspotById(cleanId, period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getHotspotById(cleanId);
     }
@@ -87,8 +96,11 @@ export const dataService = {
     ) || null;
   },
 
-  getStatistics() {
+  getStatistics(period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getStatistics(period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getStatistics();
     }
@@ -114,8 +126,11 @@ export const dataService = {
     };
   },
 
-  getAreas() {
+  getAreas(period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getAreas(period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getAreas();
     }
@@ -140,8 +155,11 @@ export const dataService = {
     };
   },
 
-  getHotspotDetail(gridId) {
+  getHotspotDetail(gridId, period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getHotspotDetail(gridId, period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getHotspotDetail(gridId);
     }
@@ -178,8 +196,11 @@ export const dataService = {
     };
   },
 
-  getChange(gridId) {
+  getChange(gridId, period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getChange(gridId, period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getChange(gridId);
     }
@@ -223,8 +244,11 @@ export const dataService = {
     return result;
   },
 
-  getEvidence(gridId) {
+  getEvidence(gridId, period) {
     const providerType = getProviderType();
+    if (providerType === 'real') {
+      return realProvider.getEvidence(gridId, period);
+    }
     if (providerType === 'postgres') {
       return postgresProvider.getEvidenceDetail(gridId);
     }

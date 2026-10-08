@@ -23,10 +23,10 @@ const router = Router();
 // Returns analyzed_cells, anomalous (MEDIUM+HIGH), high, medium, low counts.
 router.get('/statistics', async (req, res) => {
   try {
-    const stats = await dataService.getStatistics();
+    const stats = await dataService.getStatistics(req.query.period);
     res.json(stats);
   } catch (err) {
-    const meta = await dataService.getMeta();
+    const meta = await dataService.getMeta(req.query.period);
     res.status(500).json({
       meta,
       error: 'Internal server error',
@@ -39,10 +39,10 @@ router.get('/statistics', async (req, res) => {
 // Returns all cells with grid_id, lat, lng, geometry, priority_level, priority_score.
 router.get('/areas', async (req, res) => {
   try {
-    const areas = await dataService.getAreas();
+    const areas = await dataService.getAreas(req.query.period);
     res.json(areas);
   } catch (err) {
-    const meta = await dataService.getMeta();
+    const meta = await dataService.getMeta(req.query.period);
     res.status(500).json({
       meta,
       error: 'Internal server error',
@@ -56,10 +56,10 @@ router.get('/areas', async (req, res) => {
 router.get('/hotspots/:gridId', async (req, res) => {
   try {
     const { gridId } = req.params;
-    const detail = await dataService.getHotspotDetail(gridId);
+    const detail = await dataService.getHotspotDetail(gridId, req.query.period);
 
     if (!detail) {
-      const meta = await dataService.getMeta();
+      const meta = await dataService.getMeta(req.query.period);
       return res.status(404).json({
         meta,
         error: 'Not found',
@@ -69,7 +69,7 @@ router.get('/hotspots/:gridId', async (req, res) => {
 
     res.json(detail);
   } catch (err) {
-    const meta = await dataService.getMeta();
+    const meta = await dataService.getMeta(req.query.period);
     res.status(500).json({
       meta,
       error: 'Internal server error',
@@ -83,10 +83,10 @@ router.get('/hotspots/:gridId', async (req, res) => {
 router.get('/change/:gridId', async (req, res) => {
   try {
     const { gridId } = req.params;
-    const change = await dataService.getChange(gridId);
+    const change = await dataService.getChange(gridId, req.query.period);
 
     if (!change) {
-      const meta = await dataService.getMeta();
+      const meta = await dataService.getMeta(req.query.period);
       return res.status(404).json({
         meta,
         error: 'Not found',
@@ -96,7 +96,7 @@ router.get('/change/:gridId', async (req, res) => {
 
     res.json(change);
   } catch (err) {
-    const meta = await dataService.getMeta();
+    const meta = await dataService.getMeta(req.query.period);
     res.status(500).json({
       meta,
       error: 'Internal server error',
@@ -111,10 +111,10 @@ router.get('/change/:gridId', async (req, res) => {
 router.get('/evidence/:gridId', async (req, res) => {
   try {
     const { gridId } = req.params;
-    const evidence = await dataService.getEvidence(gridId);
+    const evidence = await dataService.getEvidence(gridId, req.query.period);
 
     if (!evidence) {
-      const meta = await dataService.getMeta();
+      const meta = await dataService.getMeta(req.query.period);
       return res.status(404).json({
         meta,
         error: 'Not found',
@@ -124,7 +124,7 @@ router.get('/evidence/:gridId', async (req, res) => {
 
     res.json(evidence);
   } catch (err) {
-    const meta = await dataService.getMeta();
+    const meta = await dataService.getMeta(req.query.period);
     res.status(500).json({
       meta,
       error: 'Internal server error',

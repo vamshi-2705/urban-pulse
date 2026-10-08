@@ -55,6 +55,9 @@ export async function preloadAllData() {
     `${API_BASE}/statistics`,
     `${API_BASE}/areas`,
     `${API_BASE}/hotspots`,
+    `${API_BASE}/hotspots/HYD_1220`,
+    `${API_BASE}/change/HYD_1220`,
+    `${API_BASE}/evidence/HYD_1220`,
     `${API_BASE}/hotspots/HYD_0421`,
     `${API_BASE}/change/HYD_0421`,
     `${API_BASE}/evidence/HYD_0421`

@@ -37,6 +37,44 @@ app.use(express.json());
 app.use('/images', express.static(path.resolve(__dirname, '../../data/images')));
 app.use('/data/images', express.static(path.resolve(__dirname, '../../data/images')));
 
+// Serve real evidence assets and API artifacts
+const EVIDENCE_DIR = path.resolve(__dirname, '../../data/outputs/evidence');
+const API_DIR = path.resolve(__dirname, '../../data/outputs/api');
+app.use('/data/outputs/evidence', express.static(EVIDENCE_DIR));
+app.use('/evidence', express.static(EVIDENCE_DIR));
+app.use('/data/outputs/api', express.static(API_DIR));
+
+// Fallback image resolver: if an image request arrives for /images/:gridId/:year.svg or .png,
+// resolve to real Sentinel-2 satellite observation image when available
+app.get('/images/:gridId/:year.:ext', (req, res, next) => {
+  const { gridId, year } = req.params;
+  const cleanId = String(gridId).toUpperCase();
+  const yr = String(year);
+
+  let candidatePath = null;
+  if (yr === '2020') {
+    candidatePath = path.join(EVIDENCE_DIR, '2020_2026', cleanId, 'before_rgb.png');
+    if (!fs.existsSync(candidatePath)) {
+      candidatePath = path.join(EVIDENCE_DIR, '2020_2023', cleanId, 'before_rgb.png');
+    }
+  } else if (yr === '2023') {
+    candidatePath = path.join(EVIDENCE_DIR, '2020_2023', cleanId, 'after_rgb.png');
+    if (!fs.existsSync(candidatePath)) {
+      candidatePath = path.join(EVIDENCE_DIR, '2023_2026', cleanId, 'before_rgb.png');
+    }
+  } else if (yr === '2026') {
+    candidatePath = path.join(EVIDENCE_DIR, '2020_2026', cleanId, 'after_rgb.png');
+    if (!fs.existsSync(candidatePath)) {
+      candidatePath = path.join(EVIDENCE_DIR, '2023_2026', cleanId, 'after_rgb.png');
+    }
+  }
+
+  if (candidatePath && fs.existsSync(candidatePath)) {
+    return res.sendFile(candidatePath);
+  }
+  next();
+});
+
 // Mount modular REST routes (/api/statistics, /api/areas, /api/hotspots/:gridId, /api/change/:gridId, /api/evidence/:gridId)
 app.use('/api', apiRoutes);
 
@@ -58,7 +96,7 @@ app.get('/api/health', async (req, res) => {
       status: 'ok',
       service: 'urban-pulse-backend',
       version: '1.0.0',
-      mode: providerType === 'postgres' ? 'postgres' : (providerType === 'file' ? 'file' : 'development-mock'),
+      mode: providerType === 'postgres' ? 'postgres' : (providerType === 'file' ? 'file' : (providerType === 'real' ? 'real' : 'development-mock')),
       isMock,
       timestamp: new Date().toISOString()
     });
@@ -70,7 +108,7 @@ app.get('/api/health', async (req, res) => {
 // City / Region Overview
 app.get('/api/overview', async (req, res) => {
   try {
-    const overview = await provider.getOverview();
+    const overview = await provider.getOverview(req.query.period);
     res.json(overview);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve region overview', details: error.message });
@@ -90,7 +128,7 @@ app.get('/api/pipeline', async (req, res) => {
 // Full Investigation List (Standard Member 1 contract)
 app.get('/api/investigation-list', async (req, res) => {
   try {
-    const list = await provider.getInvestigationList();
+    const list = await provider.getInvestigationList(req.query.period);
     res.json(list);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve investigation list', details: error.message });
@@ -102,7 +140,8 @@ app.get('/api/grid-cells', async (req, res) => {
   try {
     const cells = await provider.getGridCells({
       priorityLevel: req.query.priorityLevel,
-      anomalyStatus: req.query.anomalyStatus
+      anomalyStatus: req.query.anomalyStatus,
+      period: req.query.period
     });
     res.json(cells);
   } catch (error) {
@@ -116,7 +155,9 @@ app.get('/api/hotspots', async (req, res) => {
     const hotspots = await provider.getHotspots({
       priorityLevel: req.query.priorityLevel,
       category: req.query.category,
-      zone: req.query.zone
+      zone: req.query.zone,
+      period: req.query.period,
+      limit: req.query.limit
     });
     res.json(hotspots);
   } catch (error) {
@@ -127,7 +168,7 @@ app.get('/api/hotspots', async (req, res) => {
 // Single Hotspot
 app.get('/api/hotspots/:id', async (req, res) => {
   try {
-    const hotspot = await provider.getHotspotById(req.params.id);
+    const hotspot = await provider.getHotspotById(req.params.id, req.query.period);
     if (!hotspot) {
       return res.status(404).json({ error: `Hotspot with ID '${req.params.id}' not found` });
     }
@@ -140,7 +181,7 @@ app.get('/api/hotspots/:id', async (req, res) => {
 // Full Evidence Dossier for a Hotspot
 app.get('/api/hotspots/:id/evidence', async (req, res) => {
   try {
-    const evidence = await provider.getEvidence(req.params.id);
+    const evidence = await provider.getEvidence(req.params.id, req.query.period);
     if (!evidence) {
       return res.status(404).json({ error: `Evidence dossier for '${req.params.id}' not found` });
     }

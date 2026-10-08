@@ -10,6 +10,7 @@
 import { mockProvider } from './mockProvider.js';
 import { fileProvider } from './fileProvider.js';
 import { postgresProvider } from './postgresProvider.js';
+import { realProvider } from './realProvider.js';
 
 export function getProviderType() {
   return (process.env.DATA_PROVIDER || 'mock').toLowerCase();
@@ -25,6 +26,9 @@ export function getProvider() {
     }
     return postgresProvider;
   }
+  if (type === 'real') {
+    return realProvider;
+  }
   if (type === 'file') {
     return fileProvider;
   }
@@ -39,5 +43,5 @@ export async function verifyActiveProvider() {
   return true;
 }
 
-export { mockProvider, fileProvider, postgresProvider };
+export { mockProvider, fileProvider, postgresProvider, realProvider };
 export default getProvider;

@@ -169,10 +169,17 @@ export default function EvidenceView() {
 
           <div className="evidence-imagery-row">
             {years.map((yr, idx) => {
-              const imgUrl = `/images/${gridId}/${yr}.svg`;
+              // Real imagery priority: use image_map, images array, or assets
+              const imgUrl =
+                evidence.image_map?.[yr] ||
+                (evidence.images && evidence.images.find((u) => u.includes(String(yr)))) ||
+                (evidence.images && evidence.images[idx]) ||
+                `/images/${gridId}/${yr}.svg`;
+
               const isAvailable =
-                evidence.images &&
-                evidence.images.some((url) => url.includes(`/${yr}.svg`)) &&
+                (Boolean(evidence.image_map?.[yr]) ||
+                  Boolean(evidence.assets?.before_rgb) ||
+                  (evidence.images && evidence.images.length > 0)) &&
                 !imageErrors[yr];
 
               return (
@@ -181,7 +188,28 @@ export default function EvidenceView() {
                     <div className="imagery-card-wrapper">
                       {isAvailable ? (
                         <>
-                          <span className="mock-imagery-tag">Mock imagery</span>
+                          {evidence.meta?.is_mock ? (
+                            <span className="mock-imagery-tag">Mock imagery</span>
+                          ) : (
+                            <span
+                              className="real-imagery-tag"
+                              style={{
+                                position: 'absolute',
+                                top: '8px',
+                                left: '8px',
+                                background: 'rgba(16, 185, 129, 0.9)',
+                                color: '#ffffff',
+                                fontSize: '10px',
+                                fontWeight: 700,
+                                padding: '2px 6px',
+                                borderRadius: '4px',
+                                zIndex: 2,
+                                letterSpacing: '0.5px'
+                              }}
+                            >
+                              Sentinel-2 L2A
+                            </span>
+                          )}
                           <span className="imagery-year-badge">{yr}</span>
                           <img
                             src={imgUrl}
@@ -212,6 +240,32 @@ export default function EvidenceView() {
               );
             })}
           </div>
+
+          {/* Real Sentinel-2 Multi-Spectral Change Evidence Map */}
+          {evidence.assets?.combined_change && (
+            <div
+              className="evidence-change-classification-card"
+              style={{
+                marginTop: '16px',
+                padding: '16px',
+                backgroundColor: 'var(--card-bg, #ffffff)',
+                border: '1px solid var(--border-color, #e2e8f0)',
+                borderRadius: 'var(--radius-md, 8px)'
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)' }}>
+                  Multi-Spectral Categorical Change Map
+                </h3>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>1000m &times; 1000m Window (10m Resolution)</span>
+              </div>
+              <img
+                src={`/${evidence.assets.combined_change}`}
+                alt={`Multi-spectral change evidence map for ${gridId}`}
+                style={{ width: '100%', maxWidth: '320px', height: 'auto', borderRadius: '4px', border: '1px solid #cbd5e1' }}
+              />
+            </div>
+          )}
         </section>
 
         {/* 2. Vertical, Traceable Chain: Five labelled steps */}
