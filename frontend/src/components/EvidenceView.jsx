@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchEvidence, fetchHotspotDetail } from '../api/client';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function EvidenceView() {
   const { gridId } = useParams();
@@ -114,29 +115,15 @@ export default function EvidenceView() {
   return (
     <div className="why-flagged-page evidence-view-page">
       <div className="why-flagged-container">
-        {/* Navigation Breadcrumb */}
-        <div className="why-flagged-nav">
-          <button
-            type="button"
-            className="back-link-btn"
-            onClick={() => navigate(`/hotspot/${gridId}`)}
-          >
-            &larr; Back to Why Flagged ({gridId})
-          </button>
-          <button
-            type="button"
-            className="back-link-btn"
-            onClick={() => navigate(`/hotspot/${gridId}/change`)}
-          >
-            Change explorer
-          </button>
-          <button type="button" className="back-link-btn" onClick={() => navigate('/ranking')}>
-            Hotspot ranking
-          </button>
-          <button type="button" className="back-link-btn" onClick={() => navigate('/')}>
-            Overview map
-          </button>
-        </div>
+        {/* Standardized Municipal Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: 'Overview', to: '/' },
+            { label: 'Ranking', to: '/ranking' },
+            { label: `Hotspot (${gridId})`, to: `/hotspot/${gridId}` },
+            { label: 'Evidence View' }
+          ]}
+        />
 
         {/* Page Header */}
         <header className="why-flagged-header">

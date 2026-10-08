@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchStatistics, fetchAreas, fetchPipeline } from '../api/client';
 import PipelineBreadcrumb from './PipelineBreadcrumb';
+import Breadcrumbs from './Breadcrumbs';
 import SummaryStrip from './SummaryStrip';
 import CityOverviewMap from './CityOverviewMap';
 
@@ -48,6 +49,9 @@ export default function CityOverviewPage({ overview }) {
 
   return (
     <div className="city-overview-page" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '0 20px 24px' }}>
+      {/* Standardized Municipal Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Overview' }]} />
+
       {/* 7-Stage Pipeline Chain */}
       <PipelineBreadcrumb pipeline={pipeline} />
 

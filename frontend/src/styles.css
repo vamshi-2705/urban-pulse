@@ -25,7 +25,7 @@
   /* Typography */
   --text-primary: #0f172a;
   --text-secondary: #334155;
-  --text-muted: #64748b;
+  --text-muted: #475569;
   --text-inverted: #ffffff;
 
   /* Semantic Status Tokens (Green = Normal, Amber = Medium, Red = High) */
@@ -2626,6 +2626,332 @@ p {
   line-height: 1.5;
   font-style: italic;
 }
+
+/* ==========================================================================
+   Municipal Breadcrumbs Navigation
+   ========================================================================== */
+
+.municipal-breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 2px;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #172554;
+}
+
+.breadcrumb-separator {
+  color: var(--border-strong);
+  font-weight: 700;
+  user-select: none;
+  margin: 0 2px;
+}
+
+.breadcrumb-current {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Municipal Software Consistency: Typography & Tabular Numerals
+   ========================================================================== */
+
+.score-large-number,
+.score-large-denom,
+.summary-stat-value,
+.ranking-cell-score,
+.sequence-value,
+.breakdown-bar-label,
+.step-value-pill,
+.mini-map-coords-badge,
+.tab-badge,
+.toggle-badge {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Accessibility: Focus Visible & Reduced Motion
+   ========================================================================== */
+
+/* Visible high-contrast focus rings for keyboard navigation (WCAG 2.1 AA 2.4.7) */
+:focus-visible {
+  outline: 2px solid #1d4ed8 !important;
+  outline-offset: 2px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.btn:focus-visible,
+.nav-tab:focus-visible,
+.filter-tab:focus-visible,
+.toggle-btn:focus-visible,
+.year-tab-btn:focus-visible,
+.ranking-row:focus-visible,
+.breadcrumb-link:focus-visible {
+  outline: 2px solid #1d4ed8 !important;
+  outline-offset: 2px !important;
+}
+
+/* Support for prefers-reduced-motion (WCAG 2.1 AA 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Optimizations: 1366x768 (Standard Municipal Workstation)
+   ========================================================================== */
+
+@media (min-width: 1024px) and (max-height: 820px) {
+  /* Overview Map: optimize height so header, stats, and map fit on 768px screens */
+  .map-wrapper {
+    height: 440px !important;
+  }
+
+  /* Side Map on Hotspot Ranking */
+  .ranking-sidemap-column .sidemap-viewport {
+    height: 380px !important;
+  }
+
+  /* Compact spacing on detail screens */
+  .why-flagged-container,
+  .change-explorer-container {
+    gap: 16px;
+  }
+
+  .why-flagged-score-section {
+    padding: 16px 20px;
+  }
+
+  .imagery-canvas-wrapper {
+    min-height: 280px;
+  }
+}
+
+/* ==========================================================================
+   Responsive Optimizations: Phone Width (<= 640px)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* 1. App Header */
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 14px;
+    min-height: auto;
+  }
+
+  .header-left-cluster {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .header-brand {
+    justify-content: flex-start;
+  }
+
+  .header-nav {
+    width: 100%;
+    display: flex;
+  }
+
+  .header-nav .nav-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-metadata {
+    display: none; /* Keep mobile view clean and focused on primary tasks */
+  }
+
+  /* 2. Container paddings */
+  .city-overview-page,
+  .ranking-page-container,
+  .why-flagged-page,
+  .change-explorer-page {
+    padding: 0 12px 28px !important;
+  }
+
+  /* 3. Summary Strip */
+  .summary-strip {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+    padding: 12px !important;
+  }
+
+  .summary-stat-divider {
+    display: none !important;
+  }
+
+  .summary-stat-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  /* 4. Map Header & Controls */
+  .map-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .map-toggle-group {
+    width: 100%;
+    display: flex;
+  }
+
+  .map-toggle-group .toggle-btn {
+    flex: 1;
+    text-align: center;
+    padding: 6px 10px;
+  }
+
+  .map-wrapper {
+    height: 360px !important;
+  }
+
+  /* 5. Hotspot Ranking Page */
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .level-filter-group {
+    width: 100%;
+    display: flex;
+  }
+
+  .filter-tab {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 6px 8px;
+  }
+
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ranking-table th,
+  .ranking-table td {
+    padding: 10px 12px;
+  }
+
+  /* 6. Why Flagged Screen */
+  .why-flagged-main-title {
+    font-size: 20px;
+  }
+
+  .score-large-number {
+    font-size: 38px;
+  }
+
+  .action-buttons-cluster {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-buttons-cluster .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  /* 7. Change Explorer Screen */
+  .change-explorer-title {
+    font-size: 22px;
+  }
+
+  .change-panels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imagery-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .year-tab-btn {
+    min-height: 38px;
+    padding: 6px 12px;
+  }
+
+  .mini-map-viewport {
+    height: 220px;
+  }
+
+  /* 8. Evidence View Screen */
+  .evidence-imagery-row {
+    gap: 8px;
+  }
+
+  .evidence-imagery-item {
+    min-width: 140px;
+  }
+
+  .imagery-chain-arrow {
+    font-size: 18px;
+  }
+
+  .chain-step-node {
+    gap: 12px;
+  }
+
+  .step-card-content {
+    padding: 12px 14px;
+  }
+
+  .step-value-pill {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
 
 
 

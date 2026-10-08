@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchHotspots, fetchAreas } from '../api/client';
+import Breadcrumbs from './Breadcrumbs';
 import HotspotTable from './HotspotTable';
 import HotspotSideMap from './HotspotSideMap';
 
@@ -70,7 +71,15 @@ export default function HotspotRankingPage() {
   }
 
   return (
-    <div className="ranking-page-container" style={{ padding: '0 20px 24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+    <div className="ranking-page-container">
+      {/* Municipal Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Overview', to: '/' },
+          { label: 'Ranking' }
+        ]}
+      />
+
       {/* Defensible Operational Guidance Notice */}
       <div className="legal-notice-box" id="ranking-legal-notice">
         <strong>Municipal Decision-Support Notice:</strong>{' '}

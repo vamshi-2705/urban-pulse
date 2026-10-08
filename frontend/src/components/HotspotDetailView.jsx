@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchHotspotDetail, fetchChange, fetchEvidence } from '../api/client';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function HotspotDetailView() {
   const { gridId } = useParams();
@@ -129,15 +130,14 @@ export default function HotspotDetailView() {
   return (
     <div className="why-flagged-page">
       <div className="why-flagged-container">
-        {/* Navigation Breadcrumb */}
-        <div className="why-flagged-nav">
-          <button type="button" className="back-link-btn" onClick={() => navigate('/ranking')}>
-            &larr; Back to Hotspot ranking
-          </button>
-          <button type="button" className="back-link-btn" onClick={() => navigate('/')}>
-            Overview map
-          </button>
-        </div>
+        {/* Standardized Municipal Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: 'Overview', to: '/' },
+            { label: 'Ranking', to: '/ranking' },
+            { label: `Hotspot (${detail.grid_id})` }
+          ]}
+        />
 
         {/* 1. "Why was this area flagged?" with grid_id and priority badge */}
         <header className="why-flagged-header">

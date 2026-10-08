@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Polygon, CircleMarker, useMap } from 'react-leaflet';
 import { fetchChange, fetchHotspotDetail, fetchEvidence } from '../api/client';
+import Breadcrumbs from './Breadcrumbs';
 
 /**
  * Controller to ensure Leaflet map centers on the selected cell
@@ -253,22 +254,15 @@ export default function ChangeExplorerView() {
   return (
     <div className="change-explorer-page">
       <div className="change-explorer-container">
-        {/* Navigation Breadcrumb */}
-        <div className="why-flagged-nav">
-          <button
-            type="button"
-            className="back-link-btn"
-            onClick={() => navigate(`/hotspot/${gridId}`)}
-          >
-            &larr; Back to Why Flagged ({gridId})
-          </button>
-          <button type="button" className="back-link-btn" onClick={() => navigate('/ranking')}>
-            Hotspot ranking
-          </button>
-          <button type="button" className="back-link-btn" onClick={() => navigate('/')}>
-            Overview map
-          </button>
-        </div>
+        {/* Standardized Municipal Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: 'Overview', to: '/' },
+            { label: 'Ranking', to: '/ranking' },
+            { label: `Hotspot (${gridId})`, to: `/hotspot/${gridId}` },
+            { label: 'Change Explorer' }
+          ]}
+        />
 
         {/* Page Header */}
         <header className="change-explorer-header">
