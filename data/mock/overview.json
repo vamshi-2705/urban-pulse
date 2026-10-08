@@ -1,0 +1,32 @@
+{
+  "regionId": "blr-east-corridor",
+  "regionName": "Bengaluru East Growth Corridor (Mahadevapura – Varthur – Whitefield)",
+  "state": "Karnataka",
+  "center": [12.9698, 77.7499],
+  "defaultZoom": 13,
+  "bounds": [
+    [12.9200, 77.6800],
+    [13.0200, 77.8200]
+  ],
+  "monitoringCycle": "Quarterly Multi-temporal Satellite Observation",
+  "observationDates": ["2020-03-15", "2023-03-15", "2026-03-15"],
+  "latestObservationDate": "2026-03-15",
+  "baselinePeriod": "2020–2023",
+  "currentEvaluationPeriod": "2023–2026",
+  "monitoredCellsCount": 1240,
+  "anomalousCellsCount": 18,
+  "priorityCounts": {
+    "high": 6,
+    "medium": 8,
+    "normal": 4
+  },
+  "categoryCounts": {
+    "built_up_expansion": 8,
+    "vegetation_loss": 5,
+    "water_body_change": 3,
+    "bare_land_change": 2
+  },
+  "isMock": true,
+  "dataSource": "Preloaded development observations (data/mock)",
+  "legalNotice": "Unusual spatial change detected. Field verification recommended."
+}

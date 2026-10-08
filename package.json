@@ -1,0 +1,21 @@
+{
+  "name": "urban-pulse",
+  "version": "1.0.0",
+  "description": "Evidence-Based Urban Change & Field Investigation Intelligence",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend run preview",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "overrides": {
+    "shell-quote": "^1.12.0"
+  }
+}
