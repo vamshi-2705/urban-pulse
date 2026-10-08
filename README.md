@@ -225,3 +225,62 @@ npm test
 ALL EXTENDED REST SERVICES & PERSISTENCE CHECKS PASSED (0 errors).
 ```
 
+---
+
+## 8. Single-URL Production Deployment (Render / Railway)
+
+UrbanPulse is configured for simple, single-service production deployment where Express serves the compiled frontend (`frontend/dist`), the REST API (`/api/*`), and multi-temporal imagery (`/images/*`) on a single port.
+
+### Deployment Architecture
+- **Single Port**: The Node/Express server serves all endpoints and static assets.
+- **SPA Fallback Routing**: Deep client routes (e.g. `/ranking`, `/hotspot/:gridId`, `/hotspot/:gridId/change`, `/hotspot/:gridId/evidence`) automatically serve `frontend/dist/index.html`.
+- **Health Check**: `GET /api/health` remains available for platform liveness/readiness probes.
+- **Zero Docker Requirement**: Runs directly on standard Node.js runtime environments.
+
+### Local Verification
+Verify the production build and server locally:
+```bash
+# 1. Compile the frontend distribution bundle
+npm run build
+
+# 2. Start the unified production server
+npm start
+
+# Server will be live at http://localhost:5001 serving:
+# - Frontend SPA:  http://localhost:5001/
+# - Health Probe:  http://localhost:5001/api/health
+# - REST API:      http://localhost:5001/api/statistics
+# - Imagery:       http://localhost:5001/images/HYD_0421/2020.svg
+```
+
+### Deploying to Render
+1. Connect your GitHub repository to [Render](https://render.com) and create a **Web Service**.
+2. Configure settings:
+   - **Runtime**: `Node`
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+3. Set **Environment Variables** in the Render Dashboard:
+   - `NODE_ENV`: `production`
+   - `DATA_PROVIDER`: `mock` (or `postgres`)
+   - `DATABASE_URL`: *(Only if using PostgreSQL)* e.g. from Render PostgreSQL service
+   - *(Note: `PORT` is automatically injected by Render).*
+
+### Deploying to Railway
+1. Create a new project on [Railway](https://railway.app) and select **Deploy from GitHub repo**.
+2. Railway will detect `package.json`. In Settings, configure:
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+3. Set **Variables**:
+   - `NODE_ENV`: `production`
+   - `DATA_PROVIDER`: `mock`
+   - `DATABASE_URL`: `${{Postgres.DATABASE_URL}}` *(if using the Railway PostgreSQL plugin)*
+
+### How Data Files and Database Persistence are Provided
+
+| Provider | Setting | Configuration Details |
+| :--- | :--- | :--- |
+| **In-Memory Mock** *(Default)* | `DATA_PROVIDER=mock` | Zero external setup. Preloads the bundled 150-cell dataset in `data/mock/investigation_list.json`. |
+| **Filesystem JSON** | `DATA_PROVIDER=file` | Reads directly from `data/mock/investigation_list.json` or custom path specified via `DATA_FILE_PATH=/path/to/data.json`. Ideal for mounting external intelligence files as a persistent volume. |
+| **PostgreSQL Database** | `DATA_PROVIDER=postgres` | Reads from and writes to PostgreSQL. Provide connection string via `DATABASE_URL=postgresql://user:pass@host:port/dbname?sslmode=require`. Initialize schema and import data with `npm run db:import`. |
+
+

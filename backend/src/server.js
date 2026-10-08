@@ -8,6 +8,7 @@
  * - Never calculates or recalculates priority or anomaly scores
  */
 
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
@@ -169,6 +170,21 @@ app.use('/api', async (req, res) => {
     message: `Endpoint '${req.originalUrl}' not found`
   });
 });
+
+// Single-URL Production Deployment: Serve frontend build and SPA fallback
+const FRONTEND_DIST = path.resolve(__dirname, '../../frontend/dist');
+if (fs.existsSync(FRONTEND_DIST)) {
+  console.log(`[UrbanPulse] Serving frontend distribution bundle from ${FRONTEND_DIST}`);
+  app.use(express.static(FRONTEND_DIST));
+
+  // SPA fallback for all remaining client routes (e.g. /ranking, /hotspot/:gridId)
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/images') || req.path.startsWith('/data/images')) {
+      return next();
+    }
+    res.sendFile(path.join(FRONTEND_DIST, 'index.html'));
+  });
+}
 
 // Start listening after provider verification
 async function startServer() {
