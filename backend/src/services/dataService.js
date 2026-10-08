@@ -130,7 +130,8 @@ export const dataService = {
       lng: r.lng,
       geometry: r.geometry || null,
       priority_level: r.priority_level,
-      priority_score: r.priority_score
+      priority_score: r.priority_score,
+      reasons: r.reasons || []
     }));
 
     return {

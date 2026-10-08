@@ -25,6 +25,18 @@ export async function fetchPipeline() {
   return res.json();
 }
 
+export async function fetchStatistics() {
+  const res = await fetch(`${API_BASE}/statistics`);
+  if (!res.ok) throw new Error(`Failed to fetch statistics: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchAreas() {
+  const res = await fetch(`${API_BASE}/areas`);
+  if (!res.ok) throw new Error(`Failed to fetch areas: ${res.statusText}`);
+  return res.json();
+}
+
 export async function fetchHotspots(filters = {}) {
   const params = new URLSearchParams();
   if (filters.priorityLevel) params.append('priorityLevel', filters.priorityLevel);
@@ -34,6 +46,24 @@ export async function fetchHotspots(filters = {}) {
   const url = `${API_BASE}/hotspots${params.toString() ? `?${params.toString()}` : ''}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch hotspots: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchHotspotDetail(gridId) {
+  const res = await fetch(`${API_BASE}/hotspots/${gridId}`);
+  if (!res.ok) throw new Error(`Failed to fetch hotspot ${gridId}: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchChange(gridId) {
+  const res = await fetch(`${API_BASE}/change/${gridId}`);
+  if (!res.ok) throw new Error(`Failed to fetch change series for ${gridId}: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchEvidence(gridId) {
+  const res = await fetch(`${API_BASE}/evidence/${gridId}`);
+  if (!res.ok) throw new Error(`Failed to fetch evidence for ${gridId}: ${res.statusText}`);
   return res.json();
 }
 

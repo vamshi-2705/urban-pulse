@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { fetchOverview, fetchPipeline, fetchHotspots, fetchHealth, fetchGridCells } from './api/client';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { fetchOverview, fetchHotspots, fetchHealth } from './api/client';
 import DevelopmentDataBanner from './components/DevelopmentDataBanner';
 import Header from './components/Header';
-import PipelineBreadcrumb from './components/PipelineBreadcrumb';
-import CityOverviewBar from './components/CityOverviewBar';
-import MapView from './components/MapView';
+import CityOverviewPage from './components/CityOverviewPage';
 import Phase1Dashboard from './components/Phase1Dashboard';
+import HotspotDetailView from './components/HotspotDetailView';
 
 export default function App() {
   const [overview, setOverview] = useState(null);
-  const [pipeline, setPipeline] = useState(null);
   const [hotspots, setHotspots] = useState([]);
-  const [cells, setCells] = useState([]);
   const [selectedCellId, setSelectedCellId] = useState(null);
   const [healthInfo, setHealthInfo] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,24 +21,18 @@ export default function App() {
         setLoading(true);
         setError(null);
 
-        const [healthRes, overviewRes, pipelineRes, hotspotsRes, cellsRes] = await Promise.all([
-          fetchHealth(),
-          fetchOverview(),
-          fetchPipeline(),
-          fetchHotspots(),
-          fetchGridCells()
+        const [healthRes, overviewRes, hotspotsRes] = await Promise.all([
+          fetchHealth().catch(() => null),
+          fetchOverview().catch(() => null),
+          fetchHotspots().catch(() => [])
         ]);
 
         setHealthInfo(healthRes);
         setOverview(overviewRes);
-        setPipeline(pipelineRes);
-        setHotspots(hotspotsRes);
-        setCells(cellsRes);
+        setHotspots(hotspotsRes || []);
 
-        if (hotspotsRes.length > 0) {
+        if (hotspotsRes && hotspotsRes.length > 0) {
           setSelectedCellId(hotspotsRes[0].id || hotspotsRes[0].grid_id);
-        } else if (cellsRes.length > 0) {
-          setSelectedCellId(cellsRes[0].grid_id || cellsRes[0].cellId);
         }
       } catch (err) {
         console.error('Failed to load initial data:', err);
@@ -55,17 +47,20 @@ export default function App() {
 
   if (loading) {
     return (
-      <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
-        <p style={{ fontWeight: 600 }}>Loading UrbanPulse decision-support system...</p>
-        <p style={{ fontSize: '12px', marginTop: '6px' }}>Connecting to backend API & mock provider...</p>
+      <div style={{ padding: '60px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>
+        <div className="skeleton-spinner" style={{ margin: '0 auto 16px' }} />
+        <p style={{ fontWeight: 600, fontSize: '15px', color: 'var(--text-primary)' }}>
+          Loading UrbanPulse Decision-Support System...
+        </p>
+        <p style={{ fontSize: '12px', marginTop: '6px' }}>Connecting to municipal intelligence provider...</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div style={{ padding: '40px', maxWidth: '600px', margin: '40px auto' }}>
-        <div style={{ padding: '20px', backgroundColor: 'var(--status-high-bg)', border: '1px solid var(--status-high-border)', borderRadius: 'var(--radius-md)' }}>
+      <div style={{ padding: '40px 20px', maxWidth: '600px', margin: '40px auto' }}>
+        <div style={{ padding: '24px', backgroundColor: 'var(--status-high-bg)', border: '1px solid var(--status-high-border)', borderRadius: 'var(--radius-md)' }}>
           <h2 style={{ color: 'var(--status-high)', fontSize: '16px', marginBottom: '8px' }}>Backend connection error</h2>
           <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '12px' }}>
             Unable to connect to UrbanPulse API at <code>http://localhost:5001</code>.
@@ -77,7 +72,7 @@ export default function App() {
             <p style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
               Please verify the backend server is running:
             </p>
-            <pre style={{ backgroundColor: '#ffffff', padding: '8px', borderRadius: '4px', marginTop: '6px', fontSize: '11px' }}>
+            <pre style={{ backgroundColor: '#ffffff', padding: '8px', borderRadius: '4px', marginTop: '6px', fontSize: '11px', border: '1px solid var(--border-light)' }}>
               cd backend && npm run dev
             </pre>
           </div>
@@ -87,7 +82,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <div className="app-container">
       {/* Rule 3: Development data banner active while mock data is served */}
       <DevelopmentDataBanner
         isMock={overview?.isMock || healthInfo?.isMock}
@@ -95,29 +90,59 @@ export default function App() {
         legalNotice={overview?.legalNotice}
       />
 
+      {/* Top Header with Brand & Navigation (Overview / Hotspot ranking) */}
       <Header overview={overview} isConnected={Boolean(healthInfo)} />
 
-      <PipelineBreadcrumb pipeline={pipeline} />
+      {/* Main Routed View */}
+      <main style={{ minHeight: 'calc(100vh - 120px)' }}>
+        <Routes>
+          {/* City Overview View (Map, Summary Strip, Mandatory Sentence) */}
+          <Route
+            path="/"
+            element={<CityOverviewPage overview={overview} />}
+          />
+          <Route
+            path="/overview"
+            element={<CityOverviewPage overview={overview} />}
+          />
 
-      <CityOverviewBar overview={overview} />
+          {/* Hotspot Ranking View */}
+          <Route
+            path="/ranking"
+            element={
+              <div style={{ padding: '0 20px 24px' }}>
+                <Phase1Dashboard
+                  hotspots={hotspots}
+                  healthInfo={healthInfo}
+                  overview={overview}
+                  selectedHotspotId={selectedCellId}
+                  onSelectHotspot={setSelectedCellId}
+                />
+              </div>
+            }
+          />
+          <Route
+            path="/hotspots"
+            element={<Navigate to="/ranking" replace />}
+          />
 
-      <main style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {/* Phase 2: Interactive Leaflet Map View */}
-        <MapView
-          cells={cells}
-          selectedCellId={selectedCellId}
-          onSelectCell={setSelectedCellId}
-          overview={overview}
-        />
+          {/* Hotspot Specific Detail Dossier */}
+          <Route
+            path="/hotspot/:gridId"
+            element={<HotspotDetailView />}
+          />
+          <Route
+            path="/hotspots/:gridId"
+            element={<HotspotDetailView />}
+          />
+
+          {/* Fallback to Overview */}
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
+        </Routes>
       </main>
-
-      <Phase1Dashboard
-        hotspots={hotspots}
-        healthInfo={healthInfo}
-        overview={overview}
-        selectedHotspotId={selectedCellId}
-        onSelectHotspot={setSelectedCellId}
-      />
-    </>
+    </div>
   );
 }

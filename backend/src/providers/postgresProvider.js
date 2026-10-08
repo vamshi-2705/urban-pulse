@@ -427,7 +427,7 @@ export const postgresProvider = {
   async getAreas() {
     const meta = await this.getMeta();
     const res = await this.query(`
-      SELECT grid_id, lat, lng, geometry, priority_level, priority_score 
+      SELECT grid_id, lat, lng, geometry, priority_level, priority_score, reasons 
       FROM urban_observations 
       ORDER BY grid_id ASC;
     `);
@@ -438,7 +438,8 @@ export const postgresProvider = {
       lng: r.lng,
       geometry: r.geometry || null,
       priority_level: r.priority_level,
-      priority_score: r.priority_score
+      priority_score: r.priority_score,
+      reasons: r.reasons || []
     }));
 
     return {
