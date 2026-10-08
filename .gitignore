@@ -1,0 +1,52 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data directories (ignore actual data files but track .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
+
+# Geospatial binary & large file formats
+*.tif
+*.tiff
+*.jp2
+*.nc
+*.hdf
+*.tar.gz
+*.zip
+*.parquet
+
+# Logs
+logs/
+*.log
+
+# Environment variables & secrets
+.env
+.env.local
+*.pem
+credentials.json

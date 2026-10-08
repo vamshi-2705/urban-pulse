@@ -1,0 +1,29 @@
+# ==============================================================================
+# UrbanPulse - Geospatial AI + Intelligence Engine Dependencies
+# Member 1: Satellite Acquisition, Indicator Processing & Anomaly Prioritization
+# ==============================================================================
+
+# Planetary Computer & STAC API Client
+pystac-client>=0.7.2
+planetary-computer>=1.0.0
+
+# Geospatial Raster & Vector Analysis
+rasterio>=1.3.8
+geopandas>=0.14.0
+shapely>=2.0.2
+pyproj>=3.6.1
+
+# Scientific Computing & Data Processing
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Visualization (for local development and validation diagnostics only)
+matplotlib>=3.7.0
+
+# Configuration, Serialization & Validation
+pyyaml>=6.0.1
+pydantic>=2.0.0
+
+# Testing
+pytest>=7.4.0

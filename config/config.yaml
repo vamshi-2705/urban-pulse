@@ -1,0 +1,77 @@
+# ==============================================================================
+# UrbanPulse - Central Geospatial Configuration
+# ==============================================================================
+
+# Target Study Area Definition
+study_area:
+  name: "Hyderabad_Prototype"
+  region: "Hyderabad, Telangana, India"
+  # Focused development Area of Interest (Central / HITEC / Urban Core)
+  # Format: [min_lon, min_lat, max_lon, max_lat] in WGS84
+  bbox: [78.35, 17.35, 78.55, 17.50]
+  center:
+    lat: 17.425
+    lng: 78.450
+
+# Coordinate Reference Systems
+crs:
+  geographic: "EPSG:4326"
+  projected: "EPSG:32644"  # WGS 84 / UTM Zone 44N (metric coordinates for Hyderabad)
+
+# Analysis Time Periods
+time_periods:
+  years:
+    - 2020
+    - 2023
+    - 2026
+  # Preferred dry/clear-sky season months (Jan-March) for cloud minimization
+  preferred_months:
+    - 1
+    - 2
+    - 3
+
+# Satellite Acquisition Configuration (Sentinel-2 L2A via Planetary Computer)
+satellite:
+  collection: "sentinel-2-l2a"
+  stac_api_url: "https://planetarycomputer.microsoft.com/api/stac/v1"
+  cloud_cover_max_percent: 15.0
+  # Spectral bands required for Sentinel-2 surface reflectance
+  bands:
+    blue: "B02"
+    green: "B03"
+    red: "B04"
+    nir: "B08"
+    swir1: "B11"
+    swir2: "B12"
+    scl: "SCL"  # Scene Classification Layer for cloud/shadow masking
+
+# Fixed Geographic Grid
+grid:
+  prefix: "HYD"
+  cell_size_meters: 500.0  # Metric grid resolution (500m x 500m)
+
+# Project Paths (relative to repository root or absolute)
+directories:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  outputs_dir: "data/outputs"
+  logs_dir: "logs"
+
+# Logging Settings
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s]: %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  log_file: "logs/geospatial_engine.log"
+
+# Target Data Schema (Contract with Member 2 Backend/API)
+schema:
+  fields:
+    grid_id: "string"
+    lat: "float"
+    lng: "float"
+    date: "string"  # ISO 8601 (YYYY-MM-DD)
+    built_up: "float"  # percentage 0.0 - 100.0
+    vegetation: "float"  # percentage 0.0 - 100.0
+    water: "float"  # percentage 0.0 - 100.0
+    bare: "float"  # percentage 0.0 - 100.0
