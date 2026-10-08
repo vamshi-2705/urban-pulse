@@ -1530,4 +1530,403 @@ p {
   position: relative;
 }
 
+/* ==========================================================================
+   Why Flagged Screen (/hotspot/:gridId)
+   ========================================================================== */
+
+.why-flagged-page {
+  padding: 0 20px 40px;
+}
+
+.why-flagged-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-flagged-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-link-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.back-link-btn:hover {
+  background: var(--bg-surface-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.why-flagged-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.why-flagged-title-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.why-flagged-main-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.why-flagged-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-flagged-grid-id {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+.why-flagged-subtext {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* 2. Priority Score Card */
+.why-flagged-score-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.score-heading-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.score-display-large {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.score-large-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.score-large-denom {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.score-caption {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* 3. Score Breakdown Section */
+.why-flagged-breakdown-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why-flagged-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.breakdown-total-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.breakdown-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdown-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.breakdown-bar-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breakdown-bar-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.breakdown-bar-label {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+.breakdown-bar-track {
+  width: 100%;
+  height: 10px;
+  background-color: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.breakdown-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+.fill-expansion {
+  background-color: #4338ca;
+}
+
+.fill-vegetation {
+  background-color: #15803d;
+}
+
+.fill-anomaly {
+  background-color: #b45309;
+}
+
+.notice-box {
+  padding: 14px 18px;
+  background-color: var(--bg-surface-subtle);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* 4. Evidence Section */
+.why-flagged-evidence-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.evidence-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.evidence-bullet-card {
+  padding: 12px 16px;
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.evidence-card-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.icon-expansion {
+  color: #4338ca;
+}
+
+.icon-vegetation {
+  color: #15803d;
+}
+
+.icon-water {
+  color: #0284c7;
+}
+
+.icon-percentile {
+  color: #b45309;
+}
+
+.icon-baseline {
+  color: #b91c1c;
+}
+
+.evidence-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.evidence-metric-lead {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.evidence-metric-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* 5. Closing Line Banner */
+.why-flagged-closing-banner {
+  background-color: var(--status-medium-bg);
+  border: 1px solid var(--status-medium-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.closing-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.closing-directive-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--status-medium);
+  background-color: rgba(180, 83, 9, 0.14);
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.closing-directive-quote {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* 6. Buttons & Explorer Modules */
+.why-flagged-actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.action-buttons-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-outline-primary {
+  background: var(--bg-surface);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-primary-subtle);
+}
+
+.interactive-module-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.module-card-header {
+  padding: 12px 18px;
+  background-color: var(--bg-surface-subtle);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.module-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.module-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.module-card-body {
+  padding: 18px;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 
