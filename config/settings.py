@@ -84,6 +84,20 @@ class LoggingConfig:
 
 
 @dataclass(frozen=True)
+class IndicatorThresholdsConfig:
+    vegetation_candidate: float = 0.35
+    water_candidate: float = 0.05
+    builtup_candidate: float = 0.05
+
+
+@dataclass(frozen=True)
+class ChangeDetectionConfig:
+    ndvi_epsilon: float = 0.10
+    ndwi_epsilon: float = 0.10
+    ndbi_epsilon: float = 0.10
+
+
+@dataclass(frozen=True)
 class AppConfig:
     study_area: StudyAreaConfig
     crs: CRSConfig
@@ -92,6 +106,8 @@ class AppConfig:
     grid: GridConfig
     directories: DirectoriesConfig
     logging: LoggingConfig
+    indicators: IndicatorThresholdsConfig = field(default_factory=IndicatorThresholdsConfig)
+    change_detection: ChangeDetectionConfig = field(default_factory=ChangeDetectionConfig)
     raw_dict: Dict[str, Any] = field(default_factory=dict)
 
 
@@ -137,6 +153,20 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         log_file=(PROJECT_ROOT / log_file_rel).resolve(),
     )
 
+    ind_data = data.get("indicators", {}).get("heuristic_thresholds", {})
+    indicators_cfg = IndicatorThresholdsConfig(
+        vegetation_candidate=float(ind_data.get("vegetation_candidate", 0.35)),
+        water_candidate=float(ind_data.get("water_candidate", 0.05)),
+        builtup_candidate=float(ind_data.get("builtup_candidate", 0.05)),
+    )
+
+    cd_data = data.get("change_detection", {})
+    change_detection_cfg = ChangeDetectionConfig(
+        ndvi_epsilon=float(cd_data.get("ndvi", {}).get("epsilon", 0.10)),
+        ndwi_epsilon=float(cd_data.get("ndwi", {}).get("epsilon", 0.10)),
+        ndbi_epsilon=float(cd_data.get("ndbi", {}).get("epsilon", 0.10)),
+    )
+
     app_config = AppConfig(
         study_area=StudyAreaConfig(**data["study_area"]),
         crs=CRSConfig(**data["crs"]),
@@ -145,6 +175,8 @@ def load_config(config_path: Optional[Path | str] = None) -> AppConfig:
         grid=GridConfig(**data["grid"]),
         directories=directories,
         logging=logging_cfg,
+        indicators=indicators_cfg,
+        change_detection=change_detection_cfg,
         raw_dict=data,
     )
 

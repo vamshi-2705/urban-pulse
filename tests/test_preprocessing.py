@@ -184,7 +184,7 @@ def test_live_sentinel2_asset_access():
         catalog = json.load(f)
 
     p2023 = catalog["periods"]["2023"]["selected_scene"]
-    b02_url = p2023["assets"]["blue"]["href"]
+    b02_url = p2023["assets"]["blue"]["href"].split("?")[0]
     signed_url = planetary_computer.sign_url(b02_url)
 
     with rasterio.open(signed_url) as src:

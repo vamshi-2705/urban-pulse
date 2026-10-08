@@ -79,3 +79,12 @@ def test_target_schema_fields():
     required_fields = ["grid_id", "lat", "lng", "date", "built_up", "vegetation", "water", "bare"]
     for field_name in required_fields:
         assert field_name in fields, f"Missing required schema field: {field_name}"
+
+
+def test_change_detection_config():
+    """Verify change detection tolerance configuration values."""
+    cfg = get_config(reload=True)
+    assert hasattr(cfg, "change_detection")
+    assert cfg.change_detection.ndvi_epsilon > 0.0
+    assert cfg.change_detection.ndwi_epsilon > 0.0
+    assert cfg.change_detection.ndbi_epsilon > 0.0

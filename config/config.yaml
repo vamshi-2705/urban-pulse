@@ -57,6 +57,22 @@ directories:
   outputs_dir: "data/outputs"
   logs_dir: "logs"
 
+# Exploratory Prototype Indicator Thresholds (Heuristic only; continuous values remain primary)
+indicators:
+  heuristic_thresholds:
+    vegetation_candidate: 0.35  # Exploratory: NDVI > 0.35
+    water_candidate: 0.05        # Exploratory: NDWI > 0.05
+    builtup_candidate: 0.05      # Exploratory: NDBI > 0.05
+
+# Temporal Change Detection Tolerance Parameters (Epsilon tolerances; not ground truth)
+change_detection:
+  ndvi:
+    epsilon: 0.10  # Delta > 0.10 or < -0.10 represents directional change signal
+  ndwi:
+    epsilon: 0.10  # Delta > 0.10 or < -0.10 represents water-sensitive directional change signal
+  ndbi:
+    epsilon: 0.10  # Delta > 0.10 or < -0.10 represents built-up-sensitive directional change signal
+
 # Logging Settings
 logging:
   level: "INFO"

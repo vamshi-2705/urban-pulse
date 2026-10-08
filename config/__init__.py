@@ -3,8 +3,10 @@
 from config.settings import (
     AppConfig,
     CRSConfig,
+    ChangeDetectionConfig,
     DirectoriesConfig,
     GridConfig,
+    IndicatorThresholdsConfig,
     LoggingConfig,
     PROJECT_ROOT,
     SatelliteConfig,
@@ -17,8 +19,10 @@ from config.settings import (
 __all__ = [
     "AppConfig",
     "CRSConfig",
+    "ChangeDetectionConfig",
     "DirectoriesConfig",
     "GridConfig",
+    "IndicatorThresholdsConfig",
     "LoggingConfig",
     "PROJECT_ROOT",
     "SatelliteConfig",

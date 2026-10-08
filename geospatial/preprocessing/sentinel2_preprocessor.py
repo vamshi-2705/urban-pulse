@@ -121,7 +121,7 @@ def download_scene_assets(
         if key not in alias_map:
             raise KeyError(f"Asset key '{key}' not found in scene catalog for year {year}")
 
-        remote_url = alias_map[key]["href"]
+        remote_url = alias_map[key]["href"].split("?")[0]
         signed_url = planetary_computer.sign_url(remote_url)
 
         logger.info(f"[{year}] Streaming windowed asset {key} -> {dest_file.name}")
