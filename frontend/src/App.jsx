@@ -4,7 +4,7 @@ import { fetchOverview, fetchHotspots, fetchHealth } from './api/client';
 import DevelopmentDataBanner from './components/DevelopmentDataBanner';
 import Header from './components/Header';
 import CityOverviewPage from './components/CityOverviewPage';
-import Phase1Dashboard from './components/Phase1Dashboard';
+import HotspotRankingPage from './components/HotspotRankingPage';
 import HotspotDetailView from './components/HotspotDetailView';
 
 export default function App() {
@@ -106,20 +106,10 @@ export default function App() {
             element={<CityOverviewPage overview={overview} />}
           />
 
-          {/* Hotspot Ranking View */}
+          {/* Hotspot Ranking View (Second Nav Page) */}
           <Route
             path="/ranking"
-            element={
-              <div style={{ padding: '0 20px 24px' }}>
-                <Phase1Dashboard
-                  hotspots={hotspots}
-                  healthInfo={healthInfo}
-                  overview={overview}
-                  selectedHotspotId={selectedCellId}
-                  onSelectHotspot={setSelectedCellId}
-                />
-              </div>
-            }
+            element={<HotspotRankingPage />}
           />
           <Route
             path="/hotspots"
