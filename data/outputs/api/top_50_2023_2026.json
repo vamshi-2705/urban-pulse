@@ -1,0 +1,3787 @@
+[
+  {
+    "rank": 1,
+    "grid_id": "HYD_0394",
+    "period": "2023_2026",
+    "latitude": 17.457516,
+    "longitude": 78.37902,
+    "priority": {
+      "score": 0.6979,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9072,
+      "ndvi": 0.8746,
+      "ndwi": 0.809,
+      "ndbi": 0.7734,
+      "spatial": 0.8173
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3598,
+      "ndwi_delta": -0.0245,
+      "ndbi_delta": 0.7929
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0394/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0394/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0394/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0394/metadata.json"
+    }
+  },
+  {
+    "rank": 2,
+    "grid_id": "HYD_1438",
+    "period": "2023_2026",
+    "latitude": 17.350343,
+    "longitude": 78.436974,
+    "priority": {
+      "score": 0.6822,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9009,
+      "ndvi": 0.8134,
+      "ndwi": 0.8568,
+      "ndbi": 0.7356,
+      "spatial": 0.9434
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.125,
+      "ndwi_delta": -0.4217,
+      "ndbi_delta": 0.2282
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1438/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1438/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1438/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1438/metadata.json"
+    }
+  },
+  {
+    "rank": 3,
+    "grid_id": "HYD_1223",
+    "period": "2023_2026",
+    "latitude": 17.372466,
+    "longitude": 78.436666,
+    "priority": {
+      "score": 0.6752,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8395,
+      "ndvi": 0.7703,
+      "ndwi": 0.7319,
+      "ndbi": 0.7119,
+      "spatial": 0.6985
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2936,
+      "ndwi_delta": 0.0613,
+      "ndbi_delta": 0.1898
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1223/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1223/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1223/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1223/metadata.json"
+    }
+  },
+  {
+    "rank": 4,
+    "grid_id": "HYD_0671",
+    "period": "2023_2026",
+    "latitude": 17.431583,
+    "longitude": 78.468773,
+    "priority": {
+      "score": 0.6631,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8914,
+      "ndvi": 0.8123,
+      "ndwi": 0.8493,
+      "ndbi": 0.7719,
+      "spatial": 0.7901
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1957,
+      "ndwi_delta": -0.0948,
+      "ndbi_delta": 0.4272
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0671/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0671/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0671/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0671/metadata.json"
+    }
+  },
+  {
+    "rank": 5,
+    "grid_id": "HYD_0271",
+    "period": "2023_2026",
+    "latitude": 17.471431,
+    "longitude": 78.407052,
+    "priority": {
+      "score": 0.6423,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7952,
+      "ndvi": 0.7636,
+      "ndwi": 0.7416,
+      "ndbi": 0.7474,
+      "spatial": 0.5886
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.5437,
+      "ndwi_delta": 0.1985,
+      "ndbi_delta": 0.268
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0271/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0271/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0271/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0271/metadata.json"
+    }
+  },
+  {
+    "rank": 6,
+    "grid_id": "HYD_0867",
+    "period": "2023_2026",
+    "latitude": 17.407853,
+    "longitude": 78.379729,
+    "priority": {
+      "score": 0.629,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8032,
+      "ndvi": 0.7614,
+      "ndwi": 0.7084,
+      "ndbi": 0.7309,
+      "spatial": 0.7071
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.5024,
+      "ndwi_delta": 0.0586,
+      "ndbi_delta": 0.3738
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0867/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0867/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0867/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0867/metadata.json"
+    }
+  },
+  {
+    "rank": 7,
+    "grid_id": "HYD_1044",
+    "period": "2023_2026",
+    "latitude": 17.390101,
+    "longitude": 78.403498,
+    "priority": {
+      "score": 0.6279,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7513,
+      "ndvi": 0.6696,
+      "ndwi": 0.5944,
+      "ndbi": 0.6335,
+      "spatial": 0.7985
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.227,
+      "ndwi_delta": 0.0217,
+      "ndbi_delta": 0.1475
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1044/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1044/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1044/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1044/metadata.json"
+    }
+  },
+  {
+    "rank": 8,
+    "grid_id": "HYD_0101",
+    "period": "2023_2026",
+    "latitude": 17.489613,
+    "longitude": 78.416206,
+    "priority": {
+      "score": 0.6274,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7813,
+      "ndvi": 0.6953,
+      "ndwi": 0.6902,
+      "ndbi": 0.5711,
+      "spatial": 0.7137
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3916,
+      "ndwi_delta": 0.077,
+      "ndbi_delta": 0.1439
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0101/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0101/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0101/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0101/metadata.json"
+    }
+  },
+  {
+    "rank": 9,
+    "grid_id": "HYD_0185",
+    "period": "2023_2026",
+    "latitude": 17.480461,
+    "longitude": 78.406924,
+    "priority": {
+      "score": 0.6226,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7971,
+      "ndvi": 0.7557,
+      "ndwi": 0.7282,
+      "ndbi": 0.7447,
+      "spatial": 0.6268
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.5015,
+      "ndwi_delta": 0.146,
+      "ndbi_delta": 0.2828
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0185/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0185/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0185/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0185/metadata.json"
+    }
+  },
+  {
+    "rank": 10,
+    "grid_id": "HYD_0670",
+    "period": "2023_2026",
+    "latitude": 17.431523,
+    "longitude": 78.464069,
+    "priority": {
+      "score": 0.6158,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7795,
+      "ndvi": 0.7139,
+      "ndwi": 0.6735,
+      "ndbi": 0.7212,
+      "spatial": 0.6729
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3794,
+      "ndwi_delta": 0.0295,
+      "ndbi_delta": 0.2895
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    },
+    "assets": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0670/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0670/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0670/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0670/metadata.json"
+    }
+  },
+  {
+    "rank": 11,
+    "grid_id": "HYD_0628",
+    "period": "2023_2026",
+    "latitude": 17.436098,
+    "longitude": 78.46871,
+    "priority": {
+      "score": 0.6132,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8585,
+      "ndvi": 0.8128,
+      "ndwi": 0.812,
+      "ndbi": 0.7893,
+      "spatial": 0.6761
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2001,
+      "ndwi_delta": -0.0404,
+      "ndbi_delta": 0.174
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 12,
+    "grid_id": "HYD_1414",
+    "period": "2023_2026",
+    "latitude": 17.355532,
+    "longitude": 78.52625,
+    "priority": {
+      "score": 0.6125,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 1.0,
+      "ndvi": 1.0,
+      "ndwi": 1.0,
+      "ndbi": 0.8542,
+      "spatial": 1.0
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.0655,
+      "ndwi_delta": -0.113,
+      "ndbi_delta": 0.4423
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 13,
+    "grid_id": "HYD_0229",
+    "period": "2023_2026",
+    "latitude": 17.476007,
+    "longitude": 78.411693,
+    "priority": {
+      "score": 0.6125,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8543,
+      "ndvi": 0.7802,
+      "ndwi": 0.7698,
+      "ndbi": 0.7336,
+      "spatial": 0.7019
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.4945,
+      "ndwi_delta": 0.1313,
+      "ndbi_delta": 0.256
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 14,
+    "grid_id": "HYD_0310",
+    "period": "2023_2026",
+    "latitude": 17.46667,
+    "longitude": 78.388299,
+    "priority": {
+      "score": 0.6109,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9372,
+      "ndvi": 0.8818,
+      "ndwi": 0.8422,
+      "ndbi": 0.7543,
+      "spatial": 0.8623
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2242,
+      "ndwi_delta": 0.027,
+      "ndbi_delta": 0.165
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 15,
+    "grid_id": "HYD_1081",
+    "period": "2023_2026",
+    "latitude": 17.385217,
+    "longitude": 78.375349,
+    "priority": {
+      "score": 0.605,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.821,
+      "ndvi": 0.7693,
+      "ndwi": 0.733,
+      "ndbi": 0.7745,
+      "spatial": 0.6183
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.5529,
+      "ndwi_delta": 0.1054,
+      "ndbi_delta": 0.6038
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 16,
+    "grid_id": "HYD_1458",
+    "period": "2023_2026",
+    "latitude": 17.351526,
+    "longitude": 78.531007,
+    "priority": {
+      "score": 0.6045,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.851,
+      "ndvi": 0.8089,
+      "ndwi": 0.7957,
+      "ndbi": 0.7461,
+      "spatial": 0.7306
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.0803,
+      "ndwi_delta": -0.1576,
+      "ndbi_delta": 0.2005
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 17,
+    "grid_id": "HYD_0442",
+    "period": "2023_2026",
+    "latitude": 17.45331,
+    "longitude": 78.402604,
+    "priority": {
+      "score": 0.6007,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9288,
+      "ndvi": 0.8713,
+      "ndwi": 0.8201,
+      "ndbi": 0.7576,
+      "spatial": 0.9207
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.166,
+      "ndwi_delta": -0.0737,
+      "ndbi_delta": 0.6039
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 18,
+    "grid_id": "HYD_0270",
+    "period": "2023_2026",
+    "latitude": 17.471369,
+    "longitude": 78.402348,
+    "priority": {
+      "score": 0.5946,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8107,
+      "ndvi": 0.7801,
+      "ndwi": 0.7188,
+      "ndbi": 0.7426,
+      "spatial": 0.6433
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.486,
+      "ndwi_delta": 0.1638,
+      "ndbi_delta": 0.29
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 19,
+    "grid_id": "HYD_0272",
+    "period": "2023_2026",
+    "latitude": 17.471492,
+    "longitude": 78.411757,
+    "priority": {
+      "score": 0.5927,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7725,
+      "ndvi": 0.7325,
+      "ndwi": 0.7224,
+      "ndbi": 0.6581,
+      "spatial": 0.6226
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.4791,
+      "ndwi_delta": 0.1952,
+      "ndbi_delta": 0.2206
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 20,
+    "grid_id": "HYD_0131",
+    "period": "2023_2026",
+    "latitude": 17.484293,
+    "longitude": 78.355109,
+    "priority": {
+      "score": 0.5911,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8534,
+      "ndvi": 0.815,
+      "ndwi": 0.7559,
+      "ndbi": 0.7245,
+      "spatial": 0.8092
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2335,
+      "ndwi_delta": 0.0525,
+      "ndbi_delta": 0.1645
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 21,
+    "grid_id": "HYD_0872",
+    "period": "2023_2026",
+    "latitude": 17.408161,
+    "longitude": 78.403243,
+    "priority": {
+      "score": 0.5902,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8907,
+      "ndvi": 0.7674,
+      "ndwi": 0.6979,
+      "ndbi": 0.6977,
+      "spatial": 0.9028
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1709,
+      "ndwi_delta": -0.0076,
+      "ndbi_delta": 0.1993
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 22,
+    "grid_id": "HYD_1089",
+    "period": "2023_2026",
+    "latitude": 17.385708,
+    "longitude": 78.412966,
+    "priority": {
+      "score": 0.5895,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.763,
+      "ndvi": 0.7355,
+      "ndwi": 0.679,
+      "ndbi": 0.6985,
+      "spatial": 0.7037
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3715,
+      "ndwi_delta": 0.0527,
+      "ndbi_delta": 0.2519
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 23,
+    "grid_id": "HYD_0797",
+    "period": "2023_2026",
+    "latitude": 17.417858,
+    "longitude": 78.45485,
+    "priority": {
+      "score": 0.5886,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.804,
+      "ndvi": 0.7585,
+      "ndwi": 0.713,
+      "ndbi": 0.5861,
+      "spatial": 0.7042
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2988,
+      "ndwi_delta": 0.0558,
+      "ndbi_delta": 0.1585
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 24,
+    "grid_id": "HYD_1039",
+    "period": "2023_2026",
+    "latitude": 17.389794,
+    "longitude": 78.379987,
+    "priority": {
+      "score": 0.5884,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8454,
+      "ndvi": 0.7925,
+      "ndwi": 0.7452,
+      "ndbi": 0.7275,
+      "spatial": 0.697
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3959,
+      "ndwi_delta": 0.0861,
+      "ndbi_delta": 0.2536
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 25,
+    "grid_id": "HYD_0823",
+    "period": "2023_2026",
+    "latitude": 17.412306,
+    "longitude": 78.374962,
+    "priority": {
+      "score": 0.5875,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9623,
+      "ndvi": 0.8735,
+      "ndwi": 0.8932,
+      "ndbi": 0.8472,
+      "spatial": 0.9175
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2065,
+      "ndwi_delta": -0.0351,
+      "ndbi_delta": 0.2007
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 26,
+    "grid_id": "HYD_0359",
+    "period": "2023_2026",
+    "latitude": 17.462524,
+    "longitude": 78.416588,
+    "priority": {
+      "score": 0.5875,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9085,
+      "ndvi": 0.8552,
+      "ndwi": 0.8515,
+      "ndbi": 0.7658,
+      "spatial": 0.9591
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.0586,
+      "ndwi_delta": -0.2424,
+      "ndbi_delta": 0.108
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 27,
+    "grid_id": "HYD_0820",
+    "period": "2023_2026",
+    "latitude": 17.41212,
+    "longitude": 78.360854,
+    "priority": {
+      "score": 0.5875,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8387,
+      "ndvi": 0.7346,
+      "ndwi": 0.7772,
+      "ndbi": 0.7078,
+      "spatial": 0.709
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1051,
+      "ndwi_delta": -0.1125,
+      "ndbi_delta": 0.4079
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 28,
+    "grid_id": "HYD_1003",
+    "period": "2023_2026",
+    "latitude": 17.394738,
+    "longitude": 78.412839,
+    "priority": {
+      "score": 0.5861,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9481,
+      "ndvi": 0.8404,
+      "ndwi": 0.8938,
+      "ndbi": 0.7641,
+      "spatial": 0.9408
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.111,
+      "ndwi_delta": -0.0586,
+      "ndbi_delta": 0.3099
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 29,
+    "grid_id": "HYD_0674",
+    "period": "2023_2026",
+    "latitude": 17.431762,
+    "longitude": 78.482884,
+    "priority": {
+      "score": 0.5814,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7485,
+      "ndvi": 0.5324,
+      "ndwi": 0.4113,
+      "ndbi": 0.7238,
+      "spatial": 0.6843
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": false,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1838,
+      "ndwi_delta": -0.0376,
+      "ndbi_delta": 0.2426
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 30,
+    "grid_id": "HYD_0089",
+    "period": "2023_2026",
+    "latitude": 17.48887,
+    "longitude": 78.359748,
+    "priority": {
+      "score": 0.5795,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8455,
+      "ndvi": 0.6651,
+      "ndwi": 0.7557,
+      "ndbi": 0.7141,
+      "spatial": 0.7459
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1817,
+      "ndwi_delta": -0.0213,
+      "ndbi_delta": 0.3571
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 31,
+    "grid_id": "HYD_0629",
+    "period": "2023_2026",
+    "latitude": 17.436158,
+    "longitude": 78.473414,
+    "priority": {
+      "score": 0.5793,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8063,
+      "ndvi": 0.7576,
+      "ndwi": 0.7345,
+      "ndbi": 0.6659,
+      "spatial": 0.6609
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1377,
+      "ndwi_delta": -0.0256,
+      "ndbi_delta": 0.1206
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 32,
+    "grid_id": "HYD_0382",
+    "period": "2023_2026",
+    "latitude": 17.4639,
+    "longitude": 78.524791,
+    "priority": {
+      "score": 0.5776,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7923,
+      "ndvi": 0.7156,
+      "ndwi": 0.5929,
+      "ndbi": 0.7037,
+      "spatial": 0.6257
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2794,
+      "ndwi_delta": 0.0613,
+      "ndbi_delta": 0.1554
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 33,
+    "grid_id": "HYD_0863",
+    "period": "2023_2026",
+    "latitude": 17.407605,
+    "longitude": 78.360919,
+    "priority": {
+      "score": 0.5771,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8101,
+      "ndvi": 0.6534,
+      "ndwi": 0.6231,
+      "ndbi": 0.6406,
+      "spatial": 0.7058
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1618,
+      "ndwi_delta": 0.0527,
+      "ndbi_delta": 0.0834
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 34,
+    "grid_id": "HYD_0645",
+    "period": "2023_2026",
+    "latitude": 17.437099,
+    "longitude": 78.54863,
+    "priority": {
+      "score": 0.5766,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.789,
+      "ndvi": 0.7489,
+      "ndwi": 0.679,
+      "ndbi": 0.7159,
+      "spatial": 0.6075
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3998,
+      "ndwi_delta": 0.0893,
+      "ndbi_delta": 0.2933
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 35,
+    "grid_id": "HYD_0714",
+    "period": "2023_2026",
+    "latitude": 17.427068,
+    "longitude": 78.468835,
+    "priority": {
+      "score": 0.5753,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7505,
+      "ndvi": 0.4328,
+      "ndwi": 0.4653,
+      "ndbi": 0.7464,
+      "spatial": 0.6392
+    },
+    "evidence": {
+      "vegetation_loss": false,
+      "water_change": false,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1396,
+      "ndwi_delta": -0.099,
+      "ndbi_delta": 0.2688
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 36,
+    "grid_id": "HYD_0654",
+    "period": "2023_2026",
+    "latitude": 17.430551,
+    "longitude": 78.388814,
+    "priority": {
+      "score": 0.5747,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.9421,
+      "ndvi": 0.868,
+      "ndwi": 0.8527,
+      "ndbi": 0.8008,
+      "spatial": 0.936
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1893,
+      "ndwi_delta": -0.2115,
+      "ndbi_delta": 0.0722
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 37,
+    "grid_id": "HYD_1198",
+    "period": "2023_2026",
+    "latitude": 17.37805,
+    "longitude": 78.521245,
+    "priority": {
+      "score": 0.5721,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8198,
+      "ndvi": 0.7712,
+      "ndwi": 0.6447,
+      "ndbi": 0.6045,
+      "spatial": 0.665
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2434,
+      "ndwi_delta": 0.0474,
+      "ndbi_delta": 0.1445
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 38,
+    "grid_id": "HYD_0430",
+    "period": "2023_2026",
+    "latitude": 17.459676,
+    "longitude": 78.548328,
+    "priority": {
+      "score": 0.5717,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8582,
+      "ndvi": 0.7878,
+      "ndwi": 0.7618,
+      "ndbi": 0.6677,
+      "spatial": 0.7909
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1443,
+      "ndwi_delta": -0.118,
+      "ndbi_delta": 0.1416
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 39,
+    "grid_id": "HYD_0186",
+    "period": "2023_2026",
+    "latitude": 17.480522,
+    "longitude": 78.411629,
+    "priority": {
+      "score": 0.5702,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8712,
+      "ndvi": 0.7537,
+      "ndwi": 0.7437,
+      "ndbi": 0.7943,
+      "spatial": 0.7812
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1138,
+      "ndwi_delta": -0.1446,
+      "ndbi_delta": 0.1711
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 40,
+    "grid_id": "HYD_0693",
+    "period": "2023_2026",
+    "latitude": 17.425788,
+    "longitude": 78.370065,
+    "priority": {
+      "score": 0.5696,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8489,
+      "ndvi": 0.8114,
+      "ndwi": 0.7422,
+      "ndbi": 0.6951,
+      "spatial": 0.7265
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2798,
+      "ndwi_delta": 0.0679,
+      "ndbi_delta": 0.2066
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 41,
+    "grid_id": "HYD_0984",
+    "period": "2023_2026",
+    "latitude": 17.400685,
+    "longitude": 78.525643,
+    "priority": {
+      "score": 0.5696,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.767,
+      "ndvi": 0.7382,
+      "ndwi": 0.6525,
+      "ndbi": 0.6298,
+      "spatial": 0.5881
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3013,
+      "ndwi_delta": 0.1601,
+      "ndbi_delta": 0.2075
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 42,
+    "grid_id": "HYD_0102",
+    "period": "2023_2026",
+    "latitude": 17.489674,
+    "longitude": 78.420911,
+    "priority": {
+      "score": 0.5684,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7917,
+      "ndvi": 0.7098,
+      "ndwi": 0.6775,
+      "ndbi": 0.6443,
+      "spatial": 0.7153
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3843,
+      "ndwi_delta": 0.0669,
+      "ndbi_delta": 0.1768
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 43,
+    "grid_id": "HYD_1260",
+    "period": "2023_2026",
+    "latitude": 17.367587,
+    "longitude": 78.408518,
+    "priority": {
+      "score": 0.5666,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7454,
+      "ndvi": 0.7063,
+      "ndwi": 0.554,
+      "ndbi": 0.66,
+      "spatial": 0.6047
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2647,
+      "ndwi_delta": 0.0517,
+      "ndbi_delta": 0.1823
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 44,
+    "grid_id": "HYD_0273",
+    "period": "2023_2026",
+    "latitude": 17.471553,
+    "longitude": 78.416461,
+    "priority": {
+      "score": 0.5665,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7679,
+      "ndvi": 0.6057,
+      "ndwi": 0.7209,
+      "ndbi": 0.5173,
+      "spatial": 0.6626
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1882,
+      "ndwi_delta": 0.1224,
+      "ndbi_delta": 0.1005
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 45,
+    "grid_id": "HYD_0228",
+    "period": "2023_2026",
+    "latitude": 17.475946,
+    "longitude": 78.406988,
+    "priority": {
+      "score": 0.5661,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7797,
+      "ndvi": 0.7516,
+      "ndwi": 0.7436,
+      "ndbi": 0.6599,
+      "spatial": 0.5858
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.4895,
+      "ndwi_delta": 0.221,
+      "ndbi_delta": 0.2284
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 46,
+    "grid_id": "HYD_1429",
+    "period": "2023_2026",
+    "latitude": 17.349796,
+    "longitude": 78.394662,
+    "priority": {
+      "score": 0.5661,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7585,
+      "ndvi": 0.6918,
+      "ndwi": 0.6781,
+      "ndbi": 0.5075,
+      "spatial": 0.6821
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2438,
+      "ndwi_delta": 0.0608,
+      "ndbi_delta": 0.1023
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 47,
+    "grid_id": "HYD_0679",
+    "period": "2023_2026",
+    "latitude": 17.432058,
+    "longitude": 78.506402,
+    "priority": {
+      "score": 0.565,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEGETATION_LOSS",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8148,
+      "ndvi": 0.7596,
+      "ndwi": 0.7241,
+      "ndbi": 0.574,
+      "spatial": 0.6937
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.2536,
+      "ndwi_delta": 0.0721,
+      "ndbi_delta": 0.1041
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 48,
+    "grid_id": "HYD_0940",
+    "period": "2023_2026",
+    "latitude": 17.405142,
+    "longitude": 78.52088,
+    "priority": {
+      "score": 0.5649,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "PERSISTENT_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8003,
+      "ndvi": 0.7448,
+      "ndwi": 0.6699,
+      "ndbi": 0.6761,
+      "spatial": 0.6426
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": true,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.3076,
+      "ndwi_delta": 0.0927,
+      "ndbi_delta": 0.2091
+    },
+    "why_flagged": {
+      "headline": "Strong and persistent land-cover change",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "PERSISTENT_CHANGE",
+          "description": "The directional change persists across available multi-year observations."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 49,
+    "grid_id": "HYD_0030",
+    "period": "2023_2026",
+    "latitude": 17.499549,
+    "longitude": 78.486658,
+    "priority": {
+      "score": 0.5633,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "VEG_BUILTUP_COHERENCE",
+      "VEGETATION_LOSS",
+      "BUILTUP_SENSITIVE_CHANGE",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.7735,
+      "ndvi": 0.7421,
+      "ndwi": 0.7288,
+      "ndbi": 0.7201,
+      "spatial": 0.5536
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": true,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.4063,
+      "ndwi_delta": 0.2178,
+      "ndbi_delta": 0.2846
+    },
+    "why_flagged": {
+      "headline": "Coherent multi-spectral land-cover alteration",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "VEG_BUILTUP_COHERENCE",
+          "description": "Vegetation decrease coincides with built-up-sensitive spectral increase."
+        },
+        {
+          "code": "VEGETATION_LOSS",
+          "description": "Substantial reduction in photosynthetic canopy (NDVI delta <= -0.15)."
+        },
+        {
+          "code": "BUILTUP_SENSITIVE_CHANGE",
+          "description": "Substantial increase in shortwave-infrared impervious surface reflectance (NDBI delta >= 0.15)."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  },
+  {
+    "rank": 50,
+    "grid_id": "HYD_0356",
+    "period": "2023_2026",
+    "latitude": 17.46234,
+    "longitude": 78.402476,
+    "priority": {
+      "score": 0.5618,
+      "level": "MEDIUM",
+      "recommendation": "MONITOR_AND_REVIEW"
+    },
+    "reasons": [
+      "HIGH_SCENE_ANOMALY",
+      "SPATIAL_ANOMALY",
+      "WATER_CHANGE",
+      "STRONG_CHANGE_MAGNITUDE",
+      "CYCLICAL_REVERSAL_DAMPENED"
+    ],
+    "anomaly": {
+      "overall": 0.8834,
+      "ndvi": 0.8045,
+      "ndwi": 0.7845,
+      "ndbi": 0.8274,
+      "spatial": 0.7274
+    },
+    "evidence": {
+      "vegetation_loss": true,
+      "water_change": true,
+      "builtup_change": true,
+      "veg_builtup_coherence": false,
+      "persistent_change": false,
+      "cyclical_reversal": true
+    },
+    "change": {
+      "ndvi_delta": -0.1475,
+      "ndwi_delta": -0.2645,
+      "ndbi_delta": 0.1338
+    },
+    "why_flagged": {
+      "headline": "Pronounced localized spectral change anomaly",
+      "factors": [
+        {
+          "code": "HIGH_SCENE_ANOMALY",
+          "description": "Observed spectral change is unusually strong relative to the scene distribution."
+        },
+        {
+          "code": "SPATIAL_ANOMALY",
+          "description": "Spectral change sharply deviates from the surrounding 15x15 pixel local context."
+        },
+        {
+          "code": "WATER_CHANGE",
+          "description": "Significant shift in surface moisture or surface water extent (|NDWI delta| >= 0.15)."
+        },
+        {
+          "code": "STRONG_CHANGE_MAGNITUDE",
+          "description": "Extreme physical spectral displacement across one or more indicator bands."
+        },
+        {
+          "code": "CYCLICAL_REVERSAL_DAMPENED",
+          "description": "Directional turnaround detected across observation intervals; priority dampened for potential cyclical variation."
+        }
+      ]
+    }
+  }
+]

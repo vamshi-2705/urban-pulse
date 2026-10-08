@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "step": 1,
+      "id": "change",
+      "name": "Change",
+      "label": "Change detection",
+      "description": "Multi-temporal land-cover changes observed across consecutive monitoring cycles (built-up, vegetation, water, bare land).",
+      "status": "completed"
+    },
+    {
+      "step": 2,
+      "id": "historical_baseline",
+      "name": "Historical baseline",
+      "label": "Historical baseline",
+      "description": "Compares current change trajectory against the cell's multi-year historical growth trend (2020–2023).",
+      "status": "completed"
+    },
+    {
+      "step": 3,
+      "id": "local_baseline",
+      "name": "Local baseline",
+      "label": "Local baseline",
+      "description": "Compares change against the immediate neighborhood baseline to isolate localized deviation from regional trends.",
+      "status": "completed"
+    },
+    {
+      "step": 4,
+      "id": "anomaly",
+      "name": "Anomaly",
+      "label": "Anomaly detection",
+      "description": "Identifies statistically significant temporal and spatial divergence, confirming multi-temporal persistence.",
+      "status": "completed"
+    },
+    {
+      "step": 5,
+      "id": "evidence",
+      "name": "Evidence",
+      "label": "Evidence dossier",
+      "description": "Compiles verifiable observation records, acquisition dates, deltas, and percentile ranks into an inspectable dossier.",
+      "status": "completed"
+    },
+    {
+      "step": 6,
+      "id": "priority",
+      "name": "Priority",
+      "label": "Priority score",
+      "description": "Translates compound factor contributions into an explainable ranking score without manual or arbitrary overrides.",
+      "status": "completed"
+    },
+    {
+      "step": 7,
+      "id": "investigation_list",
+      "name": "Investigation list",
+      "label": "Investigation list",
+      "description": "Delivers an actionable, ordered queue of highest-urgency sites for municipal field inspection deployment.",
+      "status": "ready"
+    }
+  ]
+}

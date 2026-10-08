@@ -1,0 +1,38 @@
+{
+  "grid_id": "HYD_1438",
+  "period": "2023_2026",
+  "rank": 2,
+  "center_lat": 17.350343,
+  "center_lon": 78.436974,
+  "window_meters": 1000.0,
+  "crs": "EPSG:32644",
+  "source": "Sentinel-2 L2A",
+  "before_date": "2023-01-28T05:10:49.024000+00:00",
+  "after_date": "2026-03-10T05:12:41.024000+00:00",
+  "crop_dimensions": [
+    70,
+    100
+  ],
+  "assets": {
+    "before_rgb": "data/outputs/evidence/2023_2026/HYD_1438/before_rgb.png",
+    "after_rgb": "data/outputs/evidence/2023_2026/HYD_1438/after_rgb.png",
+    "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_before.png",
+    "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_after.png",
+    "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_change.png",
+    "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndwi_change.png",
+    "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndbi_change.png",
+    "combined_change": "data/outputs/evidence/2023_2026/HYD_1438/combined_change.png"
+  },
+  "scientific_metrics": {
+    "mean_ndvi_delta": 0.0462,
+    "mean_ndwi_delta": -0.0895,
+    "mean_ndbi_delta": 0.0658,
+    "total_pixels": 7000,
+    "coherent_pixels": 594,
+    "coherent_fraction": 0.0849,
+    "built_only_pixels": 960,
+    "veg_loss_pixels": 225,
+    "veg_gain_pixels": 1059,
+    "water_change_pixels": 1249
+  }
+}

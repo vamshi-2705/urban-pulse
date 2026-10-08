@@ -1,0 +1,378 @@
+{
+  "HYD_1220": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_1220/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_1220/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_1220/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_1220/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_1220/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_1220/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_1220/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_1220/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_1220/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1220/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1220/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1220/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1220/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1220/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1220/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1220/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1220/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1220/metadata.json"
+    }
+  },
+  "HYD_1223": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_1223/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_1223/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_1223/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_1223/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_1223/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_1223/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_1223/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_1223/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_1223/metadata.json"
+    },
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1223/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1223/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1223/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1223/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1223/metadata.json"
+    }
+  },
+  "HYD_0863": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_0863/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_0863/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_0863/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_0863/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_0863/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_0863/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_0863/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_0863/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_0863/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_0863/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_0863/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_0863/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_0863/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_0863/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_0863/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_0863/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_0863/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_0863/metadata.json"
+    }
+  },
+  "HYD_1200": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_1200/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_1200/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_1200/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_1200/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_1200/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_1200/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_1200/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_1200/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_1200/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1200/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1200/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1200/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1200/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1200/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1200/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1200/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1200/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1200/metadata.json"
+    }
+  },
+  "HYD_0310": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_0310/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_0310/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_0310/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_0310/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_0310/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_0310/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_0310/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_0310/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_0310/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_0310/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_0310/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_0310/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_0310/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_0310/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_0310/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_0310/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_0310/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_0310/metadata.json"
+    }
+  },
+  "HYD_0713": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_0713/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_0713/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_0713/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_0713/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_0713/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_0713/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_0713/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_0713/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_0713/metadata.json"
+    }
+  },
+  "HYD_1429": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_1429/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_1429/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_1429/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_1429/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_1429/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_1429/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_1429/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_1429/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_1429/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1429/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1429/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1429/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1429/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1429/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1429/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1429/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1429/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1429/metadata.json"
+    }
+  },
+  "HYD_0674": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_0674/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_0674/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_0674/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_0674/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_0674/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_0674/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_0674/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_0674/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_0674/metadata.json"
+    }
+  },
+  "HYD_0714": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_0714/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_0714/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_0714/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_0714/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_0714/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_0714/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_0714/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_0714/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_0714/metadata.json"
+    }
+  },
+  "HYD_1199": {
+    "2020_2026": {
+      "before_rgb": "data/outputs/evidence/2020_2026/HYD_1199/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2026/HYD_1199/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2026/HYD_1199/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2026/HYD_1199/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2026/HYD_1199/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2026/HYD_1199/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2026/HYD_1199/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2026/HYD_1199/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2026/HYD_1199/metadata.json"
+    },
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1199/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1199/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1199/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1199/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1199/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1199/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1199/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1199/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1199/metadata.json"
+    }
+  },
+  "HYD_1003": {
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1003/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1003/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1003/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1003/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1003/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1003/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1003/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1003/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1003/metadata.json"
+    }
+  },
+  "HYD_0359": {
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_0359/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_0359/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_0359/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_0359/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_0359/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_0359/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_0359/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_0359/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_0359/metadata.json"
+    }
+  },
+  "HYD_1311": {
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_1311/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_1311/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_1311/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_1311/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_1311/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_1311/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_1311/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_1311/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_1311/metadata.json"
+    }
+  },
+  "HYD_0820": {
+    "2020_2023": {
+      "before_rgb": "data/outputs/evidence/2020_2023/HYD_0820/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2020_2023/HYD_0820/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2020_2023/HYD_0820/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2020_2023/HYD_0820/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2020_2023/HYD_0820/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2020_2023/HYD_0820/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2020_2023/HYD_0820/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2020_2023/HYD_0820/combined_change.png",
+      "metadata": "data/outputs/evidence/2020_2023/HYD_0820/metadata.json"
+    }
+  },
+  "HYD_0394": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0394/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0394/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0394/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0394/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0394/metadata.json"
+    }
+  },
+  "HYD_1438": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1438/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1438/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1438/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1438/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1438/metadata.json"
+    }
+  },
+  "HYD_0671": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0671/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0671/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0671/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0671/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0671/metadata.json"
+    }
+  },
+  "HYD_0271": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0271/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0271/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0271/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0271/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0271/metadata.json"
+    }
+  },
+  "HYD_0867": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0867/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0867/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0867/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0867/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0867/metadata.json"
+    }
+  },
+  "HYD_1044": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_1044/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_1044/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_1044/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_1044/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_1044/metadata.json"
+    }
+  },
+  "HYD_0101": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0101/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0101/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0101/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0101/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0101/metadata.json"
+    }
+  },
+  "HYD_0185": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0185/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0185/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0185/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0185/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0185/metadata.json"
+    }
+  },
+  "HYD_0670": {
+    "2023_2026": {
+      "before_rgb": "data/outputs/evidence/2023_2026/HYD_0670/before_rgb.png",
+      "after_rgb": "data/outputs/evidence/2023_2026/HYD_0670/after_rgb.png",
+      "ndvi_before": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_before.png",
+      "ndvi_after": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_after.png",
+      "ndvi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndvi_change.png",
+      "ndwi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndwi_change.png",
+      "ndbi_change": "data/outputs/evidence/2023_2026/HYD_0670/ndbi_change.png",
+      "combined_change": "data/outputs/evidence/2023_2026/HYD_0670/combined_change.png",
+      "metadata": "data/outputs/evidence/2023_2026/HYD_0670/metadata.json"
+    }
+  }
+}

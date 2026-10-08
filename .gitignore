@@ -1,57 +1,85 @@
-# Python bytecode and cache
+# ================================
+# Python
+# ================================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
+*.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
-.mypy_cache/
 
 # Virtual environments
 .venv/
 venv/
 env/
 ENV/
-env.bak/
-venv.bak/
 
-# IDE and editors
+# ================================
+# Node
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ================================
+# Environment files
+# ================================
+.env
+.env.local
+.env.*.local
+
+# Keep example environment files
+!.env.example
+
+# ================================
+# Build outputs
+# ================================
+dist/
+build/
+.vite/
+
+# ================================
+# IDE / OS
+# ================================
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+.DS_Store
+Thumbs.db
 
-# Data directories (ignore large data files but track catalogs and .gitkeep)
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-!data/processed/*.json
-!data/processed/*/*.json
-!data/processed/*/*/*.json
-data/outputs/*
-!data/outputs/.gitkeep
-!data/outputs/*.json
-!data/outputs/*/*.json
-
-# Geospatial binary & large file formats
-*.tif
-*.tiff
-*.jp2
-*.nc
-*.hdf
-*.tar.gz
-*.zip
-*.parquet
-
+# ================================
 # Logs
-logs/
+# ================================
 *.log
+logs/
 
-# Environment variables & secrets
-.env
-.env.local
-*.pem
-credentials.json
+# ================================
+# Python generated data
+# ================================
+*.pyc
+
+# ================================
+# Temporary files
+# ================================
+*.tmp
+*.temp
+
+# ================================
+# Generated geospatial outputs
+# ================================
+data/raw/
+data/processed/
+
+# Keep directory placeholders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ================================
+# Large generated evidence
+# ================================
+# Do not ignore the API/demo contract files
+# because they are required by the frontend integration.
