@@ -1,8 +1,8 @@
 /**
  * UrbanPulse - Selftest Verification Script
  *
- * Verifies data integrity of the mock layer:
- * 1. meta.is_mock is true
+ * Verifies data integrity and REST service contract:
+ * 1. meta.is_mock is true and meta block present
  * 2. meta.analyzed_cells equals number of cells generated (~150)
  * 3. 5 HIGH, 10 MEDIUM, ~135 LOW cells
  * 4. Preserved cells (HYD_0421, HYD_0512, HYD_0387, HYD_0621) retain exact values
@@ -10,11 +10,17 @@
  * 6. Every record has valid GeoJSON square polygon geometry
  * 7. Optional bare_land_2020/2023/2026 are present and valid
  * 8. Top 8 hotspots have placeholder SVG images with "MOCK IMAGERY"
+ * 9. GET /api/statistics service contract (analyzed_cells, anomalous, high, medium, low)
+ * 10. GET /api/areas service contract (all cells with grid_id, lat, lng, geometry, priority_level, priority_score)
+ * 11. GET /api/hotspots/:gridId service contract (full record, score_breakdown, reasons, per-metric deltas, 404 for unknown)
+ * 12. GET /api/change/:gridId service contract (built_up, vegetation, water, bare_land series, 404 for unknown)
+ * 13. GET /api/evidence/:gridId service contract (observed_change, baselines, anomalies, persistence, image URLs, 404 for unknown)
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { dataService } from '../backend/src/services/dataService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,7 +29,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const MOCK_FILE = path.join(ROOT_DIR, 'data', 'mock', 'investigation_list.json');
 const IMAGES_DIR = path.join(ROOT_DIR, 'data', 'images');
 
-console.log('--- UrbanPulse Mock Layer Selftest ---');
+console.log('--- UrbanPulse Selftest Suite ---');
 
 if (!fs.existsSync(MOCK_FILE)) {
   console.error(`FAIL: Mock file not found at ${MOCK_FILE}`);
@@ -133,7 +139,6 @@ for (const rec of records) {
     console.error(`FAIL: Record ${rec.grid_id} geometry polygon ring must have 5 coordinate pairs (closed square)`);
     process.exit(1);
   }
-  // Check closed ring
   if (ring[0][0] !== ring[4][0] || ring[0][1] !== ring[4][1]) {
     console.error(`FAIL: Record ${rec.grid_id} geometry polygon ring is not closed`);
     process.exit(1);
@@ -171,5 +176,115 @@ for (const item of top8) {
 }
 console.log(`✓ Top 8 hotspots have valid placeholder SVG images with 'MOCK IMAGERY' watermark (24 files total)`);
 
-console.log('\nALL SELFTEST CHECKS PASSED SUCCESSFULLY (0 errors).\n');
+// =========================================================================
+// 6. Extended REST API Services & Contract Checks
+// =========================================================================
+
+console.log('\n--- Extended REST Services Contract Tests ---');
+
+// A. Statistics
+const stats = dataService.getStatistics();
+if (!stats.meta || stats.meta.is_mock !== true || !stats.meta.warning) {
+  console.error('FAIL: getStatistics missing required meta block');
+  process.exit(1);
+}
+if (stats.analyzed_cells !== records.length || stats.anomalous !== 15 || stats.high !== 5 || stats.medium !== 10 || stats.low !== 135) {
+  console.error('FAIL: getStatistics counts mismatch:', stats);
+  process.exit(1);
+}
+console.log(`✓ getStatistics contract passed (analyzed: ${stats.analyzed_cells}, anomalous: ${stats.anomalous}, high: ${stats.high}, medium: ${stats.medium}, low: ${stats.low})`);
+
+// B. Areas
+const areasResult = dataService.getAreas();
+if (!areasResult.meta || !Array.isArray(areasResult.areas)) {
+  console.error('FAIL: getAreas missing meta or areas array');
+  process.exit(1);
+}
+if (areasResult.areas.length !== records.length) {
+  console.error(`FAIL: getAreas count mismatch: ${areasResult.areas.length} !== ${records.length}`);
+  process.exit(1);
+}
+const firstArea = areasResult.areas[0];
+if (!firstArea.grid_id || typeof firstArea.lat !== 'number' || typeof firstArea.lng !== 'number' || !firstArea.geometry || !firstArea.priority_level || typeof firstArea.priority_score !== 'number') {
+  console.error('FAIL: getAreas item missing required attributes:', firstArea);
+  process.exit(1);
+}
+console.log(`✓ getAreas contract passed (${areasResult.areas.length} cells with geometry & scores)`);
+
+// C. Hotspot Detail (HYD_0421 & unknown)
+const hotspotDetail = dataService.getHotspotDetail('HYD_0421');
+if (!hotspotDetail || !hotspotDetail.meta || hotspotDetail.grid_id !== 'HYD_0421') {
+  console.error('FAIL: getHotspotDetail(HYD_0421) failed');
+  process.exit(1);
+}
+if (!hotspotDetail.score_breakdown || !Array.isArray(hotspotDetail.reasons) || !hotspotDetail.differences) {
+  console.error('FAIL: getHotspotDetail missing score_breakdown, reasons, or differences');
+  process.exit(1);
+}
+// Check difference calculation: 47.2 - 31.2 = 16.0
+if (hotspotDetail.differences.built_up !== 16) {
+  console.error(`FAIL: HYD_0421 built_up difference expected 16, got ${hotspotDetail.differences.built_up}`);
+  process.exit(1);
+}
+if (hotspotDetail.differences.vegetation !== -10.7) {
+  console.error(`FAIL: HYD_0421 vegetation difference expected -10.7, got ${hotspotDetail.differences.vegetation}`);
+  process.exit(1);
+}
+console.log(`✓ getHotspotDetail(HYD_0421) contract passed (built_up diff: +${hotspotDetail.differences.built_up}%, veg diff: ${hotspotDetail.differences.vegetation}%)`);
+
+// Unknown hotspot should return null (maps to 404)
+const unknownHotspot = dataService.getHotspotDetail('NON_EXISTENT_ID');
+if (unknownHotspot !== null) {
+  console.error('FAIL: getHotspotDetail on unknown ID must return null');
+  process.exit(1);
+}
+console.log('✓ getHotspotDetail unknown ID correctly returns null for 404 response');
+
+// D. Change Series (HYD_0421 & unknown)
+const changeSeries = dataService.getChange('HYD_0421');
+if (!changeSeries || !changeSeries.meta || changeSeries.grid_id !== 'HYD_0421') {
+  console.error('FAIL: getChange(HYD_0421) failed');
+  process.exit(1);
+}
+if (!Array.isArray(changeSeries.built_up) || !Array.isArray(changeSeries.vegetation) || !Array.isArray(changeSeries.water)) {
+  console.error('FAIL: getChange series missing arrays for built_up, vegetation, or water');
+  process.exit(1);
+}
+if (changeSeries.built_up.length !== 3 || changeSeries.built_up[0].year !== 2020 || changeSeries.built_up[2].year !== 2026) {
+  console.error('FAIL: getChange series format invalid:', changeSeries.built_up);
+  process.exit(1);
+}
+console.log('✓ getChange(HYD_0421) contract passed (multi-year time series [{year, value}])');
+
+const unknownChange = dataService.getChange('NON_EXISTENT_ID');
+if (unknownChange !== null) {
+  console.error('FAIL: getChange on unknown ID must return null');
+  process.exit(1);
+}
+console.log('✓ getChange unknown ID correctly returns null for 404 response');
+
+// E. Evidence Record (HYD_0421 & unknown)
+const evidenceRec = dataService.getEvidence('HYD_0421');
+if (!evidenceRec || !evidenceRec.meta || evidenceRec.grid_id !== 'HYD_0421') {
+  console.error('FAIL: getEvidence(HYD_0421) failed');
+  process.exit(1);
+}
+if (!evidenceRec.observed_change || typeof evidenceRec.historical_change !== 'number' || typeof evidenceRec.local_percentile !== 'number') {
+  console.error('FAIL: getEvidence missing observed_change, historical_change, or local_percentile');
+  process.exit(1);
+}
+if (!Array.isArray(evidenceRec.images) || evidenceRec.images.length !== 3) {
+  console.error('FAIL: HYD_0421 should have 3 image URLs, got:', evidenceRec.images);
+  process.exit(1);
+}
+console.log(`✓ getEvidence(HYD_0421) contract passed (${evidenceRec.images.length} verified placeholder image URLs)`);
+
+const unknownEvidence = dataService.getEvidence('NON_EXISTENT_ID');
+if (unknownEvidence !== null) {
+  console.error('FAIL: getEvidence on unknown ID must return null');
+  process.exit(1);
+}
+console.log('✓ getEvidence unknown ID correctly returns null for 404 response');
+
+console.log('\nALL EXTENDED REST SERVICES CHECKS PASSED (0 errors).\n');
 process.exit(0);

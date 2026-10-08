@@ -13,6 +13,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { mockProvider } from './providers/mockProvider.js';
+import apiRoutes from './routes/api.js';
 
 dotenv.config();
 
@@ -26,8 +27,12 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
-// Serve placeholder imagery from data/images
+// Serve placeholder imagery from data/images (both /images and /data/images)
+app.use('/images', express.static(path.resolve(__dirname, '../../data/images')));
 app.use('/data/images', express.static(path.resolve(__dirname, '../../data/images')));
+
+// Mount modular REST routes (/api/statistics, /api/areas, /api/hotspots/:gridId, /api/change/:gridId, /api/evidence/:gridId)
+app.use('/api', apiRoutes);
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -136,7 +141,15 @@ app.get('/api/hotspots/:id/evidence', (req, res) => {
 
 // Global 404 handler
 app.use('/api', (req, res) => {
-  res.status(404).json({ error: `Endpoint '${req.originalUrl}' not found` });
+  res.status(404).json({
+    meta: mockProvider.getOverview()?.meta || {
+      source: "mock",
+      is_mock: true,
+      warning: "DEVELOPMENT DATA ONLY. Invented values for UI development. Not real satellite observations. Replace with Member 1 output before the demo."
+    },
+    error: 'Not found',
+    message: `Endpoint '${req.originalUrl}' not found`
+  });
 });
 
 // Start listening
