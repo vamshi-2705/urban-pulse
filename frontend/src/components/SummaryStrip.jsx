@@ -68,7 +68,7 @@ export default function SummaryStrip({ statistics, loading, error }) {
 
       {/* Mandatory Single Sentence Under the Strip */}
       <p className="summary-banner-sentence">
-        From {analyzed} analyzed locations, UrbanPulse flagged {anomalous} for field verification.
+        From {analyzed} analyzed locations, Urban IQ flagged {anomalous} for field verification.
       </p>
     </div>
   );

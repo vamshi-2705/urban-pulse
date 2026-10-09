@@ -85,27 +85,27 @@ export default function HotspotSideMap({
 
     if (isHovered) {
       return {
-        color: '#1e3a8a',
-        weight: 3.5,
-        fillColor: level === 'HIGH' ? '#ef4444' : '#f59e0b',
-        fillOpacity: 0.9
+        color: '#FF6B35',
+        weight: 3,
+        fillColor: level === 'HIGH' ? '#EF4444' : '#FF6B35',
+        fillOpacity: 0.95
       };
     }
 
     if (level === 'HIGH') {
       return {
-        color: '#b91c1c',
-        weight: 1.8,
-        fillColor: '#dc2626',
+        color: '#EF4444',
+        weight: 1.5,
+        fillColor: '#DC2626',
         fillOpacity: 0.65
       };
     }
 
     return {
-      color: '#b45309',
-      weight: 1.5,
-      fillColor: '#d97706',
-      fillOpacity: 0.50
+      color: '#F59E0B',
+      weight: 1.2,
+      fillColor: '#D97706',
+      fillOpacity: 0.45
     };
   };
 
@@ -134,11 +134,19 @@ export default function HotspotSideMap({
           center={defaultCenter}
           zoom={12}
           scrollWheelZoom={false}
-          style={{ height: '100%', width: '100%' }}
+          style={{ height: '100%', width: '100%', background: '#080D14' }}
         >
+          {/* Esri World Dark Gray Basemap (Zero API Key) */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+            maxZoom={19}
+            maxNativeZoom={16}
+          />
+          <TileLayer
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+            maxZoom={19}
+            maxNativeZoom={16}
           />
 
           {bounds && <SideMapBoundsFitter bounds={bounds} />}

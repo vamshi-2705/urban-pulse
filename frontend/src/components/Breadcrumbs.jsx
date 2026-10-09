@@ -1,41 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 /**
- * Standardized Municipal Breadcrumbs Component
- * Hierarchical navigation: Overview > Ranking > Hotspot (:gridId) [> Subview]
+ * Clean Horizontal Breadcrumb Navigation Pill
+ * Eliminates browser-default numbered list styling
  */
 export default function Breadcrumbs({ items = [] }) {
+  const navigate = useNavigate();
+
   if (!items || items.length === 0) return null;
 
   return (
-    <nav className="municipal-breadcrumb-nav" aria-label="Breadcrumb">
-      <ol className="breadcrumb-list">
+    <nav className="clean-breadcrumb-nav font-mono" aria-label="Breadcrumb navigation">
+      <button
+        type="button"
+        className="breadcrumb-back-btn"
+        onClick={() => navigate('/')}
+        title="Return to central map"
+      >
+        &larr; MAP
+      </button>
+
+      <span className="breadcrumb-divider-pipe">|</span>
+
+      <div className="breadcrumb-pill-trail">
         {items.map((item, idx) => {
           const isLast = idx === items.length - 1;
 
           return (
             <React.Fragment key={item.label || idx}>
-              <li className={`breadcrumb-item ${isLast ? 'active' : ''}`}>
+              <span className={`breadcrumb-segment ${isLast ? 'active' : ''}`}>
                 {isLast || !item.to ? (
-                  <span className="breadcrumb-current" aria-current="page">
+                  <span className="breadcrumb-current-label">
                     {item.label}
                   </span>
                 ) : (
-                  <Link to={item.to} className="breadcrumb-link">
+                  <Link to={item.to} className="breadcrumb-active-link">
                     {item.label}
                   </Link>
                 )}
-              </li>
+              </span>
               {!isLast && (
-                <li className="breadcrumb-separator" aria-hidden="true">
+                <span className="breadcrumb-chevron-separator" aria-hidden="true">
                   &rsaquo;
-                </li>
+                </span>
               )}
             </React.Fragment>
           );
         })}
-      </ol>
+      </div>
     </nav>
   );
 }

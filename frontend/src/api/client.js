@@ -2,8 +2,11 @@
  * UrbanPulse Frontend API Client
  *
  * Connects directly to backend endpoints.
- * Never calculates or overrides priority or anomaly data.
- * Implements intelligent in-memory caching and startup preloading for slow network resilience.
+ * Supports period-aware queries for:
+ * - 2020_2026 (default)
+ * - 2020_2023
+ * - 2023_2026
+ * Implements intelligent in-memory caching and startup preloading for instant responsiveness.
  */
 
 const API_BASE = '/api';
@@ -45,77 +48,94 @@ export function clearCache(url) {
 }
 
 /**
- * Preloads and caches intelligence data across the entire demo path at startup
+ * Preloads and caches intelligence data across all 3 supported periods at startup
  */
 export async function preloadAllData() {
-  const coreEndpoints = [
-    `${API_BASE}/health`,
-    `${API_BASE}/overview`,
-    `${API_BASE}/pipeline`,
-    `${API_BASE}/statistics`,
-    `${API_BASE}/areas`,
-    `${API_BASE}/hotspots`,
-    `${API_BASE}/hotspots/HYD_1220`,
-    `${API_BASE}/change/HYD_1220`,
-    `${API_BASE}/evidence/HYD_1220`,
-    `${API_BASE}/hotspots/HYD_0421`,
-    `${API_BASE}/change/HYD_0421`,
-    `${API_BASE}/evidence/HYD_0421`
-  ];
+  const periods = ['2020_2026', '2020_2023', '2023_2026'];
+  const endpoints = [];
 
-  await Promise.allSettled(coreEndpoints.map((url) => cachedFetch(url)));
+  endpoints.push(`${API_BASE}/health`);
+  endpoints.push(`${API_BASE}/pipeline`);
+
+  for (const p of periods) {
+    endpoints.push(`${API_BASE}/overview?period=${p}`);
+    endpoints.push(`${API_BASE}/statistics?period=${p}`);
+    endpoints.push(`${API_BASE}/areas?period=${p}`);
+    endpoints.push(`${API_BASE}/hotspots?period=${p}`);
+    endpoints.push(`${API_BASE}/hotspots/HYD_1220?period=${p}`);
+    endpoints.push(`${API_BASE}/change/HYD_1220?period=${p}`);
+    endpoints.push(`${API_BASE}/evidence/HYD_1220?period=${p}`);
+  }
+
+  await Promise.allSettled(endpoints.map((url) => cachedFetch(url)));
 }
 
 export async function fetchHealth() {
   return cachedFetch(`${API_BASE}/health`);
 }
 
-export async function fetchOverview() {
-  return cachedFetch(`${API_BASE}/overview`);
+export async function fetchPipeline(period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/pipeline${q}`);
 }
 
-export async function fetchPipeline() {
-  return cachedFetch(`${API_BASE}/pipeline`);
+export async function fetchOverview(period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/overview${q}`);
 }
 
-export async function fetchStatistics() {
-  return cachedFetch(`${API_BASE}/statistics`);
+export async function fetchStatistics(period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/statistics${q}`);
 }
 
-export async function fetchAreas() {
-  return cachedFetch(`${API_BASE}/areas`);
+export async function fetchAreas(period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/areas${q}`);
 }
 
 export async function fetchHotspots(filters = {}) {
+  let period = typeof filters === 'string' ? filters : filters.period;
   const params = new URLSearchParams();
-  if (filters.priorityLevel) params.append('priorityLevel', filters.priorityLevel);
-  if (filters.category) params.append('category', filters.category);
-  if (filters.zone) params.append('zone', filters.zone);
+  if (period) params.append('period', period);
+  if (typeof filters === 'object') {
+    if (filters.priorityLevel) params.append('priorityLevel', filters.priorityLevel);
+    if (filters.category) params.append('category', filters.category);
+    if (filters.zone) params.append('zone', filters.zone);
+  }
 
   const url = `${API_BASE}/hotspots${params.toString() ? `?${params.toString()}` : ''}`;
   return cachedFetch(url);
 }
 
-export async function fetchHotspotDetail(gridId) {
-  return cachedFetch(`${API_BASE}/hotspots/${gridId}`);
+export async function fetchHotspotDetail(gridId, period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/hotspots/${gridId}${q}`);
 }
 
-export async function fetchChange(gridId) {
-  return cachedFetch(`${API_BASE}/change/${gridId}`);
+export async function fetchChange(gridId, period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/change/${gridId}${q}`);
 }
 
-export async function fetchEvidence(gridId) {
-  return cachedFetch(`${API_BASE}/evidence/${gridId}`);
+export async function fetchEvidence(gridId, period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/evidence/${gridId}${q}`);
 }
 
-export async function fetchHotspotEvidence(hotspotId) {
-  return cachedFetch(`${API_BASE}/hotspots/${hotspotId}/evidence`);
+export async function fetchHotspotEvidence(hotspotId, period) {
+  const q = period ? `?period=${encodeURIComponent(period)}` : '';
+  return cachedFetch(`${API_BASE}/hotspots/${hotspotId}/evidence${q}`);
 }
 
 export async function fetchGridCells(filters = {}) {
+  let period = typeof filters === 'string' ? filters : filters.period;
   const params = new URLSearchParams();
-  if (filters.priorityLevel) params.append('priorityLevel', filters.priorityLevel);
-  if (filters.anomalyStatus) params.append('anomalyStatus', filters.anomalyStatus);
+  if (period) params.append('period', period);
+  if (typeof filters === 'object') {
+    if (filters.priorityLevel) params.append('priorityLevel', filters.priorityLevel);
+    if (filters.anomalyStatus) params.append('anomalyStatus', filters.anomalyStatus);
+  }
 
   const url = `${API_BASE}/grid-cells${params.toString() ? `?${params.toString()}` : ''}`;
   return cachedFetch(url);

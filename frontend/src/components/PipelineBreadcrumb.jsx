@@ -1,42 +1,44 @@
 import React from 'react';
 
-export default function PipelineBreadcrumb({ pipeline }) {
-  const defaultStages = [
-    { step: 1, id: 'change', name: 'Change' },
-    { step: 2, id: 'historical_baseline', name: 'Historical baseline' },
-    { step: 3, id: 'local_baseline', name: 'Local baseline' },
-    { step: 4, id: 'anomaly', name: 'Anomaly' },
-    { step: 5, id: 'evidence', name: 'Evidence' },
-    { step: 6, id: 'priority', name: 'Priority' },
-    { step: 7, id: 'investigation_list', name: 'Investigation list' }
+/**
+ * Compact Intelligence Workflow Strip
+ * Communicates the core product paradigm:
+ * OBSERVE → CHANGE → ANOMALY → EVIDENCE → PRIORITY
+ */
+export default function PipelineBreadcrumb({ activeStage = 'PRIORITY' }) {
+  const stages = [
+    { id: 'OBSERVE', label: 'OBSERVE', desc: 'Sentinel-2 L2A 10m Multi-spectral' },
+    { id: 'CHANGE', label: 'CHANGE', desc: 'Normalized Temporal Deltas (NDVI/NDWI/NDBI)' },
+    { id: 'ANOMALY', label: 'ANOMALY', desc: 'Scene-level & Local Spatial Deviation' },
+    { id: 'EVIDENCE', label: 'EVIDENCE', desc: 'Multi-indicator Coherence & Persistence' },
+    { id: 'PRIORITY', label: 'PRIORITY', desc: 'Explainable Triage & Field Verification' }
   ];
 
-  const stages = pipeline?.stages || defaultStages;
-
   return (
-    <section className="pipeline-bar" aria-label="Decision support pipeline stages">
-      <div className="pipeline-header">
-        <span className="pipeline-title">Evidence Pipeline Chain</span>
-        <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
-          Transparent multi-stage derivation from satellite observations to field queue
-        </span>
+    <div className="workflow-strip" aria-label="Intelligence processing workflow">
+      <div className="workflow-strip-label">WORKFLOW</div>
+      <div className="workflow-steps-chain">
+        {stages.map((stage, idx) => {
+          const isActive = stage.id === activeStage;
+          return (
+            <React.Fragment key={stage.id}>
+              <div
+                className={`workflow-step ${isActive ? 'active' : ''}`}
+                title={stage.desc}
+              >
+                <span className="workflow-step-num">0{idx + 1}</span>
+                <span className="workflow-step-label">{stage.label}</span>
+              </div>
+              {idx < stages.length - 1 && (
+                <span className="workflow-arrow" aria-hidden="true">→</span>
+              )}
+            </React.Fragment>
+          );
+        })}
       </div>
-      <div className="pipeline-chain">
-        {stages.map((stage, idx) => (
-          <React.Fragment key={stage.id}>
-            <div
-              className={`pipeline-step ${stage.id === 'investigation_list' ? 'step-active' : ''}`}
-              title={stage.description || stage.name}
-            >
-              <span className="pipeline-step-num">{stage.step}</span>
-              <span>{stage.name}</span>
-            </div>
-            {idx < stages.length - 1 && (
-              <span className="pipeline-arrow" aria-hidden="true">→</span>
-            )}
-          </React.Fragment>
-        ))}
+      <div className="workflow-meta">
+        HYDERABAD AOI &bull; 1,462 CELLS (500m)
       </div>
-    </section>
+    </div>
   );
 }

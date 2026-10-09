@@ -1,117 +1,99 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { MapContainer, TileLayer, Polygon, CircleMarker, Popup, useMap } from 'react-leaflet';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useMemo } from 'react';
+import { MapContainer, TileLayer, Polygon, CircleMarker, Tooltip, useMap } from 'react-leaflet';
 
 /**
- * Controller to fit the map viewport exactly to the bounding box of all monitored cells
+ * Controller to smoothly center and fly map to target hotspot coordinates
+ * plus exposes controls for zoom and recenter
  */
-function BoundsFitter({ bounds }) {
+function MapControlsManager({ cameraTarget, targetCoord, defaultCoord = [17.372285, 78.422560] }) {
   const map = useMap();
 
   useEffect(() => {
-    if (bounds && bounds.length === 2) {
-      map.fitBounds(bounds, {
-        padding: [30, 30],
-        maxZoom: 14,
-        animate: true,
-        duration: 0.8
+    if (cameraTarget && cameraTarget.center && cameraTarget.center.length === 2) {
+      map.flyTo(cameraTarget.center, cameraTarget.zoom || 13, {
+        duration: cameraTarget.duration || 1.2,
+        easeLinearity: 0.25
+      });
+    } else if (targetCoord && targetCoord.length === 2) {
+      map.flyTo(targetCoord, 14, {
+        duration: 0.8,
+        easeLinearity: 0.25
       });
     }
-  }, [bounds, map]);
+  }, [cameraTarget, targetCoord, map]);
 
-  return null;
-}
-
-/**
- * Focus controller when a specific cell is selected
- */
-function CellFocusController({ targetCoord }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (targetCoord && targetCoord.length === 2) {
-      map.flyTo(targetCoord, Math.max(map.getZoom(), 14), {
-        duration: 0.5
-      });
-    }
-  }, [targetCoord, map]);
-
-  return null;
+  return (
+    <div className="map-floating-action-cluster font-mono">
+      <button
+        type="button"
+        className="map-action-btn"
+        onClick={() => map.zoomIn()}
+        title="Zoom in"
+        aria-label="Zoom in"
+      >
+        +
+      </button>
+      <button
+        type="button"
+        className="map-action-btn"
+        onClick={() => map.zoomOut()}
+        title="Zoom out"
+        aria-label="Zoom out"
+      >
+        &minus;
+      </button>
+      <button
+        type="button"
+        className="map-action-btn recenter-btn"
+        onClick={() => map.flyTo(defaultCoord, 12.5, { duration: 0.8 })}
+        title="Recenter map on Hyderabad"
+        aria-label="Recenter map"
+      >
+        &#8635;
+      </button>
+    </div>
+  );
 }
 
 export default function CityOverviewMap({
   areas = [],
-  selectedGridId,
+  hotspots = [],
+  selectedGridId = 'HYD_1220',
   onSelectCell,
-  loading = false,
-  error = null,
-  onRetry
+  cameraTarget = null,
+  guidedScene = null
 }) {
-  const navigate = useNavigate();
-  const [filterMode, setFilterMode] = useState('all'); // 'all' | 'anomalous'
-  const [focusTarget, setFocusTarget] = useState(null);
+  // Find selected cell
+  const selectedCell = useMemo(() => {
+    return (
+      areas.find((c) => c.grid_id === selectedGridId) ||
+      hotspots.find((h) => (h.grid_id || h.id) === selectedGridId)
+    );
+  }, [areas, hotspots, selectedGridId]);
 
-  // Compute bounding box across all areas
-  const bounds = useMemo(() => {
-    if (!areas || areas.length === 0) return null;
-
-    let minLat = Infinity;
-    let maxLat = -Infinity;
-    let minLng = Infinity;
-    let maxLng = -Infinity;
-
-    areas.forEach((cell) => {
-      if (cell.geometry?.coordinates?.[0]) {
-        cell.geometry.coordinates[0].forEach(([lng, lat]) => {
-          if (lat < minLat) minLat = lat;
-          if (lat > maxLat) maxLat = lat;
-          if (lng < minLng) minLng = lng;
-          if (lng > maxLng) maxLng = lng;
-        });
-      } else if (cell.lat && cell.lng) {
-        if (cell.lat < minLat) minLat = cell.lat;
-        if (cell.lat > maxLat) maxLat = cell.lat;
-        if (cell.lng < minLng) minLng = cell.lng;
-        if (cell.lng > maxLng) maxLng = cell.lng;
-      }
-    });
-
-    if (minLat === Infinity || minLng === Infinity) return null;
-    return [
-      [minLat, minLng],
-      [maxLat, maxLng]
-    ];
-  }, [areas]);
-
-  // Default center
-  const defaultCenter = useMemo(() => {
-    if (bounds) {
-      return [
-        (bounds[0][0] + bounds[1][0]) / 2,
-        (bounds[0][1] + bounds[1][1]) / 2
-      ];
+  // Compute centroid
+  const selectedCentroid = useMemo(() => {
+    if (!selectedCell) return [17.372285, 78.422560];
+    if (selectedCell.lat && selectedCell.lng) {
+      return [selectedCell.lat, selectedCell.lng];
     }
-    return [17.385, 78.486]; // Hyderabad default
-  }, [bounds]);
-
-  // Counts
-  const anomalousCount = useMemo(() => {
-    return areas.filter(
-      (c) => c.priority_level === 'HIGH' || c.priority_level === 'MEDIUM'
-    ).length;
-  }, [areas]);
-
-  // Filtered cells based on toggle
-  const visibleCells = useMemo(() => {
-    if (filterMode === 'anomalous') {
-      return areas.filter(
-        (c) => c.priority_level === 'HIGH' || c.priority_level === 'MEDIUM'
-      );
+    if (selectedCell.coordinates && selectedCell.coordinates.length === 2) {
+      return selectedCell.coordinates;
     }
-    return areas;
-  }, [areas, filterMode]);
+    if (selectedCell.geometry?.coordinates?.[0]) {
+      const coords = selectedCell.geometry.coordinates[0];
+      let sumLat = 0;
+      let sumLng = 0;
+      coords.forEach(([lng, lat]) => {
+        sumLat += lat;
+        sumLng += lng;
+      });
+      return [sumLat / coords.length, sumLng / coords.length];
+    }
+    return [17.372285, 78.422560];
+  }, [selectedCell]);
 
-  // Convert GeoJSON coordinates [lng, lat] to Leaflet [lat, lng]
+  // Convert polygon coordinates
   const getPolygonPositions = (cell) => {
     if (cell.geometry?.coordinates?.[0]) {
       return cell.geometry.coordinates[0].map(([lng, lat]) => [lat, lng]);
@@ -119,271 +101,265 @@ export default function CityOverviewMap({
     return null;
   };
 
-  // Styling helper:
-  // "Keep LOW cells very light and low-opacity so red and amber stand out."
+  /**
+   * Calm polygon styling — adaptive to guided walkthrough scenes
+   */
   const getCellStyle = (cell) => {
     const isSelected = cell.grid_id === selectedGridId;
     const level = (cell.priority_level || '').toUpperCase();
 
+    // Scene 1: OBSERVE — clearly highlight the 1,462 500m cells grid mesh
+    if (guidedScene === 1) {
+      return {
+        color: 'rgba(255, 107, 53, 0.40)',
+        weight: 0.8,
+        fillColor: 'rgba(255, 107, 53, 0.05)',
+        fillOpacity: 0.15
+      };
+    }
+
+    // Scene 2: CHANGE — illuminate cells with confirmed spectral displacement
+    if (guidedScene === 2) {
+      if (level === 'HIGH' || level === 'MEDIUM') {
+        return {
+          color: '#FF6B35',
+          weight: 1.2,
+          fillColor: level === 'HIGH' ? '#EF4444' : '#FF6B35',
+          fillOpacity: 0.45
+        };
+      }
+      return {
+        color: 'rgba(255, 255, 255, 0.03)',
+        weight: 0.2,
+        fillColor: 'transparent',
+        fillOpacity: 0
+      };
+    }
+
+    // Scene 3: ANOMALY — illuminate fused high and medium priority anomaly polygons
+    if (guidedScene === 3) {
+      if (level === 'HIGH') {
+        return {
+          color: '#EF4444',
+          weight: 1.8,
+          fillColor: '#EF4444',
+          fillOpacity: 0.65
+        };
+      }
+      if (level === 'MEDIUM') {
+        return {
+          color: '#F59E0B',
+          weight: 0.9,
+          fillColor: '#F59E0B',
+          fillOpacity: 0.25
+        };
+      }
+      return {
+        color: 'rgba(255, 255, 255, 0.02)',
+        weight: 0.2,
+        fillColor: 'transparent',
+        fillOpacity: 0
+      };
+    }
+
+    // Standard / Scenes 4-7 styling
     if (isSelected) {
       return {
-        color: '#1e3a8a',
-        weight: 3.5,
-        fillColor: level === 'HIGH' ? '#dc2626' : level === 'MEDIUM' ? '#d97706' : '#16a34a',
-        fillOpacity: 0.85
+        color: '#FF6B35',
+        weight: 2.2,
+        fillColor: level === 'HIGH' ? '#EF4444' : '#F59E0B',
+        fillOpacity: 0.70
       };
     }
 
     if (level === 'HIGH') {
       return {
-        color: '#b91c1c',
-        weight: 2,
-        fillColor: '#dc2626',
-        fillOpacity: 0.72
+        color: '#EF4444',
+        weight: 1.2,
+        fillColor: '#EF4444',
+        fillOpacity: 0.55
       };
     }
 
     if (level === 'MEDIUM') {
       return {
-        color: '#b45309',
-        weight: 1.5,
-        fillColor: '#d97706',
-        fillOpacity: 0.52
+        color: 'rgba(245, 158, 11, 0.35)',
+        weight: 0.5,
+        fillColor: '#F59E0B',
+        fillOpacity: 0.10
       };
     }
 
-    // LOW priority (Normal): Keep very light and low-opacity
+    // NORMAL: very calm & subtle
     return {
-      color: '#16a34a',
-      weight: 0.6,
-      fillColor: '#22c55e',
-      fillOpacity: 0.08
+      color: 'rgba(255, 255, 255, 0.03)',
+      weight: 0.3,
+      fillColor: 'transparent',
+      fillOpacity: 0.0
     };
   };
 
-  const handleCellClick = (cell) => {
-    if (onSelectCell) {
-      onSelectCell(cell.grid_id);
-    }
-    if (cell.lat && cell.lng) {
-      setFocusTarget([cell.lat, cell.lng]);
-    }
-  };
-
-  const handleOpenDetails = (gridId) => {
-    navigate(`/hotspot/${gridId}`);
-  };
-
-  if (loading) {
-    return (
-      <div className="map-card loading-state">
-        <div className="map-skeleton">
-          <div className="skeleton-spinner" />
-          <p>Loading geospatial areas & observations...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="map-card error-state">
-        <div style={{ padding: '32px 24px', textAlign: 'center' }}>
-          <p style={{ color: 'var(--status-high)', fontWeight: 700, fontSize: '15px' }}>Error loading map areas</p>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>{error}</p>
-          {onRetry && (
-            <button type="button" className="btn btn-primary" style={{ marginTop: '16px' }} onClick={onRetry}>
-              Retry loading map
-            </button>
-          )}
-        </div>
-      </div>
-    );
-  }
-
-  if (!loading && !error && areas.length === 0) {
-    return (
-      <div className="map-card empty-state">
-        <div style={{ padding: '40px 24px', textAlign: 'center' }}>
-          <p style={{ fontWeight: 700, fontSize: '15px', color: 'var(--text-primary)' }}>No Monitored Cells Available</p>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '6px' }}>
-            No geospatial intelligence records were returned for this region. Verify data provider connection.
-          </p>
-          {onRetry && (
-            <button type="button" className="btn btn-outline-primary" style={{ marginTop: '16px' }} onClick={onRetry}>
-              Refresh data
-            </button>
-          )}
-        </div>
-      </div>
-    );
-  }
+  const rawScore = selectedCell?.priority_score ?? selectedCell?.priorityScore ?? 82;
+  const displayScore =
+    typeof rawScore === 'number' && rawScore < 1
+      ? Math.round(rawScore * 100)
+      : Math.round(rawScore);
 
   return (
-    <section className="map-card" aria-label="City overview geospatial map">
-      {/* Map Control Toolbar with Toggle */}
-      <div className="map-header">
-        <div className="map-header-left">
-          <span className="map-title">City Spatial Overview</span>
-          <span className="map-cell-count">
-            Showing {visibleCells.length} of {areas.length} grid cells (~500 m)
-          </span>
-        </div>
+    <div className="product-map-frame" aria-label="Geospatial map frame">
+      <MapContainer
+        center={selectedCentroid}
+        zoom={13}
+        scrollWheelZoom={true}
+        zoomControl={false}
+        style={{ height: '100%', width: '100%', background: '#080D14' }}
+      >
+        {/* Zero-Key Free Esri World Dark Gray Basemap (No API key, no watermark) */}
+        <TileLayer
+          attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+          maxZoom={19}
+          maxNativeZoom={16}
+        />
+        <TileLayer
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+          maxZoom={19}
+          maxNativeZoom={16}
+        />
 
-        {/* Toggle: All cells / Anomalous only */}
-        <div className="map-toggle-group" role="group" aria-label="Cell visibility filter">
-          <button
-            type="button"
-            className={`toggle-btn ${filterMode === 'all' ? 'active' : ''}`}
-            onClick={() => setFilterMode('all')}
-          >
-            All cells <span className="toggle-badge">{areas.length}</span>
-          </button>
-          <button
-            type="button"
-            className={`toggle-btn ${filterMode === 'anomalous' ? 'active' : ''}`}
-            onClick={() => setFilterMode('anomalous')}
-          >
-            Anomalous only <span className="toggle-badge text-amber">{anomalousCount}</span>
-          </button>
-        </div>
-      </div>
+        {/* Floating Top-Right Map Controls & Flight Handler */}
+        <MapControlsManager
+          cameraTarget={cameraTarget}
+          targetCoord={selectedCentroid}
+        />
 
-      {/* Map Viewport */}
-      <div className="map-wrapper" style={{ height: '540px', position: 'relative' }}>
-        <MapContainer
-          center={defaultCenter}
-          zoom={12}
-          scrollWheelZoom={true}
-          style={{ height: '100%', width: '100%' }}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+        {/* All Monitored Cells */}
+        {areas.map((cell) => {
+          const positions = getPolygonPositions(cell);
+          const level = (cell.priority_level || 'LOW').toUpperCase();
+          const score = cell.priority_score ?? 0;
+          const formattedScore =
+            typeof score === 'number' && score < 1
+              ? (score * 100).toFixed(0)
+              : Number(score).toFixed(0);
 
-          {/* Automatic bounds fitting to /api/areas */}
-          {bounds && <BoundsFitter bounds={bounds} />}
+          const cellTooltip = (
+            <Tooltip direction="top" offset={[0, -6]} className="clean-cell-tooltip">
+              <div className="tooltip-inner font-mono">
+                <span className="tooltip-id">{cell.grid_id}</span>
+                <span className={`tooltip-lvl lvl-${level.toLowerCase()}`}>{level}</span>
+                <span className="tooltip-score">{formattedScore}</span>
+              </div>
+            </Tooltip>
+          );
 
-          {/* Focus controller on user click */}
-          {focusTarget && <CellFocusController targetCoord={focusTarget} />}
-
-          {visibleCells.map((cell) => {
-            const positions = getPolygonPositions(cell);
-            const level = (cell.priority_level || 'LOW').toUpperCase();
-            const score = cell.priority_score ?? 0;
-            const mainReason = (cell.reasons && cell.reasons.length > 0)
-              ? cell.reasons[0]
-              : (level === 'HIGH' ? 'Rapid built-up expansion & significant vegetation loss'
-                 : level === 'MEDIUM' ? 'Localized land cover divergence from baseline'
-                 : 'Stable nominal baseline observation');
-
-            const popupContent = (
-              <Popup>
-                <div className="popup-card">
-                  <div className="popup-header">
-                    <span className="popup-title">{cell.grid_id}</span>
-                    <span className={`badge ${level === 'HIGH' ? 'badge-high' : level === 'MEDIUM' ? 'badge-medium' : 'badge-normal'}`}>
-                      {level}
-                    </span>
-                  </div>
-
-                  <div className="popup-body">
-                    <div className="popup-score-row">
-                      <span className="popup-score-label">Priority score:</span>
-                      <strong className="popup-score-val">{score} / 100</strong>
-                    </div>
-
-                    <div className="popup-reason-box">
-                      <span className="popup-reason-heading">Main reason:</span>
-                      <p className="popup-reason-text">&ldquo;{mainReason}&rdquo;</p>
-                    </div>
-
-                    <div className="popup-status-note">
-                      Field verification recommended.
-                    </div>
-                  </div>
-
-                  <div className="popup-actions">
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-open-details"
-                      onClick={() => handleOpenDetails(cell.grid_id)}
-                    >
-                      Open details &rarr;
-                    </button>
-                  </div>
-                </div>
-              </Popup>
-            );
-
-            // Draw as polygon if geometry present, fall back to circle if no geometry
-            if (positions && positions.length > 0) {
-              return (
-                <Polygon
-                  key={cell.grid_id}
-                  positions={positions}
-                  pathOptions={getCellStyle(cell)}
-                  eventHandlers={{
-                    click: () => handleCellClick(cell)
-                  }}
-                >
-                  {popupContent}
-                </Polygon>
-              );
-            }
-
+          if (positions && positions.length > 0) {
             return (
-              <CircleMarker
+              <Polygon
                 key={cell.grid_id}
-                center={[cell.lat, cell.lng]}
-                radius={10}
+                positions={positions}
                 pathOptions={getCellStyle(cell)}
                 eventHandlers={{
-                  click: () => handleCellClick(cell)
+                  click: () => onSelectCell && onSelectCell(cell.grid_id)
                 }}
               >
-                {popupContent}
-              </CircleMarker>
+                {cellTooltip}
+              </Polygon>
             );
-          })}
-        </MapContainer>
+          }
 
-        {/* Legend bottom-left (Normal, Moderate, High priority) */}
-        <div className="map-legend bottom-left" aria-label="Priority color legend">
-          <div className="map-legend-title">Priority Level</div>
-          <div className="legend-item">
-            <span
-              className="legend-color-box"
-              style={{
-                backgroundColor: 'rgba(34, 197, 94, 0.25)',
-                border: '1px solid #16a34a'
+          return (
+            <CircleMarker
+              key={cell.grid_id}
+              center={[cell.lat, cell.lng]}
+              radius={7}
+              pathOptions={getCellStyle(cell)}
+              eventHandlers={{
+                click: () => onSelectCell && onSelectCell(cell.grid_id)
+              }}
+            >
+              {cellTooltip}
+            </CircleMarker>
+          );
+        })}
+
+        {/* Selected Location Target Radar Marker */}
+        {selectedCentroid && (
+          <>
+            <CircleMarker
+              center={selectedCentroid}
+              radius={24}
+              pathOptions={{
+                color: '#FF6B35',
+                weight: 1.5,
+                fillColor: '#FF6B35',
+                fillOpacity: 0.14,
+                className: 'target-radar-pulse'
               }}
             />
-            <span>Normal</span>
-          </div>
-          <div className="legend-item">
-            <span
-              className="legend-color-box"
-              style={{
-                backgroundColor: '#d97706',
-                border: '1px solid #b45309'
+            <CircleMarker
+              center={selectedCentroid}
+              radius={12}
+              pathOptions={{
+                color: '#FF6B35',
+                weight: 1.5,
+                fillColor: 'transparent',
+                fillOpacity: 0
               }}
             />
-            <span>Moderate</span>
-          </div>
-          <div className="legend-item">
-            <span
-              className="legend-color-box"
-              style={{
-                backgroundColor: '#dc2626',
-                border: '1px solid #b91c1c'
+            <CircleMarker
+              center={selectedCentroid}
+              radius={4}
+              pathOptions={{
+                color: '#FFFFFF',
+                weight: 1.5,
+                fillColor: '#FF6B35',
+                fillOpacity: 1
               }}
-            />
-            <span>High priority</span>
-          </div>
+            >
+              <Tooltip
+                permanent
+                direction="top"
+                offset={[0, -14]}
+                className="target-tag-tooltip"
+              >
+                <div className="target-tag font-mono">
+                  <span>{selectedGridId}</span>
+                  <span className="text-orange">{displayScore}</span>
+                </div>
+              </Tooltip>
+            </CircleMarker>
+          </>
+        )}
+      </MapContainer>
+
+      {/* Floating Top-Left Status Pill Over Map */}
+      <div className="map-floating-header-pill font-mono">
+        <span className="pill-dot-live" aria-hidden="true" />
+        <span className="pill-region">HYDERABAD METROPOLITAN AREA</span>
+        <span className="pill-sep">&bull;</span>
+        <span className="pill-meta text-muted">SENTINEL-2 EARTH OBSERVATION</span>
+      </div>
+
+      {/* Floating Bottom-Left Tiny Legend */}
+      <div className="map-floating-legend font-mono" aria-label="Map legend">
+        <div className="legend-chip">
+          <span className="legend-dot dot-normal" />
+          <span>Normal</span>
+        </div>
+        <div className="legend-chip">
+          <span className="legend-dot dot-medium" />
+          <span>Medium</span>
+        </div>
+        <div className="legend-chip">
+          <span className="legend-dot dot-high" />
+          <span>High</span>
+        </div>
+        <div className="legend-chip">
+          <span className="legend-dot dot-selected" />
+          <span>Selected</span>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

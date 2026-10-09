@@ -10,6 +10,10 @@ export default defineConfig({
         target: 'http://localhost:5001',
         changeOrigin: true
       },
+      '/data': {
+        target: 'http://localhost:5001',
+        changeOrigin: true
+      },
       '/images': {
         target: 'http://localhost:5001',
         changeOrigin: true
